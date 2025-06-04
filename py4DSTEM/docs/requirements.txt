@@ -1,3 +1,0 @@
-emdfile
-sphinx_rtd_theme
-# py4dstem
