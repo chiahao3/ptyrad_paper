@@ -1,7 +1,6 @@
 # Directories that don't need to backup by Git
 00_data/*
 !00_data/data_instruction.txt
-01_params/
 03_output/
 !03_output/data_instruction.txt
 __pycache__

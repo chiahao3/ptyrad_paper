@@ -1,5 +1,5 @@
 # Python script to run py4DSTEM
-# Updated by Chia-Hao Lee on 2024.12.02
+# Updated by Chia-Hao Lee on 2025.06.04
 
 import argparse
 import cupy as cp
@@ -16,9 +16,8 @@ if __name__ == "__main__":
     
     print_system_info()
     
-    
-    for batch in [1024,256,64,16]:#[16,32,64,128,256,512,1024]:
-        for pmode in [6]: #1,3,6,12
+    for batch in [4, 1, 1024, 256, 64, 16]:
+        for pmode in [6]:
             for update_step_size in [0.5]:
                 try:
                     # Run py4DSTEM_ptycho_solver

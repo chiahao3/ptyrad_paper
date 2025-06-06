@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --job-name=abtem
+#SBATCH --mail-user=cl2696@cornell.edu  # Where to send mail
+#SBATCH --nodes=1                      # number of nodes requested
+#SBATCH --nodelist=c0002, c0003        # Specify nodes
+#SBATCH --ntasks=1                     # number of tasks to run in parallel
+#SBATCH --cpus-per-task=4              # number of CPUs required for each task (Not sure if this matters because os.cpu_count always 256 cores)
+#SBATCH --gres=gpu:2g.20gb:1           # request a GPU #gpu:2g.20gb:1, gpu:a100:1
+#SBATCH --time=168:00:00                # Time limit hrs:min:sec
+#SBATCH --mem=128G
+#SBATCH --output=03_output/logs/paper/log_job_%j_simulate_tBL_WSe2_4dstem_phonon_partial.txt  # Standard output and error log to /logs, you need to create this folder first!
+
+pwd; hostname; date
+
+module load cuda/11.5
+
+source activate cornell
+
+cd $HOME/workspace/ptyrad
+
+python -u ./scripts/paper/simulate_tBL_WSe2_4dstem_phonon_partial_distributed.py --start_idx 7168 --end_idx 8192 2>&1 
+
+date
