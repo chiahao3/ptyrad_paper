@@ -1,0 +1,54 @@
+#!/bin/bash
+#SBATCH --job-name=py4dstem
+#SBATCH --mail-user=cl2696@cornell.edu       # Where to send mail
+#SBATCH --nodes=1                            # number of nodes requested
+#SBATCH --ntasks=1                           # number of tasks to run in parallel
+#SBATCH --cpus-per-task=32                    # number of CPUs required for each task. 4 for 10GB, 8 for 20GB, 32 for 80GB of A100.
+#SBATCH --gres=gpu:a100:1                 # request a GPU #gpu:a100:1, gpu:2g.20gb:1
+#SBATCH --time=336:00:00                     # Time limit hrs:min:sec
+#SBATCH --output=03_output/logs/log_job_%j_py4dstem_profiling_tBL_WSe2_b1024_p12_6slice.txt  # Standard output and error log to /logs, you need to create this folder first!
+
+pwd; hostname; date
+
+module load cuda/11.8
+
+source activate py4DSTEM
+
+## Set the params_path variable
+PARAMS_PATH="01_params/py4dstem_profiling_tBL_WSe2_p12_6slice.yml"
+echo params_path = ${PARAMS_PATH}
+
+## Making sure we are under repo root and calling `sbatch scripts/slurm_run_py4dstem.sub`
+cd ~/workspace/ptyrad_paper; pwd; 
+
+# Use CUDA_VISIBLE_DEVICES to scope to assigned GPUs
+GPU_IDS=${CUDA_VISIBLE_DEVICES:-0}  # default to 0 just in case
+
+# --- Log initial GPU info
+echo "====== Initial GPU Info ======"
+nvidia-smi
+
+# nvidia-smi dmon (SM, memory usage, etc.) # -s sets the display item, -o add timesteamps, -d sets interval (sec)
+nvidia-smi dmon -i $GPU_IDS -s pucvmet -o TD -d 1 -f 03_output/profiling/py4dstem_gpu_dmon_tBL_WSe2_b1024_p12_6slice_${SLURM_JOB_ID}.csv &
+DMON_PID=$!
+
+# nvidia-smi utilization (GPU + memory)
+nvidia-smi --id=$GPU_IDS \
+  --query-gpu=timestamp,name,utilization.gpu,utilization.memory,memory.total,memory.free,memory.used,temperature.gpu,power.draw \
+  --format=csv -l 1 -f 03_output/profiling/py4dstem_gpu_smi_tBL_WSe2_b1024_p12_6slice_${SLURM_JOB_ID}.csv &
+SMI_PID=$!
+
+# nsys profiling
+nsys profile -t cuda,nvtx,osrt,cudnn,cublas \
+    --cudabacktrace=true \
+    --cuda-memory-usage=true \
+    --force-overwrite=true \
+    -x true \
+    --delay 600 \
+    --duration 600 \
+    --output 03_output/profiling/py4dstem_gpu_nsys_tBL_WSe2_b1024_p12_6slice_${SLURM_JOB_ID}.nsys-rep \
+    python -u ./02_scripts/run_py4dstem_profiling.py --params_path "${PARAMS_PATH}" 2>&1
+
+kill $DMON_PID $SMI_PID || true
+
+date

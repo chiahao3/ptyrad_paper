@@ -25,6 +25,6 @@ cd ~/workspace/ptyrad_paper; pwd;
 ## The jobid is used as a unique identifier for hypertune mode with multiple GPU workers on different nodes. 
 ## The JOBID is an environment variable that'll be automatically set to 1-N via LoopSubmit.sh. If not set, default to 0.
 
-python -u ./02_scripts/run_ptyrad_loop.py --params_path "${PARAMS_PATH}" 2>&1 --params_path "${PARAMS_PATH}" --gpuid 0 --jobid "${JOBID:-0}" 2>&1
+python -u ./02_scripts/run_ptyrad_loop.py --params_path "${PARAMS_PATH}" 2>&1
 
 date
