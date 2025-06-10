@@ -152,14 +152,18 @@ function out = ptyshv_solver(params)
     meas_save_fname = sprintf('data_roi%s_dp.hdf5', roi_label);
     dp_path = normalize_path(fullfile(meas_save_dir,meas_save_fname));
 
+    % if isfile(dp_path)
+    %     warning("Detected existing file with the same name, overwriting it......")
+    %     delete(dp_path);
+    % end
+    % dp = reshape(dp, Ndpx, Ndpy, []); % PtychoShelves actually takes this 3D shape
+    % h5create(dp_path, '/dp', size(dp),'ChunkSize',[size(dp,1), size(dp,2), 1],'Deflate',4)
+    % h5write(dp_path, '/dp', dp)
+    % fprintf('### measurement data for PtyShv has been saved as %s ### \n', dp_path);
+
     if isfile(dp_path)
-        warning("Detected existing file with the same name, overwriting it......")
-        delete(dp_path);
+        warning("Detected existing file with the same name, skip the writing......")
     end
-    dp = reshape(dp, Ndpx, Ndpy, []); % PtychoShelves actually takes this 3D shape
-    h5create(dp_path, '/dp', size(dp),'ChunkSize',[size(dp,1), size(dp,2), 1],'Deflate',4)
-    h5write(dp_path, '/dp', dp)
-    fprintf('### measurement data for PtyShv has been saved as %s ### \n', dp_path);
 
     %% Step 5: prepare an save initial probe
     disp('### Initializing probe ###')

@@ -1,5 +1,5 @@
 % Matlab function to run PtyShv
-% Updated by Chia-Hao Lee on 2025.06.06
+% Updated by Chia-Hao Lee on 2025.06.08
 
 function run_ptyshv_loop(params_path)
 
@@ -8,14 +8,38 @@ function run_ptyshv_loop(params_path)
     utils_path = fullfile(fileparts(mfilename('fullpath')), 'ptyshv_utils');
     addpath(utils_path);
 
-    for batch_size = [4, 1, 1024, 256, 64, 16]
-        % Load Params file, currently only support json
-        params = load_params(params_path);
+    for round_idx = 1:5
+        for batch = [1024, 512, 256, 128, 64, 32, 16]
+            for pmode = [1, 3, 6, 12]
+                for slice = [1, 3, 6]
 
-        fprintf('Running with grouping = %i \n', batch_size);
-        params.grouping = batch_size;
+                    try
+                        % Load Params file, currently only support json
+                        params = load_params(params_path);
 
-        % Call core function
-        ptyshv_solver(params);
+                        fprintf('Running (round_idx, batch, pmode, slice) = (%d, %d, %d, %d)\n', round_idx, batch, pmode, slice);
+                        params.output_dir = [params.output_dir, sprintf('_r%d/', round_idx)];
+                        params.grouping = batch;
+                        params.Nprobe = pmode;
+                        params.Nlayers = slice;
+                        params.delta_z = 12/slice;
+
+                        % Call core function
+                        ptyshv_solver(params);
+                    catch ME
+                        fprintf('An error occurred for (round_idx, batch, pmode, slice) = (%d, %d, %d, %d)\n', round_idx, batch, pmode, slice);
+                        fprintf('Error message: %s\n', ME.message);
+                    end
+
+                    % Optional: clear GPU memory to prevent OOM on next run
+                    try
+                        gpuDevice([]);  % Reset GPU
+                    catch
+                        % If no GPU or GPU already reset, ignore
+                    end
+
+                end
+            end
+        end
     end
 end

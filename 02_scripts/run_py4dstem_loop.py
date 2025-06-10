@@ -1,10 +1,15 @@
 # Python script to run py4DSTEM
-# Updated by Chia-Hao Lee on 2025.06.04
+# Updated by Chia-Hao Lee on 2025.06.08
 
 import argparse
-import cupy as cp
+import gc
 
-from py4DSTEM.process.phase.utils_CHL import print_system_info, load_yml_params, py4DSTEM_ptycho_solver
+import cupy as cp
+from py4DSTEM.process.phase.utils_CHL import (
+    load_yml_params,
+    print_system_info,
+    py4DSTEM_ptycho_solver,
+)
 
 if __name__ == "__main__":
     
@@ -14,22 +19,32 @@ if __name__ == "__main__":
     parser.add_argument("--params_path", type=str, required=True)
     args = parser.parse_args()
     
-    print_system_info()
     
-    for batch in [4, 1, 1024, 256, 64, 16]:
-        for pmode in [6]:
-            for update_step_size in [0.5]:
-                try:
-                    # Run py4DSTEM_ptycho_solver
-                    params = load_yml_params(args.params_path)
+    for round_idx in range(1, 6):
+        for batch in [1024, 512, 256, 128, 64, 32, 16]:
+            for pmode in [1, 3, 6, 12]:
+                for slice in [1, 3, 6]:
+                    try:
+                        
+                        print_system_info()
+                        params = load_yml_params(args.params_path)
+                        
+                        # Run py4DSTEM_ptycho_solver
+                        print(f"Running (round_idx, batch, pmode, slice) = {(round_idx, batch, pmode, slice)}")
+                        
+                        params['recon_params']['output_dir'] += f'_r{str(round_idx)}/'
+                        params['recon_params']['BATCH_SIZE'] = batch
+                        params['exp_params']['pmode_max'] = pmode
+                        params['exp_params']['Nlayer'] = slice
+                        params['exp_params']['slice_thickness'] = round(12/slice, 2)
+                        
+                        py4DSTEM_ptycho_solver(params)
+                        
+                    except Exception as e:
+                        print(f"An error occurred for (round, batch, pmode, slice) = {(round_idx, batch, pmode, slice)}: {e}")
+                        
+                    finally:
+                        cp.cuda.Device(0).synchronize()
+                        cp.get_default_memory_pool().free_all_blocks()  # Clear GPU memory
+                        gc.collect()
                     
-                    print(f"Running batch = {batch}, pmode = {pmode}, update_step_size = {update_step_size}")
-                    params['exp_params']['pmode_max'] = pmode
-                    params['recon_params']['BATCH_SIZE'] = batch
-                    params['recon_params']['update_step_size'] = update_step_size
-                    py4DSTEM_ptycho_solver(params)
-                except cp.cuda.memory.OutOfMemoryError as e:
-                    print(f"Skipped batch={batch}, pmode={pmode}, update_step_size = {update_step_size} due to OOM.")
-                    cp.get_default_memory_pool().free_all_blocks()  # Clear GPU memory
-                except Exception as e:
-                    print(f"An error occurred for batch={batch}, pmode={pmode}: {e}")

@@ -4,9 +4,10 @@
 #SBATCH --nodes=1                            # number of nodes requested
 #SBATCH --ntasks=1                           # number of tasks to run in parallel
 #SBATCH --cpus-per-task=4                    # number of CPUs required for each task. 4 for 10GB, 8 for 20GB, 32 for 80GB of A100.
-#SBATCH --gres=gpu:2g.20gb:1                 # request a GPU #gpu:2g.20gb:1
+#SBATCH --gres=gpu:2g.20gb:1                 # request a GPU #gpu:a100:1, gpu:2g.20gb:1
+#SBATCH --nodelist=c0002
 #SBATCH --time=336:00:00                     # Time limit hrs:min:sec
-#SBATCH --output=03_output/logs/log_job_%j_ptyshv_batch_sizes_tBL_WSe2_p6_6slice.txt  # Standard output and error log to /logs, you need to create this folder first!
+#SBATCH --output=03_output/logs/log_job_%j_ptyshv_table_tBL_WSe2.txt  # Standard output and error log to /logs, you need to create this folder first!
 
 pwd; hostname; date
 
@@ -15,15 +16,15 @@ module load cuda/11.8
 module load matlab/R2021a
 
 ## Set the params_path variable
-PARAMS_PATH="01_params/ptyshv_batch_sizes_tBL_WSe2_p6_6slice.json"
+PARAMS_PATH="01_params/ptyshv_table_tBL_WSe2.json"
 echo params_path = ${PARAMS_PATH}
 
 ## Making sure we are under repo root and calling `sbatch scripts/slurm_run_ptyshv.sub`
 cd ~/workspace/ptyrad_paper; pwd; 
 
-matlab -nodisplay -nosplash -r "addpath('02_scripts');\
+matlab -nodisplay -nosplash -batch "addpath('02_scripts');\
                                 run_ptyshv_loop('$PARAMS_PATH');\
                                 exit" 2>&1
-
+# -batch is used to disable debugging mode and set Matlab into non-interactive mode, so all OOM error would be raised and catched, (then slipped).
 # Don't use dash (-) in the <matlab_script_name> because '-r' will fail to recognize the script name.
 # The '.m' file extension is not needed for <matlab_script_name> while using '-r'

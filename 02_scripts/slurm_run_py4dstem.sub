@@ -4,9 +4,10 @@
 #SBATCH --nodes=1                            # number of nodes requested
 #SBATCH --ntasks=1                           # number of tasks to run in parallel
 #SBATCH --cpus-per-task=4                    # number of CPUs required for each task. 4 for 10GB, 8 for 20GB, 32 for 80GB of A100.
-#SBATCH --gres=gpu:2g.20gb:1                 # request a GPU #gpu:2g.20gb:1
+#SBATCH --gres=gpu:2g.20gb:1                 # request a GPU #gpu:a100:1, gpu:2g.20gb:1
+#SBATCH --nodelist=c0002
 #SBATCH --time=336:00:00                     # Time limit hrs:min:sec
-#SBATCH --output=03_output/logs/log_job_%j_py4dstem_batch_sizes_tBL_WSe2_p6_6slice.txt  # Standard output and error log to /logs, you need to create this folder first!
+#SBATCH --output=03_output/logs/log_job_%j_py4dstem_table_tBL_WSe2.txt  # Standard output and error log to /logs, you need to create this folder first!
 
 pwd; hostname; date
 
@@ -15,7 +16,7 @@ module load cuda/11.8
 source activate py4DSTEM
 
 ## Set the params_path variable
-PARAMS_PATH="01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml"
+PARAMS_PATH="01_params/py4dstem_table_tBL_WSe2.yml"
 echo params_path = ${PARAMS_PATH}
 
 ## Making sure we are under repo root and calling `sbatch scripts/slurm_run_py4dstem.sub`
