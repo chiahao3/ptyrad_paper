@@ -57,6 +57,7 @@ function out = ptyshv_solver(params)
     scan_custom_flip     = params.scan_custom_flip';
     custom_data_flip     = params.custom_data_flip';
     scan_affine          = params.scan_affine';                  % Scan affine transformation [scale, asymmetry, rotation, shear], pass [] to ignore
+    overwrite_hdf5       = params.overwrite_hdf5;                % Whether to overwrite or skip the existing measurements hdf5 file
 
     % Input source and params
     meas_source          = params.meas_source;                   % 'file', 'custom'
@@ -69,6 +70,7 @@ function out = ptyshv_solver(params)
     pos_params           = params.pos_params;                    % struct or array
 
     % Reconstruction parameters
+    GPU_ID               = params.GPU_ID;                        % default GPU id, [] means choosen by matlab. Note that Matlab starts from 1.
     scan_number          = params.scan_number;                   % Ptychoshelves needs
     data_descriptor      = params.data_descriptor;               % A short string that describe data when sending notifications
     output_dir           = params.output_dir;                    % Output directory for the reconstructed result and the output initial probe
@@ -151,18 +153,22 @@ function out = ptyshv_solver(params)
     roi_label = sprintf('%i_Ndp%i_step%i', scan_number, Ndpx, Npx);
     meas_save_fname = sprintf('data_roi%s_dp.hdf5', roi_label);
     dp_path = normalize_path(fullfile(meas_save_dir,meas_save_fname));
-
-    % if isfile(dp_path)
-    %     warning("Detected existing file with the same name, overwriting it......")
-    %     delete(dp_path);
-    % end
-    % dp = reshape(dp, Ndpx, Ndpy, []); % PtychoShelves actually takes this 3D shape
-    % h5create(dp_path, '/dp', size(dp),'ChunkSize',[size(dp,1), size(dp,2), 1],'Deflate',4)
-    % h5write(dp_path, '/dp', dp)
-    % fprintf('### measurement data for PtyShv has been saved as %s ### \n', dp_path);
+    dp = reshape(dp, Ndpx, Ndpy, []); % PtychoShelves actually takes this 3D shape
 
     if isfile(dp_path)
-        warning("Detected existing file with the same name, skip the writing......")
+        if overwrite_hdf5
+            warning("Detected existing file with the same name, overwriting it......")
+            delete(dp_path);
+            h5create(dp_path, '/dp', size(dp),'ChunkSize',[size(dp,1), size(dp,2), 1],'Deflate',4)
+            h5write(dp_path, '/dp', dp)
+            fprintf('### measurement data for PtyShv has been saved as %s ### \n', dp_path);
+        else
+            warning("Detected existing file with the same name, skip the writing......")
+        end
+    else
+        h5create(dp_path, '/dp', size(dp),'ChunkSize',[size(dp,1), size(dp,2), 1],'Deflate',4)
+        h5write(dp_path, '/dp', dp)
+        fprintf('### measurement data for PtyShv has been saved as %s ### \n', dp_path);
     end
 
     %% Step 5: prepare an save initial probe
@@ -412,7 +418,7 @@ function out = ptyshv_solver(params)
     eng. use_gpu = true;                                         % if false, run CPU code, but it will get very slow 
     eng. keep_on_gpu = true;                                     % keep data + projections on GPU, false is useful for large data if DM is used
     eng. compress_data = false;                                  % use automatic online memory compression to limit need of GPU memory
-    eng. gpu_id = [];                                            % default GPU id, [] means choosen by matlab
+    eng. gpu_id = GPU_ID;                                        % default GPU id, [] means choosen by matlab
     eng. check_gpu_load = true;                                  % check available GPU memory before starting GPU engines 
     
     % general 

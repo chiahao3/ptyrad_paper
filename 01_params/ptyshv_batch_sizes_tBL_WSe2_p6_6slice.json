@@ -24,6 +24,7 @@
     "scan_custom_flip": [1, 1, 0],
     "custom_data_flip": [0, 1, 1],
     "scan_affine": [1,0,3,0],
+    "overwrite_hdf5": false,
 
    "meas_source" : "file",
    "meas_params" : {"path": "/home/fs01/cl2696/workspace/ptyrad_paper/00_data/tBL_WSe2/Panel_g-h_Themis/scan_x128_y128.raw", "key": ""},
@@ -34,6 +35,7 @@
    "pos_source" : "simu",
    "pos_params" : {},
 
+   "GPU_ID": 1,
    "scan_number": 1,
    "data_descriptor": "WSe2",
    "output_dir": "/home/fs01/cl2696/workspace/ptyrad_paper/03_output/tBL_WSe2/20250606_ptyshv_batch_sizes",

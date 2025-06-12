@@ -1,5 +1,5 @@
 {
-    "cSAXS_matlab_path": "/home/fs01/cl2696/workspace/fold_slice",
+    "cSAXS_matlab_path": "/mnt/altas/workspace/fold_slice",
 
     "voltage": 80,
     "alpha0": 24.94,
@@ -11,7 +11,7 @@
     "rbf": 11.42,
     "ADU": 151,
 
-    "Nprobe": 6,
+    "Nprobe": 12,
     "variable_probe_modes": 0,
     "Nlayers": 6,
     "delta_z": 2,
@@ -27,7 +27,7 @@
     "overwrite_hdf5": false,
 
    "meas_source" : "file",
-   "meas_params" : {"path": "/home/fs01/cl2696/workspace/ptyrad_paper/00_data/tBL_WSe2/Panel_g-h_Themis/scan_x128_y128.raw", "key": ""},
+   "meas_params" : {"path": "/mnt/altas/workspace/ptyrad_paper/00_data/tBL_WSe2/Panel_g-h_Themis/scan_x128_y128.raw", "key": ""},
    "probe_source" : "simu",
    "probe_params" : {},
    "obj_source" : "simu",
@@ -38,11 +38,11 @@
    "GPU_ID": 1,
    "scan_number": 1,
    "data_descriptor": "WSe2",
-   "output_dir": "/home/fs01/cl2696/workspace/ptyrad_paper/03_output/tBL_WSe2/20250608_ptyshv_table",
-   "Niter": 20,
-   "Niter_save_results": 20,
-   "Niter_plot_results": 1000,
-   "grouping": 32,
+   "output_dir": "/mnt/altas/workspace/ptyrad_paper/03_output/tBL_WSe2/20250608_ptyshv_profiling",
+   "Niter": 10000,
+   "Niter_save_results": 10000,
+   "Niter_plot_results": 10000,
+   "grouping": 256,
    "GPU_solver": "MLs",
    "errmetric": "L1",
    "diff_pattern_blur": 0,
