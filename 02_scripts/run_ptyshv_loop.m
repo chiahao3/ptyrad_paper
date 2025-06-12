@@ -8,17 +8,17 @@ function run_ptyshv_loop(params_path)
     utils_path = fullfile(fileparts(mfilename('fullpath')), 'ptyshv_utils');
     addpath(utils_path);
 
-    for round_idx = 1:5
-        for batch = [1024, 512, 256, 128, 64, 32, 16]
-            for pmode = [1, 3, 6, 12]
-                for slice = [1, 3, 6]
+    for round_idx = [1]
+        for batch = [16]
+            for pmode = [12]
+                for slice = [6]
 
                     try
                         % Load Params file, currently only support json
                         params = load_params(params_path);
 
                         fprintf('Running (round_idx, batch, pmode, slice) = (%d, %d, %d, %d)\n', round_idx, batch, pmode, slice);
-                        params.output_dir = [params.output_dir, sprintf('_r%d/', round_idx)];
+                        % params.output_dir = [params.output_dir, sprintf('_r%d/', round_idx)];
                         params.grouping = batch;
                         params.Nprobe = pmode;
                         params.Nlayers = slice;

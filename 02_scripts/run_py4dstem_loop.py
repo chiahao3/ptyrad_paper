@@ -20,10 +20,10 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     
-    for round_idx in range(1, 6):
-        for batch in [1024, 512, 256, 128, 64, 32, 16]:
-            for pmode in [1, 3, 6, 12]:
-                for slice in [1, 3, 6]:
+    for round_idx in [1]:
+        for batch in [16]:
+            for pmode in [12]:
+                for slice in [6]:
                     try:
                         
                         print_system_info()
@@ -32,7 +32,7 @@ if __name__ == "__main__":
                         # Run py4DSTEM_ptycho_solver
                         print(f"Running (round_idx, batch, pmode, slice) = {(round_idx, batch, pmode, slice)}")
                         
-                        params['recon_params']['output_dir'] += f'_r{str(round_idx)}/'
+                        # params['recon_params']['output_dir'] += f'_r{str(round_idx)}/'
                         params['recon_params']['BATCH_SIZE'] = batch
                         params['exp_params']['pmode_max'] = pmode
                         params['exp_params']['Nlayer'] = slice

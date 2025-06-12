@@ -23,7 +23,7 @@ if __name__ == "__main__":
         for batch in [16]:
             for pmode in [12]:
                 for slice in [6]:
-                    for df in [-120, -140, -160, -180, -200]: #[-20, -15, -10, -5, 0, 5, 10, 15, 20]:
+                    for df in [0]: #[-20, -15, -10, -5, 0, 5, 10, 15, 20]:
                         try:
                             # Setup CustomLogger
                             logger = CustomLogger(

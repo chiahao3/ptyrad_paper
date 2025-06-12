@@ -31,7 +31,7 @@ echo "params_path = ${PARAMS_PATH}"
 
 # Use GPUID
 GPU_IDS=1  # default to 1, the none display GPU. The Matlab GPU ID (with an offset 1) is set inside the params .json.
-export CUDA_VISIBLE_DEVICES=$GPU_IDS # This has no effect to nvidia-smi and nvidia-smi dmon, but can mask the nsys and following python/Matlab
+export CUDA_VISIBLE_DEVICES=$GPU_IDS # This has no effect to nvidia-smi, nvidia-smi dmon, and nsys. This is used to mask the following python/Matlab because py4DSTEM doesn't take GPU ID
 
 # --- Log initial GPU info
 echo "====== Initial GPU Info ======"
@@ -54,7 +54,7 @@ NSYS_OUT="${PROFILE_DIR}/ptyshv_gpu_nsys_${JOB_NAME}_${JOB_ID}.nsys-rep"
 echo "====== Starting Nsight Systems Profiling ======"
 nsys profile -t cuda,nvtx,osrt,cudnn,cublas \
     --cudabacktrace=true \
-    --gpu-metrics-devices=0 \
+    --gpu-metrics-devices=$GPU_IDS \
     --cuda-memory-usage=true \
     --force-overwrite=true \
     -x true \
