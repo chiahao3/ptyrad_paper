@@ -37,36 +37,36 @@ export CUDA_VISIBLE_DEVICES=$GPU_IDS # This has no effect to nvidia-smi, nvidia-
 echo "====== Initial GPU Info ======"
 nvidia-smi
 
-# Start nvidia-smi dmon logging
-DMON_LOG="${PROFILE_DIR}/ptyshv_gpu_dmon_${JOB_NAME}_${JOB_ID}.csv"
-nvidia-smi dmon -i $GPU_IDS -s pucvmet -o TD -d 1 -f "$DMON_LOG" &
-DMON_PID=$!
+# # Start nvidia-smi dmon logging
+# DMON_LOG="${PROFILE_DIR}/ptyshv_gpu_dmon_${JOB_NAME}_${JOB_ID}.csv"
+# nvidia-smi dmon -i $GPU_IDS -s pucvmet -o TD -d 1 -f "$DMON_LOG" &
+# DMON_PID=$!
 
-# Start nvidia-smi smi logging
-SMI_LOG="${PROFILE_DIR}/ptyshv_gpu_smi_${JOB_NAME}_${JOB_ID}.csv"
-nvidia-smi --id=$GPU_IDS \
-  --query-gpu=timestamp,name,utilization.gpu,utilization.memory,memory.total,memory.free,memory.used,temperature.gpu,power.draw \
-  --format=csv -l 1 -f "$SMI_LOG" &
-SMI_PID=$!
+# # Start nvidia-smi smi logging
+# SMI_LOG="${PROFILE_DIR}/ptyshv_gpu_smi_${JOB_NAME}_${JOB_ID}.csv"
+# nvidia-smi --id=$GPU_IDS \
+#   --query-gpu=timestamp,name,utilization.gpu,utilization.memory,memory.total,memory.free,memory.used,temperature.gpu,power.draw \
+#   --format=csv -l 1 -f "$SMI_LOG" &
+# SMI_PID=$!
 
-# Run nsys profiling
-NSYS_OUT="${PROFILE_DIR}/ptyshv_gpu_nsys_${JOB_NAME}_${JOB_ID}.nsys-rep"
-echo "====== Starting Nsight Systems Profiling ======"
-nsys profile -t cuda,nvtx,osrt,cudnn,cublas \
-    --cudabacktrace=true \
-    --gpu-metrics-devices=$GPU_IDS \
-    --cuda-memory-usage=true \
-    --force-overwrite=true \
-    -x true \
-    --delay 300 \
-    --duration 300 \
-    --output "$NSYS_OUT" \
-    matlab -nodisplay -nosplash -r "addpath('02_scripts');\
-                                    run_ptyshv_profiling('$PARAMS_PATH');\
-                                    exit"
+# # Run nsys profiling
+# NSYS_OUT="${PROFILE_DIR}/ptyshv_gpu_nsys_${JOB_NAME}_${JOB_ID}.nsys-rep"
+# echo "====== Starting Nsight Systems Profiling ======"
+# nsys profile -t cuda,nvtx,osrt,cudnn,cublas \
+#     --cudabacktrace=true \
+#     --gpu-metrics-devices=$GPU_IDS \
+#     --cuda-memory-usage=true \
+#     --force-overwrite=true \
+#     -x true \
+#     --delay 300 \
+#     --duration 300 \
+#     --output "$NSYS_OUT" \
+matlab -nodisplay -nosplash -r "addpath('02_scripts');\
+                                run_ptyshv_profiling('$PARAMS_PATH');\
+                                exit"
 
-# Kill background monitoring
-kill $DMON_PID $SMI_PID || true
+# # Kill background monitoring
+# kill $DMON_PID $SMI_PID || true
 
 date
 echo "==== JOB END ===="
