@@ -19,10 +19,10 @@ if __name__ == "__main__":
     parser.add_argument("--jobid", type=int, required=False, default=0, help="Unique identifier for hypertune mode with multiple GPU workers")
     args = parser.parse_args()
     
-    for round_idx in range(1, 6):
-        for batch in [1024, 512, 256, 128, 64, 32, 16]:
-            for pmode in [1, 3, 6, 12]:
-                for slice in [1, 3, 6]:
+    for round_idx in range(1, 2):
+        for batch in [1024, 256, 64, 16, 4, 1]:
+            for pmode in [6]:
+                for slice in [6]:
                     for df in [0]: #[-20, -15, -10, -5, 0, 5, 10, 15, 20]:
                         try:
                             # Setup CustomLogger
@@ -44,7 +44,7 @@ if __name__ == "__main__":
                             # Run ptyrad_ptycho_solver
                             vprint(f"Running (round_idx, batch, pmode, slice, df) = {(round_idx, batch, pmode, slice, df)}")
                             
-                            params['recon_params']['output_dir'] += f'_r{str(round_idx)}/'
+                            # params['recon_params']['output_dir'] += f'_r{str(round_idx)}/'
                             params['recon_params']['BATCH_SIZE']['size'] = batch
                             params['init_params']['probe_pmode_max'] = pmode
                             params['init_params']['obj_Nlayer'] = slice

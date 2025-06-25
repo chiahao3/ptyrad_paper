@@ -38,7 +38,7 @@
    "GPU_ID": 1,
    "scan_number": 1,
    "data_descriptor": "WSe2",
-   "output_dir": "/home/fs01/cl2696/workspace/ptyrad_paper/03_output/tBL_WSe2/20250612_ptyshv_convergence",
+   "output_dir": "/home/fs01/cl2696/workspace/ptyrad_paper/03_output/tBL_WSe2/20250618_ptyshv_convergence",
    "Niter": 200,
    "Niter_save_results": 10,
    "Niter_plot_results": 1000,

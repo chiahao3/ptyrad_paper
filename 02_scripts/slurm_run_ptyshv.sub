@@ -4,7 +4,7 @@
 #SBATCH --nodes=1                            # number of nodes requested
 #SBATCH --ntasks=1                           # number of tasks to run in parallel
 #SBATCH --cpus-per-task=32                    # number of CPUs required for each task. 4 for 10GB, 8 for 20GB, 32 for 80GB of A100.
-#SBATCH --gres=gpu:a100:1                 # request a GPU #gpu:a100:1, gpu:2g.20gb:1
+#SBATCH --gres=gpu:a100:4                 # request a GPU #gpu:a100:1, gpu:2g.20gb:1
 #SBATCH --nodelist=c0001
 #SBATCH --time=336:00:00                     # Time limit hrs:min:sec
 #SBATCH --output=03_output/logs/log_job_%j_ptyshv_convergence_tBL_WSe2_p12_6slice.txt  # Standard output and error log to /logs, you need to create this folder first!
@@ -23,7 +23,7 @@ echo params_path = ${PARAMS_PATH}
 cd ~/workspace/ptyrad_paper; pwd; 
 
 matlab -nodisplay -nosplash -batch "addpath('02_scripts');\
-                                run_ptyshv_loop('$PARAMS_PATH');\
+                                run_ptyshv('$PARAMS_PATH');\
                                 exit" 2>&1
 # -batch is used to disable debugging mode and set Matlab into non-interactive mode, so all OOM error would be raised and catched, (then slipped).
 # Don't use dash (-) in the <matlab_script_name> because '-r' will fail to recognize the script name.
