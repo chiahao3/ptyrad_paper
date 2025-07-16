@@ -48,7 +48,7 @@ nsys profile -t cuda,nvtx,osrt,cudnn,cublas \
     --duration 600 \
     --output 03_output/profiling/ptyshv_gpu_nsys_tBL_WSe2_b1024_p12_6slice_${SLURM_JOB_ID}.nsys-rep \
     matlab -nodisplay -nosplash -nojvm -r "addpath('02_scripts');\
-                                            run_ptyshv_profiling('$PARAMS_PATH');\
+                                            run_ptyshv('$PARAMS_PATH');\
                                             exit" 2>&1
 
 kill $DMON_PID $SMI_PID || true

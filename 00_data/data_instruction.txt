@@ -1,4 +1,4 @@
-If you get this folder from my GitHib repo, you can either go to out Zenodo record to download these files, or get them from the original links provided below.
+If you get this folder from my GitHib repo, you can either go to our [Zenodo record](https://doi.org/10.5281/zenodo.15273176) to download these files, or get them from the original links provided below.
 
 tBL-WSe2
 - Paper: https://doi.org/10.1126/science.adl2029

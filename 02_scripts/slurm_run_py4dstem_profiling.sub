@@ -47,7 +47,7 @@ nsys profile -t cuda,nvtx,osrt,cudnn,cublas \
     --delay 600 \
     --duration 600 \
     --output 03_output/profiling/py4dstem_gpu_nsys_tBL_WSe2_b1024_p12_6slice_${SLURM_JOB_ID}.nsys-rep \
-    python -u ./02_scripts/run_py4dstem_profiling.py --params_path "${PARAMS_PATH}" 2>&1
+    python -u ./02_scripts/run_py4dstem.py --params_path "${PARAMS_PATH}" 2>&1
 
 kill $DMON_PID $SMI_PID || true
 

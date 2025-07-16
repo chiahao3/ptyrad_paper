@@ -8,7 +8,7 @@
 #SBATCH --gres=gpu:2g.20gb:1           # request a GPU #gpu:2g.20gb:1, gpu:a100:1
 #SBATCH --time=168:00:00                # Time limit hrs:min:sec
 #SBATCH --mem=128G
-#SBATCH --output=03_output/logs/paper/log_job_%j_simulate_tBL_WSe2_4dstem_phonon_partial.txt  # Standard output and error log to /logs, you need to create this folder first!
+#SBATCH --output=03_output/logs/log_job_%j_simulate_tBL_WSe2_4dstem_phonon_partial.txt  # Standard output and error log to /logs, you need to create this folder first!
 
 pwd; hostname; date
 
@@ -16,8 +16,8 @@ module load cuda/11.5
 
 source activate cornell
 
-cd $HOME/workspace/ptyrad
+cd $HOME/workspace/ptyrad_paper
 
-python -u ./scripts/paper/simulate_tBL_WSe2_4dstem_phonon_partial_distributed.py --start_idx 7168 --end_idx 8192 2>&1 
+python -u ./02_scripts/simulate_tBL_WSe2_4dstem_phonon_partial_distributed.py --start_idx 7168 --end_idx 8192 2>&1 
 
 date

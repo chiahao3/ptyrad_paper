@@ -3,5 +3,7 @@
 !00_data/data_instruction.txt
 03_output/
 !03_output/data_instruction.txt
+!03_output/logs/
+!03_output/profiling_A100/
 __pycache__
 *.sqlite3
