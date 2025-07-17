@@ -1,0 +1,103 @@
+/home/fs01/cl2696/workspace/ptyrad
+c0003
+Tue Feb 18 22:36:15 EST 2025
+start_idx = 12288, end_idx = 14336
+tBL_sc.cell = Cell([85.72200000000001, 85.65857268831881, 14.751999999999999]) Ang
+Supercell tBL_sc contains 3120 Se atoms and 1560 W atoms
+Introducing 62 Se vacancies
+First 5 vac_idx = [4347 4465 3195  321 1603]
+Supercell tBL_sc contains 3058 Se atoms and 1560 W atoms
+Using FrozenPhonons potential with 25 configs
+phonon_seed = [102 435 860 270 106  71 700  20 614 121 466 214 330 458  87 372  99 871
+ 663 130 661 308 769 343 491]
+potential.shape = (25, 15, 861, 861), potential_arr.shape = (15, 861, 861).
+Note that the last 2 axes are transposed because abTEM go with (z,x,y) but we want (z,y,x)
+Energy = 80.0 kV, rel. wavelength = 0.041757 Ang
+CBED collection kmax = 3.3467 1/Ang, collection alpha_max = 139.7490 mrad
+Using partial temporal coherent probe with 5 defoci
+Focal spread = 43.7500 Å
+defocus distribution = [-87.5  -43.75   0.    43.75  87.5 ]
+probe.shape = (5, 861, 861)
+type           label    coordinates
+-------------  -------  ----------------------
+ParameterAxis  C10 [Å]  87.50 43.75 ... -87.50
+RealSpaceAxis  x [Å]    0.00 0.10 ... 85.62
+RealSpaceAxis  y [Å]    0.00 0.10 ... 85.56
+First 5 positions of pos_ang_xy (Ang) = [[15.13851982 15.15582296]
+ [15.65058453 15.16337168]
+ [15.99172619 15.11927959]
+ [16.47080477 15.2099479 ]
+ [16.88856104 15.10751354]], this is for abTEM
+
+First 5 positions of pos_px_yx (px) = [[334.44459814 334.3287806 ]
+ [334.49512505 337.75625522]
+ [334.19999723 340.0396666 ]
+ [334.80688016 343.24635056]
+ [334.12124187 346.04257724]], this is for reconstruction packages
+Traceback (most recent call last):
+  File "/home/fs01/cl2696/workspace/ptyrad/./scripts/paper/simulate_tBL_WSe2_4dstem_phonon_partial_distributed.py", line 267, in <module>
+    cbeds = probe.multislice(scan = pos_ang_xy[start_idx:end_idx], potential = potential).diffraction_patterns().reduce_ensemble().compute(progress_bar=False)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/array.py", line 1014, in compute
+    output, profilers = _compute(
+                        ^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/array.py", line 239, in _compute
+    arrays = dask.compute(
+             ^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/dask/base.py", line 660, in compute
+    results = schedule(dsk, keys, **kwargs)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/array.py", line 1198, in _apply_transform
+    array = transform._calculate_new_array(array_object)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/multislice.py", line 1027, in _calculate_new_array
+    measurements = self.multislice_func(
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/multislice.py", line 521, in multislice_and_detect
+    waves = multislice_step(
+            ^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/multislice.py", line 459, in multislice_step
+    return conventional_multislice_step(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/multislice.py", line 357, in conventional_multislice_step
+    waves = propagator.propagate(waves, thickness=thickness, in_place=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/multislice.py", line 202, in propagate
+    array = fft2_convolve(waves._array, kernel, overwrite_x=in_place)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/core/fft.py", line 228, in fft2_convolve
+    return _fft2_convolve(x, kernel, overwrite_x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/core/fft.py", line 208, in _fft2_convolve
+    return ifft2(x, overwrite_x=overwrite_x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/core/fft.py", line 191, in ifft2
+    return _fft_dispatch(x, func_name="ifft2", overwrite_x=overwrite_x, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/abtem/core/fft.py", line 183, in _fft_dispatch
+    return getattr(cp.fft, func_name)(x, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/cupy/fft/_fft.py", line 762, in ifft2
+    return func(a, s, axes, norm, cufft.CUFFT_INVERSE)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/cupy/fft/_fft.py", line 620, in _fftn
+    a = _exec_fftn(a, direction, value_type, norm=norm, axes=axes_sorted,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/cupy/fft/_fft.py", line 555, in _exec_fftn
+    out = plan.get_output_array(a, order=order)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cupy/cuda/cufft.pyx", line 881, in cupy.cuda.cufft.PlanNd.get_output_array
+  File "/home/fs01/cl2696/anaconda3/envs/cornell/lib/python3.11/site-packages/cupy/_creation/basic.py", line 31, in empty
+    return cupy.ndarray(shape, dtype, order=order)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cupy/_core/core.pyx", line 137, in cupy._core.core.ndarray.__new__
+  File "cupy/_core/core.pyx", line 225, in cupy._core.core._ndarray_base._init
+  File "cupy/cuda/memory.pyx", line 738, in cupy.cuda.memory.alloc
+  File "cupy/cuda/memory.pyx", line 1424, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1445, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1116, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1137, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc
+  File "cupy/cuda/memory.pyx", line 1382, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+  File "cupy/cuda/memory.pyx", line 1385, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+cupy.cuda.memory.OutOfMemoryError: Out of memory allocating 118,611,456 bytes (allocated so far: 20,466,416,128 bytes).
+Tue Feb 18 23:44:25 EST 2025

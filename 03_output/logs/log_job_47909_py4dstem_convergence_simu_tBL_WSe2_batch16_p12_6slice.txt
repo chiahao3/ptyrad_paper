@@ -1,0 +1,261 @@
+/home/fs01/cl2696/workspace/ptyrad
+c0002
+Wed Feb 19 02:26:19 EST 2025
+params_path = params/paper/py4dstem_convergence_simu_tBL_WSe2_batch16_p12_6slice.yml
+Load py4DSTEM-dev v0.0.4 (2024.12.12 CHL) from editable local repo
+cupyx.jit.rawkernel is experimental. The interface can change in the future.
+### System information ###
+Operating System: Linux 4.18.0-372.26.1.el8_6.x86_64
+OS Version: #1 SMP Tue Sep 13 18:09:48 UTC 2022
+Machine: x86_64
+Processor: x86_64
+Available CPU cores: 4
+Total Memory: 1007.45 GB
+Available Memory: 895.17 GB
+CUDA Runtime Version: 11.8
+GPU Device: ['NVIDIA A100-SXM4-80GB MIG 2g.20gb']
+Python Executable: /home/fs01/cl2696/anaconda3/envs/py4dstem/bin/python
+Python Version: 3.11.10 (main, Oct  3 2024, 07:29:13) [GCC 11.2.0]
+NumPy Version: 1.26.4
+Cupy Version: 13.3.0
+Success! Loaded .yml file path = params/paper/py4dstem_convergence_simu_tBL_WSe2_batch16_p12_6slice.yml
+Success! Loaded .hdf5 file path = data/paper/simu_tBL_WSe2/phonon_temporal_spatial_N16384_dp128.hdf5
+Imported .hdf5 data shape = (16384, 128, 128)
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (0.0000, 0.0254, 2.1056)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [0, 0, 1]
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0254, 2.1055)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation forced to 0 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   4%|▍         | 651/16384 [00:00<00:02, 6504.64probe position/s]Normalizing amplitudes:   8%|▊         | 1302/16384 [00:00<00:02, 5048.56probe position/s]Normalizing amplitudes:  11%|█         | 1827/16384 [00:00<00:03, 4706.55probe position/s]Normalizing amplitudes:  14%|█▍        | 2308/16384 [00:00<00:03, 4671.20probe position/s]Normalizing amplitudes:  17%|█▋        | 2781/16384 [00:00<00:02, 4633.11probe position/s]Normalizing amplitudes:  20%|█▉        | 3258/16384 [00:00<00:02, 4673.89probe position/s]Normalizing amplitudes:  24%|██▍       | 3953/16384 [00:00<00:02, 5372.63probe position/s]Normalizing amplitudes:  27%|██▋       | 4496/16384 [00:00<00:02, 5134.62probe position/s]Normalizing amplitudes:  31%|███       | 5015/16384 [00:01<00:02, 4934.75probe position/s]Normalizing amplitudes:  34%|███▎      | 5513/16384 [00:01<00:02, 4780.66probe position/s]Normalizing amplitudes:  37%|███▋      | 5995/16384 [00:01<00:02, 4745.18probe position/s]Normalizing amplitudes:  40%|███▉      | 6492/16384 [00:01<00:02, 4807.65probe position/s]Normalizing amplitudes:  43%|████▎     | 6975/16384 [00:01<00:01, 4809.30probe position/s]Normalizing amplitudes:  46%|████▌     | 7458/16384 [00:01<00:01, 4730.62probe position/s]Normalizing amplitudes:  48%|████▊     | 7932/16384 [00:01<00:01, 4700.59probe position/s]Normalizing amplitudes:  51%|█████▏    | 8410/16384 [00:01<00:01, 4723.09probe position/s]Normalizing amplitudes:  54%|█████▍    | 8893/16384 [00:01<00:01, 4753.86probe position/s]Normalizing amplitudes:  57%|█████▋    | 9369/16384 [00:01<00:01, 4747.80probe position/s]Normalizing amplitudes:  60%|██████    | 9845/16384 [00:02<00:01, 4740.39probe position/s]Normalizing amplitudes:  63%|██████▎   | 10345/16384 [00:02<00:01, 4815.35probe position/s]Normalizing amplitudes:  66%|██████▌   | 10847/16384 [00:02<00:01, 4872.21probe position/s]Normalizing amplitudes:  69%|██████▉   | 11335/16384 [00:02<00:01, 4853.42probe position/s]Normalizing amplitudes:  72%|███████▏  | 11839/16384 [00:02<00:00, 4908.49probe position/s]Normalizing amplitudes:  75%|███████▌  | 12331/16384 [00:02<00:00, 4909.48probe position/s]Normalizing amplitudes:  78%|███████▊  | 12843/16384 [00:02<00:00, 4971.94probe position/s]Normalizing amplitudes:  81%|████████▏ | 13341/16384 [00:02<00:00, 4925.92probe position/s]Normalizing amplitudes:  84%|████████▍ | 13834/16384 [00:02<00:00, 4859.62probe position/s]Normalizing amplitudes:  87%|████████▋ | 14327/16384 [00:02<00:00, 4874.00probe position/s]Normalizing amplitudes:  91%|█████████ | 14851/16384 [00:03<00:00, 4973.96probe position/s]Normalizing amplitudes:  94%|█████████▍| 15379/16384 [00:03<00:00, 5063.43probe position/s]Normalizing amplitudes:  97%|█████████▋| 15886/16384 [00:03<00:00, 5022.75probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:03<00:00, 4878.80probe position/s]
+output_path = 'output/paper/simu_tBL_WSe2/20250219_py4dstem_convergence/20250219_N16384_dp128_flipT001_random16_p12_6slice_dz2_update0.5_kzf0.1_1e5' is generated!
+reconstruction kwargs = {'num_iter': 200, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 16, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 10, 'save_result': ['model', 'objp', 'probe'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': 'output/paper/simu_tBL_WSe2/20250219_py4dstem_convergence/20250219_N16384_dp128_flipT001_random16_p12_6slice_dz2_update0.5_kzf0.1_1e5'}
+Performing 200 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 16 measurements.
+Iter: 1, Total Loss: 0.6954 in 363.910 sec
+Iter: 2, Total Loss: 0.6475 in 371.280 sec
+Iter: 3, Total Loss: 0.636 in 365.345 sec
+Iter: 4, Total Loss: 0.6319 in 363.212 sec
+Iter: 5, Total Loss: 0.6295 in 356.011 sec
+Iter: 6, Total Loss: 0.6276 in 365.630 sec
+Iter: 7, Total Loss: 0.6262 in 345.542 sec
+Iter: 8, Total Loss: 0.6251 in 354.262 sec
+Iter: 9, Total Loss: 0.6243 in 350.776 sec
+Iter: 10, Total Loss: 0.6237 in 336.758 sec
+Saving results for iter 10
+Iter: 11, Total Loss: 0.6232 in 354.590 sec
+Iter: 12, Total Loss: 0.6229 in 345.617 sec
+Iter: 13, Total Loss: 0.6226 in 366.870 sec
+Iter: 14, Total Loss: 0.6223 in 330.901 sec
+Iter: 15, Total Loss: 0.6221 in 344.036 sec
+Iter: 16, Total Loss: 0.622 in 345.090 sec
+Iter: 17, Total Loss: 0.6218 in 344.219 sec
+Iter: 18, Total Loss: 0.6216 in 347.230 sec
+Iter: 19, Total Loss: 0.6215 in 351.533 sec
+Iter: 20, Total Loss: 0.6214 in 347.471 sec
+Saving results for iter 20
+Iter: 21, Total Loss: 0.6213 in 361.710 sec
+Iter: 22, Total Loss: 0.6212 in 356.630 sec
+Iter: 23, Total Loss: 0.6211 in 343.013 sec
+Iter: 24, Total Loss: 0.621 in 352.811 sec
+Iter: 25, Total Loss: 0.6209 in 351.638 sec
+Iter: 26, Total Loss: 0.6208 in 317.594 sec
+Iter: 27, Total Loss: 0.6207 in 331.613 sec
+Iter: 28, Total Loss: 0.6207 in 330.885 sec
+Iter: 29, Total Loss: 0.6206 in 338.654 sec
+Iter: 30, Total Loss: 0.6205 in 331.794 sec
+Saving results for iter 30
+Iter: 31, Total Loss: 0.6205 in 353.199 sec
+Iter: 32, Total Loss: 0.6204 in 332.020 sec
+Iter: 33, Total Loss: 0.6203 in 353.762 sec
+Iter: 34, Total Loss: 0.6203 in 338.064 sec
+Iter: 35, Total Loss: 0.6202 in 362.289 sec
+Iter: 36, Total Loss: 0.6202 in 359.136 sec
+Iter: 37, Total Loss: 0.6201 in 359.698 sec
+Iter: 38, Total Loss: 0.62 in 360.897 sec
+Iter: 39, Total Loss: 0.62 in 354.023 sec
+Iter: 40, Total Loss: 0.62 in 346.120 sec
+Saving results for iter 40
+Iter: 41, Total Loss: 0.6199 in 347.182 sec
+Iter: 42, Total Loss: 0.6198 in 365.164 sec
+Iter: 43, Total Loss: 0.6198 in 384.418 sec
+Iter: 44, Total Loss: 0.6198 in 369.867 sec
+Iter: 45, Total Loss: 0.6197 in 360.194 sec
+Iter: 46, Total Loss: 0.6197 in 342.088 sec
+Iter: 47, Total Loss: 0.6197 in 355.862 sec
+Iter: 48, Total Loss: 0.6196 in 354.737 sec
+Iter: 49, Total Loss: 0.6196 in 367.327 sec
+Iter: 50, Total Loss: 0.6195 in 343.928 sec
+Saving results for iter 50
+Iter: 51, Total Loss: 0.6195 in 369.230 sec
+Iter: 52, Total Loss: 0.6194 in 346.285 sec
+Iter: 53, Total Loss: 0.6194 in 354.196 sec
+Iter: 54, Total Loss: 0.6194 in 336.893 sec
+Iter: 55, Total Loss: 0.6194 in 342.270 sec
+Iter: 56, Total Loss: 0.6193 in 341.586 sec
+Iter: 57, Total Loss: 0.6193 in 340.279 sec
+Iter: 58, Total Loss: 0.6193 in 346.073 sec
+Iter: 59, Total Loss: 0.6192 in 348.978 sec
+Iter: 60, Total Loss: 0.6192 in 364.121 sec
+Saving results for iter 60
+Iter: 61, Total Loss: 0.6192 in 348.469 sec
+Iter: 62, Total Loss: 0.6191 in 344.440 sec
+Iter: 63, Total Loss: 0.6191 in 340.445 sec
+Iter: 64, Total Loss: 0.6191 in 367.700 sec
+Iter: 65, Total Loss: 0.6191 in 361.865 sec
+Iter: 66, Total Loss: 0.619 in 368.794 sec
+Iter: 67, Total Loss: 0.619 in 362.893 sec
+Iter: 68, Total Loss: 0.619 in 355.063 sec
+Iter: 69, Total Loss: 0.6189 in 370.848 sec
+Iter: 70, Total Loss: 0.6189 in 356.210 sec
+Saving results for iter 70
+Iter: 71, Total Loss: 0.6189 in 356.800 sec
+Iter: 72, Total Loss: 0.6189 in 366.180 sec
+Iter: 73, Total Loss: 0.6188 in 351.929 sec
+Iter: 74, Total Loss: 0.6188 in 343.261 sec
+Iter: 75, Total Loss: 0.6188 in 345.330 sec
+Iter: 76, Total Loss: 0.6188 in 350.938 sec
+Iter: 77, Total Loss: 0.6187 in 336.347 sec
+Iter: 78, Total Loss: 0.6187 in 344.484 sec
+Iter: 79, Total Loss: 0.6187 in 343.144 sec
+Iter: 80, Total Loss: 0.6187 in 357.295 sec
+Saving results for iter 80
+Iter: 81, Total Loss: 0.6186 in 348.468 sec
+Iter: 82, Total Loss: 0.6186 in 346.969 sec
+Iter: 83, Total Loss: 0.6186 in 348.845 sec
+Iter: 84, Total Loss: 0.6186 in 339.260 sec
+Iter: 85, Total Loss: 0.6185 in 332.287 sec
+Iter: 86, Total Loss: 0.6185 in 336.144 sec
+Iter: 87, Total Loss: 0.6185 in 334.817 sec
+Iter: 88, Total Loss: 0.6185 in 337.798 sec
+Iter: 89, Total Loss: 0.6185 in 336.891 sec
+Iter: 90, Total Loss: 0.6184 in 340.549 sec
+Saving results for iter 90
+Iter: 91, Total Loss: 0.6184 in 342.715 sec
+Iter: 92, Total Loss: 0.6184 in 341.833 sec
+Iter: 93, Total Loss: 0.6184 in 332.873 sec
+Iter: 94, Total Loss: 0.6184 in 338.734 sec
+Iter: 95, Total Loss: 0.6183 in 338.558 sec
+Iter: 96, Total Loss: 0.6183 in 335.699 sec
+Iter: 97, Total Loss: 0.6183 in 335.697 sec
+Iter: 98, Total Loss: 0.6183 in 337.217 sec
+Iter: 99, Total Loss: 0.6183 in 342.774 sec
+Iter: 100, Total Loss: 0.6183 in 337.672 sec
+Saving results for iter 100
+Iter: 101, Total Loss: 0.6182 in 338.522 sec
+Iter: 102, Total Loss: 0.6182 in 335.481 sec
+Iter: 103, Total Loss: 0.6182 in 333.737 sec
+Iter: 104, Total Loss: 0.6182 in 379.036 sec
+Iter: 105, Total Loss: 0.6182 in 382.055 sec
+Iter: 106, Total Loss: 0.6181 in 360.812 sec
+Iter: 107, Total Loss: 0.6181 in 362.293 sec
+Iter: 108, Total Loss: 0.6181 in 344.673 sec
+Iter: 109, Total Loss: 0.6181 in 359.200 sec
+Iter: 110, Total Loss: 0.6181 in 363.121 sec
+Saving results for iter 110
+Iter: 111, Total Loss: 0.6181 in 337.514 sec
+Iter: 112, Total Loss: 0.6181 in 371.311 sec
+Iter: 113, Total Loss: 0.618 in 348.688 sec
+Iter: 114, Total Loss: 0.618 in 365.958 sec
+Iter: 115, Total Loss: 0.618 in 359.841 sec
+Iter: 116, Total Loss: 0.618 in 346.585 sec
+Iter: 117, Total Loss: 0.618 in 369.345 sec
+Iter: 118, Total Loss: 0.618 in 361.096 sec
+Iter: 119, Total Loss: 0.6179 in 355.697 sec
+Iter: 120, Total Loss: 0.6179 in 355.456 sec
+Saving results for iter 120
+Iter: 121, Total Loss: 0.6179 in 384.258 sec
+Iter: 122, Total Loss: 0.6179 in 393.317 sec
+Iter: 123, Total Loss: 0.6179 in 357.830 sec
+Iter: 124, Total Loss: 0.6179 in 335.218 sec
+Iter: 125, Total Loss: 0.6179 in 375.030 sec
+Iter: 126, Total Loss: 0.6178 in 362.053 sec
+Iter: 127, Total Loss: 0.6178 in 357.836 sec
+Iter: 128, Total Loss: 0.6178 in 375.182 sec
+Iter: 129, Total Loss: 0.6178 in 369.760 sec
+Iter: 130, Total Loss: 0.6178 in 375.688 sec
+Saving results for iter 130
+Iter: 131, Total Loss: 0.6178 in 363.850 sec
+Iter: 132, Total Loss: 0.6178 in 347.844 sec
+Iter: 133, Total Loss: 0.6177 in 354.745 sec
+Iter: 134, Total Loss: 0.6177 in 360.304 sec
+Iter: 135, Total Loss: 0.6177 in 354.061 sec
+Iter: 136, Total Loss: 0.6177 in 367.925 sec
+Iter: 137, Total Loss: 0.6177 in 366.230 sec
+Iter: 138, Total Loss: 0.6177 in 381.109 sec
+Iter: 139, Total Loss: 0.6177 in 359.983 sec
+Iter: 140, Total Loss: 0.6177 in 354.120 sec
+Saving results for iter 140
+Iter: 141, Total Loss: 0.6177 in 384.102 sec
+Iter: 142, Total Loss: 0.6176 in 374.520 sec
+Iter: 143, Total Loss: 0.6176 in 379.543 sec
+Iter: 144, Total Loss: 0.6176 in 403.873 sec
+Iter: 145, Total Loss: 0.6176 in 447.925 sec
+Iter: 146, Total Loss: 0.6176 in 419.835 sec
+Iter: 147, Total Loss: 0.6176 in 398.315 sec
+Iter: 148, Total Loss: 0.6176 in 425.536 sec
+Iter: 149, Total Loss: 0.6175 in 421.531 sec
+Iter: 150, Total Loss: 0.6175 in 386.655 sec
+Saving results for iter 150
+Iter: 151, Total Loss: 0.6175 in 380.701 sec
+Iter: 152, Total Loss: 0.6175 in 359.252 sec
+Iter: 153, Total Loss: 0.6175 in 382.113 sec
+Iter: 154, Total Loss: 0.6175 in 386.366 sec
+Iter: 155, Total Loss: 0.6175 in 357.750 sec
+Iter: 156, Total Loss: 0.6175 in 360.437 sec
+Iter: 157, Total Loss: 0.6175 in 387.661 sec
+Iter: 158, Total Loss: 0.6175 in 381.737 sec
+Iter: 159, Total Loss: 0.6174 in 362.138 sec
+Iter: 160, Total Loss: 0.6174 in 394.305 sec
+Saving results for iter 160
+Iter: 161, Total Loss: 0.6174 in 387.832 sec
+Iter: 162, Total Loss: 0.6174 in 381.431 sec
+Iter: 163, Total Loss: 0.6174 in 375.131 sec
+Iter: 164, Total Loss: 0.6174 in 371.495 sec
+Iter: 165, Total Loss: 0.6174 in 367.391 sec
+Iter: 166, Total Loss: 0.6174 in 380.092 sec
+Iter: 167, Total Loss: 0.6173 in 388.463 sec
+Iter: 168, Total Loss: 0.6173 in 397.010 sec
+Iter: 169, Total Loss: 0.6173 in 383.574 sec
+Iter: 170, Total Loss: 0.6173 in 362.017 sec
+Saving results for iter 170
+Iter: 171, Total Loss: 0.6173 in 363.971 sec
+Iter: 172, Total Loss: 0.6173 in 353.776 sec
+Iter: 173, Total Loss: 0.6173 in 350.344 sec
+Iter: 174, Total Loss: 0.6173 in 356.083 sec
+Iter: 175, Total Loss: 0.6173 in 360.528 sec
+Iter: 176, Total Loss: 0.6173 in 378.583 sec
+Iter: 177, Total Loss: 0.6173 in 378.986 sec
+Iter: 178, Total Loss: 0.6172 in 379.495 sec
+Iter: 179, Total Loss: 0.6172 in 382.804 sec
+Iter: 180, Total Loss: 0.6172 in 381.906 sec
+Saving results for iter 180
+Iter: 181, Total Loss: 0.6172 in 379.625 sec
+Iter: 182, Total Loss: 0.6172 in 395.498 sec
+Iter: 183, Total Loss: 0.6172 in 389.864 sec
+Iter: 184, Total Loss: 0.6172 in 390.573 sec
+Iter: 185, Total Loss: 0.6172 in 394.152 sec
+Iter: 186, Total Loss: 0.6172 in 394.874 sec
+Iter: 187, Total Loss: 0.6172 in 380.878 sec
+Iter: 188, Total Loss: 0.6171 in 393.584 sec
+Iter: 189, Total Loss: 0.6171 in 400.163 sec
+Iter: 190, Total Loss: 0.6171 in 379.830 sec
+Saving results for iter 190
+Iter: 191, Total Loss: 0.6171 in 374.960 sec
+Iter: 192, Total Loss: 0.6171 in 379.723 sec
+Iter: 193, Total Loss: 0.6171 in 370.950 sec
+Iter: 194, Total Loss: 0.6171 in 374.721 sec
+Iter: 195, Total Loss: 0.6171 in 376.220 sec
+Iter: 196, Total Loss: 0.6171 in 361.674 sec
+Iter: 197, Total Loss: 0.6171 in 366.899 sec
+Iter: 198, Total Loss: 0.6171 in 365.885 sec
+Iter: 199, Total Loss: 0.617 in 372.983 sec
+Iter: 200, Total Loss: 0.617 in 361.526 sec
+Saving results for iter 200
+### Finished 200 iterations, averaged iter_t = 361.156 with std = 19.993 sec ###
+### py4DSTEM ptycho solver is finished in 20 hr 3 min 55.421 sec###
+
+Wed Feb 19 22:30:49 EST 2025

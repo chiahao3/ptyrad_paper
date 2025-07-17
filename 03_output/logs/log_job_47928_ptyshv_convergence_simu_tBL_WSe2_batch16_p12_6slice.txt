@@ -1,0 +1,344 @@
+/home/fs01/cl2696/workspace/ptyrad
+c0002
+Wed Feb 19 12:26:51 EST 2025
+Starting job 47928 on c0002
+/home/fs01/cl2696/workspace/ptyrad/params/paper
+GPU 0: NVIDIA A100-SXM4-80GB (UUID: GPU-31203ec1-b145-480b-d58d-66b8c414ddd2)
+GPU 1: NVIDIA A100-SXM4-80GB (UUID: GPU-7251cf85-2d13-62a5-ab91-c22272f0810f)
+GPU 2: NVIDIA A100-SXM4-80GB (UUID: GPU-a4dd3583-3df5-975b-ad95-40d126f5251b)
+GPU 3: NVIDIA A100-SXM4-80GB (UUID: GPU-1ef1bae9-5f03-78bc-dbbd-b033bf30a7b1)
+  MIG 2g.20gb     Device  0: (UUID: MIG-4810cd05-a319-5ff7-9262-ee1f4ba66a8e)
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2021 The MathWorks, Inc.
+                  R2021a (9.10.0.1602886) 64-bit (glnxa64)
+                             February 17, 2021
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans = 
+
+  CUDADevice with properties:
+
+                      Name: 'NVIDIA A100-SXM4-80GB MIG 2g.20gb'
+                     Index: 1
+         ComputeCapability: '8.0'
+            SupportsDouble: 1
+             DriverVersion: 11.8000
+            ToolkitVersion: 11
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 2.0938e+10
+           AvailableMemory: 2.0629e+10
+       MultiprocessorCount: 28
+              ClockRateKHz: 1410000
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 0
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+           DeviceAvailable: 1
+            DeviceSelected: 1
+
+Started at 2025-02-19_12-27-01
+Original dp min = 0.0000, mean = 0.0255, max = 1.5220
+Processed dp min = 0.0000, mean = 0.0255, max = 1.5220
+[Warning: Directory already exists.] 
+[> In ptyshv_convergence_simu_tBL_WSe2_batch16_p12_6slice (line 168)] 
+data_roi6_Ndp128_step128_dp.hdf5 has been saved!
+Current grouping: 16, Current Nprobe: 12
+[init] : Preparing paths.
+[init] :  p.queue.name is not set, using default p.queue.name = ''
+[init] : p.detector.data_prefix is not defined
+[init] : Using matlab APS data preparator.
+[init] : run_name = S00006_128x128_b0_MLs_L1_p12_g16_pc1_noModel_mm_Ns6_dz2_reg0.1
+[init] : base_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//
+[init] : Using default save_path
+[init] : save_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/analysis/S00000-00999/S00006/
+[init] : Using default prepared data path
+[init] : prepare_data_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/analysis/S00000-00999/S00006/
+[init] : Using default prepared data filename
+[init] : prepare_data_filename = S00006_data_128x128.h5
+[init] : Loading preferences for empad detector.
+[init] : read_path_format not defined for empad. Using default value.
+[Warning: Applying custom scan flip: 1 1 0 ] 
+[> In scans.positions.matlab_pos (line 14)
+In scans.read_positions (line 20)
+In core.initialize_ptycho (line 107)
+In core.ptycho_recons/ptycho_call (line 172)
+In core.ptycho_recons (line 289)
+In ptyshv_convergence_simu_tBL_WSe2_batch16_p12_6slice (line 537)] 
+[init] : Preparing initial guess.
+[init] : Computed object size: 493 x 493
+[init] : Using random object as initial guess.
+[init] : Using previous run as initial probe.
+[init] : Loaded probe from: /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/6/init_probe_128.mat
+[init] : File /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/6/init_probe_128.mat loaded successfully.
+[init] : Loading raw data
+[init] : Preparing data using matlab APS data preparation.
+[init] : Using supplied center: 65  65
+[init] : Using center: (65, 65)
+[init] : Selected region: ('RowFrom', 1, 'RowTo', 128, 'ColumnFrom', 1, 'ColumnTo', 128)
+[init] : Loading raw data of scan 00006.
+[init] : HDF5 file name:/home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//6/data_roi6_Ndp128_step128_dp.hdf5
+[init] : Loaded data from:/home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//6/data_roi6_Ndp128_step128_dp.hdf5
+[init] : Number of probe positions: 16384
+[init] : Number of diffraction patterns : 16384
+[init] : Finished data preparation and initialization.
+[ptycho] : Reconstructing S00006 
+[ptycho] : Calling engine GPU_MS
+[GPU/CPU_MS-engine] : Intermediate results will be saved in the directory below every 1 iterations.
+[GPU/CPU_MS-engine] : /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//6/roi6_Ndp128_step128//MLs_L1_p12_g16_pc1_noModel_mm_Ns6_dz2_reg0.1/
+[GPU/CPU_MS-engine] : Loading constant probe (1)
+[GPU/CPU_MS-engine] : Loading constant probe (2)
+[GPU/CPU_MS-engine] : Loading constant probe (3)
+[GPU/CPU_MS-engine] : Loading constant probe (4)
+[GPU/CPU_MS-engine] : Loading constant probe (5)
+[GPU/CPU_MS-engine] : Loading constant probe (6)
+[GPU/CPU_MS-engine] : Loading constant probe (7)
+[GPU/CPU_MS-engine] : Loading constant probe (8)
+[GPU/CPU_MS-engine] : Loading constant probe (9)
+[GPU/CPU_MS-engine] : Loading constant probe (10)
+[GPU/CPU_MS-engine] : Loading constant probe (11)
+[GPU/CPU_MS-engine] : Loading constant probe (12)
+[GPU/CPU_MS-engine] : Load and pad object and probe
+[GPU/CPU_MS-engine] : Preparing data and masks
+[GPU/CPU_MS-engine] : GPU 1 initialized ... 
+[GPU/CPU_MS-engine-init] : Add 5 more layers from 1 layer(s)
+[GPU/CPU_MS-engine-init] : Append vacuum layer
+[GPU/CPU_MS-engine-init] : 902 of 1056 GB RAM free
+[GPU/CPU_MS-engine-init] : Check GPU load
+[GPU/CPU_MS-engine-init] : 
+----MEMORY REPORT GPU ID:1-----
+Required total memory 1.38GB
+ - Required data memory 1.07GB 
+ - Required object memory 0.04GB 
+ - Required FFT memory 0.03GB 
+ ============================ 
+available memory 20.63/20.94GB
+[GPU/CPU_MS-engine-init] :  === Starting MLs solver === 
+[GPU/CPU_MS-engine-init] : Maximal possible grouping 1210
+[GPU/CPU_MS-engine-init] : Selected grouping 16
+[GPU-1_MLs_WSe2_] : Started solver using MLs method on GPU 1
+[GPU-1_MLs_WSe2_] : Moving data to GPU
+[GPU-1_MLs_WSe2_] : Free GPU memory 20.63GB
+[GPU-1_MLs_WSe2_] : Data moved to GPU
+[GPU-1_MLs_WSe2_] : Free GPU memory 19.53GB
+[GPU-1_MLs_WSe2_] : Iteration: 1 / 20  (Time left:Inf hour. avg:Inf sec)
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0485 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0477 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0477 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0479 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0487 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.401  o1: 0.0501 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.04055 
+[GPU-1_MLs_WSe2_] : Iteration: 2 / 20  (Time left:1.41 hour. avg:268 sec)
+[GPU-1_MLs_WSe2_] : EMPIRICAL ESTIMATION OF POSITION RELIABILITY
+
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.094 px MAX error 0.11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0687 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.381  o1: 0.0716 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03948 
+[GPU-1_MLs_WSe2_] : Iteration: 3 / 20  (Time left:1.38 hour. avg:275 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.12 px MAX error 0.22 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0738 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0754 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0764 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0782 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.374  o1: 0.0809 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03846 
+[GPU-1_MLs_WSe2_] : Iteration: 4 / 20  (Time left:1.32 hour. avg:279 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.16 px MAX error 0.32 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0794 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.079 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0788 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0794 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0811 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.382  o1: 0.0824 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03789 
+[GPU-1_MLs_WSe2_] : Iteration: 5 / 20  (Time left:1.27 hour. avg:285 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.18 px MAX error 0.43 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0766 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0771 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0771 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0773 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0787 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.381  o1: 0.0798 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03756 
+[GPU-1_MLs_WSe2_] : Iteration: 6 / 20  (Time left:1.18 hour. avg:283 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.21 px MAX error 0.53 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0753 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0746 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0743 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.395  o1: 0.0742 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03731 
+[GPU-1_MLs_WSe2_] : Iteration: 7 / 20  (Time left:1.1 hour. avg:282 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.23 px MAX error 0.63 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.097 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0747 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0754 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0759 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.4  o1: 0.076 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03709 
+[GPU-1_MLs_WSe2_] : Iteration: 8 / 20  (Time left:1.02 hour. avg:282 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.24 px MAX error 0.73 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0741 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0766 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0777 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0774 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0758 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.407  o1: 0.0746 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03691 
+[GPU-1_MLs_WSe2_] : Iteration: 9 / 20  (Time left:56.3 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.25 px MAX error 0.83 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0837 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0746 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0747 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0747 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0743 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.383  o1: 0.0735 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03679 
+[GPU-1_MLs_WSe2_] : Iteration: 10 / 20  (Time left:51.6 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.26 px MAX error 0.92 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0779 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0747 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0756 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.399  o1: 0.0763 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 11 / 20  (Time left:46.9 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.27 px MAX error   1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0721 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.395  o1: 0.0727 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 12 / 20  (Time left:42.1 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.27 px MAX error 1.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0716 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.39  o1: 0.0733 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03661 
+[GPU-1_MLs_WSe2_] : Iteration: 13 / 20  (Time left:37.6 min. avg:282 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.27 px MAX error 1.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0953 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.416  o1: 0.0733 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 14 / 20  (Time left:32.9 min. avg:282 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.28 px MAX error 1.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0628 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0765 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0783 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0793 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0799 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0805 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 15 / 20  (Time left:28.1 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.28 px MAX error 1.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0737 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0758 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0775 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0776 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.409  o1: 0.0768 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 16 / 20  (Time left:23.4 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.28 px MAX error 1.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0655 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0764 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0766 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.076 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0754 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.401  o1: 0.0725 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03652 
+[GPU-1_MLs_WSe2_] : Iteration: 17 / 20  (Time left:18.7 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.28 px MAX error 1.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0383 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0852 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.083 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0813 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0803 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.08 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.398  o1: 0.08 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 18 / 20  (Time left:14.1 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.29 px MAX error 1.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0363 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0806 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0805 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0804 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0806 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.081 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.405  o1: 0.0811 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 19 / 20  (Time left:9.37 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.29 px MAX error 1.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0408 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0634 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.398  o1: 0.0745 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 20 / 20  (Time left:4.69 min. avg:281 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.29 px MAX error 1.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0438 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0817 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0805 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0799 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0801 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.081 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.416  o1: 0.0816 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.03646 
+[GPU-1_MLs_WSe2_] :  ====  Time per one iteration 280.702s
+[GPU-1_MLs_WSe2_] :  ====  Total time 5614.04s
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : ========= 2D PTYCHO GEOMETRY REFINEMENT, apply manually to your template ===========
+[GPU-1_MLs_WSe2_] : p.affine_matrix =  [1 , 2.455e-05 ; -0.0002972 , 1 ] 
+[GPU-1_MLs_WSe2_] : ====================================================================================
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : Advanced: ======================== AFFINE CORRECTION OF SCANNER AXIS ====================
+[GPU-1_MLs_WSe2_] : Advanced: (for control system of piezo scanner, important for calibration of cSAXS fast FZP scanner)
+[GPU-1_MLs_WSe2_] : Advanced: correction_matrix = inv(p.affine_matrix) =  [1 , -2.455e-05 ; 0.0002972 , 0.9999 ]  
+[GPU-1_MLs_WSe2_] : Advanced: ===============================================================================
+[GPU-1_MLs_WSe2_] : Note:  Use scans at 0 and 180 deg with eng.share_object == true && eng.mirror_objects == true to get estimation of the 0vs180deg affine matrix requied for ptychotomography
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : ==== Geometry parameters for each scan===== 
+[GPU-1_MLs_WSe2_] : Scan #6: [scale=1.0001 , asymmetry=-0.000 , rotation=0.001deg , shear=-0.016deg, shift = 0.0 0.0px ] 
+[GPU-1_MLs_WSe2_] :  === Finished MLs solver === in 5.66e+03s
+[ptycho] : Elapsed time for engine GPU_MS: 5664.7 s
+Elapsed time is 5675.970377 seconds.

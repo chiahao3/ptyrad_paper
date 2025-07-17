@@ -1,0 +1,802 @@
+/home/fs01/cl2696/workspace/ptyrad_paper
+c0002
+Wed Jun  4 21:21:09 EDT 2025
+params_path = 01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml
+/home/fs01/cl2696/workspace/ptyrad_paper
+Load py4DSTEM-dev v0.0.4 (2024.12.12 CHL) from editable local repo
+cupyx.jit.rawkernel is experimental. The interface can change in the future.
+### System information ###
+Operating System: Linux 4.18.0-372.26.1.el8_6.x86_64
+OS Version: #1 SMP Tue Sep 13 18:09:48 UTC 2022
+Machine: x86_64
+Processor: x86_64
+Available CPU cores: 4
+Total Memory: 1007.45 GB
+Available Memory: 904.34 GB
+CUDA Runtime Version: 11.8
+GPU Device: ['NVIDIA A100-SXM4-80GB MIG 2g.20gb']
+Python Executable: /home/fs01/cl2696/miniforge3/envs/py4DSTEM/bin/python
+Python Version: 3.11.13 | packaged by conda-forge | (main, Jun  4 2025, 14:48:23) [GCC 13.3.0]
+NumPy Version: 1.26.4
+Cupy Version: 13.4.1
+Success! Loaded .yml file path = 01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml
+Running batch = 4, pmode = 6, update_step_size = 0.5
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (-30.8785, 1814.7064, 99441.8047)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [1, 0, 0]
+Minimum value of -30.8785 subtracted due to the positive px value constraint of measurements
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0275, 1.4818)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation = 3 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   4%|▍         | 656/16384 [00:00<00:02, 6557.10probe position/s]Normalizing amplitudes:   8%|▊         | 1312/16384 [00:00<00:02, 6271.38probe position/s]Normalizing amplitudes:  12%|█▏        | 1940/16384 [00:00<00:02, 5710.96probe position/s]Normalizing amplitudes:  15%|█▌        | 2516/16384 [00:00<00:02, 5693.21probe position/s]Normalizing amplitudes:  19%|█▉        | 3095/16384 [00:00<00:02, 5723.12probe position/s]Normalizing amplitudes:  23%|██▎       | 3699/16384 [00:00<00:02, 5825.12probe position/s]Normalizing amplitudes:  26%|██▋       | 4317/16384 [00:00<00:02, 5938.05probe position/s]Normalizing amplitudes:  30%|██▉       | 4913/16384 [00:00<00:01, 5866.55probe position/s]Normalizing amplitudes:  34%|███▎      | 5524/16384 [00:00<00:01, 5940.40probe position/s]Normalizing amplitudes:  37%|███▋      | 6119/16384 [00:01<00:01, 5625.53probe position/s]Normalizing amplitudes:  41%|████      | 6722/16384 [00:01<00:01, 5741.07probe position/s]Normalizing amplitudes:  45%|████▍     | 7328/16384 [00:01<00:01, 5834.02probe position/s]Normalizing amplitudes:  49%|████▊     | 7967/16384 [00:01<00:01, 5995.62probe position/s]Normalizing amplitudes:  52%|█████▏    | 8569/16384 [00:01<00:01, 5913.73probe position/s]Normalizing amplitudes:  56%|█████▌    | 9162/16384 [00:01<00:01, 5899.41probe position/s]Normalizing amplitudes:  60%|█████▉    | 9804/16384 [00:01<00:01, 6051.39probe position/s]Normalizing amplitudes:  64%|██████▎   | 10411/16384 [00:01<00:01, 5962.36probe position/s]Normalizing amplitudes:  68%|██████▊   | 11077/16384 [00:01<00:00, 6166.01probe position/s]Normalizing amplitudes:  71%|███████▏  | 11695/16384 [00:01<00:00, 5666.36probe position/s]Normalizing amplitudes:  75%|███████▍  | 12278/16384 [00:02<00:00, 5710.99probe position/s]Normalizing amplitudes:  79%|███████▉  | 12932/16384 [00:02<00:00, 5946.05probe position/s]Normalizing amplitudes:  83%|████████▎ | 13558/16384 [00:02<00:00, 6035.30probe position/s]Normalizing amplitudes:  87%|████████▋ | 14239/16384 [00:02<00:00, 6259.30probe position/s]Normalizing amplitudes:  91%|█████████ | 14869/16384 [00:02<00:00, 6247.51probe position/s]Normalizing amplitudes:  95%|█████████▍| 15497/16384 [00:02<00:00, 6027.96probe position/s]Normalizing amplitudes:  98%|█████████▊| 16103/16384 [00:02<00:00, 6033.92probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:02<00:00, 5928.17probe position/s]
+output_path = '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random4_p6_6slice_dz2_update0.5_kzf1' is generated!
+reconstruction kwargs = {'num_iter': 100, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 4, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 10, 'save_result': ['model', 'objp'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random4_p6_6slice_dz2_update0.5_kzf1'}
+Performing 100 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 4 measurements.
+Iter: 1, Total Loss: 0.007476 in 594.125 sec
+Iter: 2, Total Loss: 0.005617 in 572.809 sec
+Iter: 3, Total Loss: 0.005249 in 571.310 sec
+Iter: 4, Total Loss: 0.005114 in 577.256 sec
+Iter: 5, Total Loss: 0.005034 in 580.645 sec
+Iter: 6, Total Loss: 0.004976 in 592.787 sec
+Iter: 7, Total Loss: 0.00493 in 581.108 sec
+Iter: 8, Total Loss: 0.004893 in 576.671 sec
+Iter: 9, Total Loss: 0.004863 in 577.393 sec
+Iter: 10, Total Loss: 0.00484 in 585.930 sec
+Saving results for iter 10
+Iter: 11, Total Loss: 0.00482 in 594.765 sec
+Iter: 12, Total Loss: 0.004804 in 585.303 sec
+Iter: 13, Total Loss: 0.00479 in 586.243 sec
+Iter: 14, Total Loss: 0.004779 in 580.088 sec
+Iter: 15, Total Loss: 0.004768 in 577.364 sec
+Iter: 16, Total Loss: 0.004759 in 574.275 sec
+Iter: 17, Total Loss: 0.004751 in 558.673 sec
+Iter: 18, Total Loss: 0.004743 in 557.170 sec
+Iter: 19, Total Loss: 0.004736 in 563.422 sec
+Iter: 20, Total Loss: 0.00473 in 553.759 sec
+Saving results for iter 20
+Iter: 21, Total Loss: 0.004724 in 560.358 sec
+Iter: 22, Total Loss: 0.004718 in 570.238 sec
+Iter: 23, Total Loss: 0.004712 in 570.390 sec
+Iter: 24, Total Loss: 0.004707 in 561.744 sec
+Iter: 25, Total Loss: 0.004702 in 564.321 sec
+Iter: 26, Total Loss: 0.004697 in 602.538 sec
+Iter: 27, Total Loss: 0.004692 in 582.332 sec
+Iter: 28, Total Loss: 0.004688 in 593.461 sec
+Iter: 29, Total Loss: 0.004684 in 599.799 sec
+Iter: 30, Total Loss: 0.004679 in 580.575 sec
+Saving results for iter 30
+Iter: 31, Total Loss: 0.004676 in 584.465 sec
+Iter: 32, Total Loss: 0.004672 in 580.730 sec
+Iter: 33, Total Loss: 0.004669 in 607.702 sec
+Iter: 34, Total Loss: 0.004665 in 580.682 sec
+Iter: 35, Total Loss: 0.004662 in 575.468 sec
+Iter: 36, Total Loss: 0.004658 in 585.145 sec
+Iter: 37, Total Loss: 0.004656 in 596.134 sec
+Iter: 38, Total Loss: 0.004652 in 589.527 sec
+Iter: 39, Total Loss: 0.00465 in 602.139 sec
+Iter: 40, Total Loss: 0.004646 in 593.356 sec
+Saving results for iter 40
+Iter: 41, Total Loss: 0.004644 in 588.944 sec
+Iter: 42, Total Loss: 0.004641 in 593.546 sec
+Iter: 43, Total Loss: 0.004638 in 598.726 sec
+Iter: 44, Total Loss: 0.004636 in 613.013 sec
+Iter: 45, Total Loss: 0.004633 in 596.808 sec
+Iter: 46, Total Loss: 0.004631 in 609.322 sec
+Iter: 47, Total Loss: 0.004628 in 597.983 sec
+Iter: 48, Total Loss: 0.004626 in 587.319 sec
+Iter: 49, Total Loss: 0.004624 in 575.467 sec
+Iter: 50, Total Loss: 0.004621 in 568.997 sec
+Saving results for iter 50
+Iter: 51, Total Loss: 0.004619 in 563.914 sec
+Iter: 52, Total Loss: 0.004617 in 571.987 sec
+Iter: 53, Total Loss: 0.004615 in 571.317 sec
+Iter: 54, Total Loss: 0.004613 in 588.040 sec
+Iter: 55, Total Loss: 0.004611 in 585.713 sec
+Iter: 56, Total Loss: 0.004609 in 583.735 sec
+Iter: 57, Total Loss: 0.004606 in 583.843 sec
+Iter: 58, Total Loss: 0.004605 in 575.123 sec
+Iter: 59, Total Loss: 0.004603 in 601.354 sec
+Iter: 60, Total Loss: 0.004601 in 601.074 sec
+Saving results for iter 60
+Iter: 61, Total Loss: 0.0046 in 602.221 sec
+Iter: 62, Total Loss: 0.004598 in 568.284 sec
+Iter: 63, Total Loss: 0.004596 in 565.912 sec
+Iter: 64, Total Loss: 0.004595 in 570.511 sec
+Iter: 65, Total Loss: 0.004592 in 570.998 sec
+Iter: 66, Total Loss: 0.004591 in 570.923 sec
+Iter: 67, Total Loss: 0.004589 in 579.125 sec
+Iter: 68, Total Loss: 0.004588 in 578.355 sec
+Iter: 69, Total Loss: 0.004586 in 574.814 sec
+Iter: 70, Total Loss: 0.004584 in 574.406 sec
+Saving results for iter 70
+Iter: 71, Total Loss: 0.004583 in 575.506 sec
+Iter: 72, Total Loss: 0.004581 in 569.440 sec
+Iter: 73, Total Loss: 0.004579 in 569.320 sec
+Iter: 74, Total Loss: 0.004578 in 574.392 sec
+Iter: 75, Total Loss: 0.004576 in 571.348 sec
+Iter: 76, Total Loss: 0.004575 in 574.321 sec
+Iter: 77, Total Loss: 0.004574 in 580.892 sec
+Iter: 78, Total Loss: 0.004572 in 590.258 sec
+Iter: 79, Total Loss: 0.004571 in 575.954 sec
+Iter: 80, Total Loss: 0.00457 in 573.223 sec
+Saving results for iter 80
+Iter: 81, Total Loss: 0.004568 in 569.597 sec
+Iter: 82, Total Loss: 0.004567 in 580.895 sec
+Iter: 83, Total Loss: 0.004566 in 577.131 sec
+Iter: 84, Total Loss: 0.004564 in 574.908 sec
+Iter: 85, Total Loss: 0.004563 in 572.538 sec
+Iter: 86, Total Loss: 0.004562 in 571.526 sec
+Iter: 87, Total Loss: 0.00456 in 569.725 sec
+Iter: 88, Total Loss: 0.004559 in 594.375 sec
+Iter: 89, Total Loss: 0.004558 in 573.173 sec
+Iter: 90, Total Loss: 0.004557 in 572.745 sec
+Saving results for iter 90
+Iter: 91, Total Loss: 0.004555 in 579.250 sec
+Iter: 92, Total Loss: 0.004554 in 576.927 sec
+Iter: 93, Total Loss: 0.004552 in 573.701 sec
+Iter: 94, Total Loss: 0.004551 in 581.763 sec
+Iter: 95, Total Loss: 0.004551 in 575.890 sec
+Iter: 96, Total Loss: 0.004549 in 579.498 sec
+Iter: 97, Total Loss: 0.004548 in 573.582 sec
+Iter: 98, Total Loss: 0.004547 in 568.210 sec
+Iter: 99, Total Loss: 0.004546 in 576.919 sec
+Iter: 100, Total Loss: 0.004544 in 575.466 sec
+Saving results for iter 100
+### Finished 100 iterations, averaged iter_t = 580.064 with std = 11.993 sec ###
+### py4DSTEM ptycho solver is finished in 16 hr 6 min 48.142 sec###
+
+Success! Loaded .yml file path = 01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml
+Running batch = 1, pmode = 6, update_step_size = 0.5
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (-30.8785, 1814.7064, 99441.8047)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [1, 0, 0]
+Minimum value of -30.8785 subtracted due to the positive px value constraint of measurements
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0275, 1.4818)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation = 3 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   3%|▎         | 572/16384 [00:00<00:02, 5711.71probe position/s]Normalizing amplitudes:   7%|▋         | 1144/16384 [00:00<00:02, 5680.27probe position/s]Normalizing amplitudes:  11%|█         | 1740/16384 [00:00<00:02, 5802.80probe position/s]Normalizing amplitudes:  14%|█▍        | 2321/16384 [00:00<00:02, 5787.19probe position/s]Normalizing amplitudes:  18%|█▊        | 2900/16384 [00:00<00:02, 5073.96probe position/s]Normalizing amplitudes:  21%|██▏       | 3503/16384 [00:00<00:02, 5367.39probe position/s]Normalizing amplitudes:  25%|██▍       | 4090/16384 [00:00<00:02, 5521.38probe position/s]Normalizing amplitudes:  28%|██▊       | 4659/16384 [00:00<00:02, 5570.35probe position/s]Normalizing amplitudes:  32%|███▏      | 5223/16384 [00:00<00:02, 5562.13probe position/s]Normalizing amplitudes:  35%|███▌      | 5813/16384 [00:01<00:01, 5660.62probe position/s]Normalizing amplitudes:  39%|███▉      | 6383/16384 [00:01<00:01, 5630.52probe position/s]Normalizing amplitudes:  42%|████▏     | 6949/16384 [00:01<00:01, 5592.84probe position/s]Normalizing amplitudes:  46%|████▌     | 7544/16384 [00:01<00:01, 5697.42probe position/s]Normalizing amplitudes:  50%|████▉     | 8133/16384 [00:01<00:01, 5754.02probe position/s]Normalizing amplitudes:  53%|█████▎    | 8724/16384 [00:01<00:01, 5797.42probe position/s]Normalizing amplitudes:  57%|█████▋    | 9305/16384 [00:01<00:01, 5713.42probe position/s]Normalizing amplitudes:  60%|██████    | 9904/16384 [00:01<00:01, 5793.65probe position/s]Normalizing amplitudes:  64%|██████▍   | 10484/16384 [00:01<00:01, 5700.20probe position/s]Normalizing amplitudes:  68%|██████▊   | 11069/16384 [00:01<00:00, 5742.10probe position/s]Normalizing amplitudes:  71%|███████   | 11649/16384 [00:02<00:00, 5757.77probe position/s]Normalizing amplitudes:  75%|███████▍  | 12226/16384 [00:02<00:00, 5702.64probe position/s]Normalizing amplitudes:  78%|███████▊  | 12823/16384 [00:02<00:00, 5779.73probe position/s]Normalizing amplitudes:  82%|████████▏ | 13427/16384 [00:02<00:00, 5855.67probe position/s]Normalizing amplitudes:  86%|████████▌ | 14013/16384 [00:02<00:00, 5811.10probe position/s]Normalizing amplitudes:  89%|████████▉ | 14595/16384 [00:02<00:00, 5774.24probe position/s]Normalizing amplitudes:  93%|█████████▎| 15194/16384 [00:02<00:00, 5837.42probe position/s]Normalizing amplitudes:  96%|█████████▋| 15790/16384 [00:02<00:00, 5872.03probe position/s]Normalizing amplitudes: 100%|█████████▉| 16380/16384 [00:02<00:00, 5878.72probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:02<00:00, 5708.36probe position/s]
+output_path = '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random1_p6_6slice_dz2_update0.5_kzf1' is generated!
+reconstruction kwargs = {'num_iter': 100, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 1, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 10, 'save_result': ['model', 'objp'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random1_p6_6slice_dz2_update0.5_kzf1'}
+Performing 100 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 1 measurements.
+Iter: 1, Total Loss: 0.007621 in 2282.673 sec
+Iter: 2, Total Loss: 0.006175 in 2275.040 sec
+Iter: 3, Total Loss: 0.005861 in 2301.151 sec
+Iter: 4, Total Loss: 0.005692 in 2273.821 sec
+Iter: 5, Total Loss: 0.005578 in 2471.247 sec
+Iter: 6, Total Loss: 0.005492 in 2757.605 sec
+Iter: 7, Total Loss: 0.005424 in 2869.747 sec
+Iter: 8, Total Loss: 0.005366 in 2727.284 sec
+Iter: 9, Total Loss: 0.005317 in 2793.253 sec
+Iter: 10, Total Loss: 0.005278 in 2938.095 sec
+Saving results for iter 10
+Iter: 11, Total Loss: 0.005241 in 3021.924 sec
+Iter: 12, Total Loss: 0.005209 in 2983.623 sec
+Iter: 13, Total Loss: 0.00518 in 2602.470 sec
+Iter: 14, Total Loss: 0.005155 in 2676.350 sec
+Iter: 15, Total Loss: 0.005131 in 2734.052 sec
+Iter: 16, Total Loss: 0.005111 in 2656.095 sec
+Iter: 17, Total Loss: 0.005091 in 2709.846 sec
+Iter: 18, Total Loss: 0.005074 in 2690.596 sec
+Iter: 19, Total Loss: 0.00506 in 2681.178 sec
+Iter: 20, Total Loss: 0.005044 in 2701.053 sec
+Saving results for iter 20
+Iter: 21, Total Loss: 0.00503 in 2703.803 sec
+Iter: 22, Total Loss: 0.005019 in 2776.766 sec
+Iter: 23, Total Loss: 0.005006 in 2754.173 sec
+Iter: 24, Total Loss: 0.004995 in 2710.000 sec
+Iter: 25, Total Loss: 0.004983 in 2574.939 sec
+Iter: 26, Total Loss: 0.004972 in 2701.349 sec
+Iter: 27, Total Loss: 0.004963 in 2642.093 sec
+Iter: 28, Total Loss: 0.004954 in 2649.087 sec
+Iter: 29, Total Loss: 0.004944 in 2740.744 sec
+Iter: 30, Total Loss: 0.004936 in 2732.636 sec
+Saving results for iter 30
+Iter: 31, Total Loss: 0.004928 in 2787.129 sec
+Iter: 32, Total Loss: 0.00492 in 3075.148 sec
+Iter: 33, Total Loss: 0.004911 in 3104.947 sec
+Iter: 34, Total Loss: 0.004904 in 3004.154 sec
+Iter: 35, Total Loss: 0.004898 in 3045.162 sec
+Iter: 36, Total Loss: 0.004891 in 2954.458 sec
+Iter: 37, Total Loss: 0.004884 in 3180.131 sec
+Iter: 38, Total Loss: 0.004878 in 3030.343 sec
+Iter: 39, Total Loss: 0.004871 in 2857.018 sec
+Iter: 40, Total Loss: 0.004864 in 2859.451 sec
+Saving results for iter 40
+Iter: 41, Total Loss: 0.004858 in 2894.354 sec
+Iter: 42, Total Loss: 0.004853 in 3003.432 sec
+Iter: 43, Total Loss: 0.004847 in 3256.295 sec
+Iter: 44, Total Loss: 0.004842 in 2696.742 sec
+Iter: 45, Total Loss: 0.004836 in 2494.092 sec
+Iter: 46, Total Loss: 0.00483 in 2476.515 sec
+Iter: 47, Total Loss: 0.004826 in 2722.316 sec
+Iter: 48, Total Loss: 0.00482 in 2969.706 sec
+Iter: 49, Total Loss: 0.004815 in 2921.043 sec
+Iter: 50, Total Loss: 0.00481 in 2403.228 sec
+Saving results for iter 50
+Iter: 51, Total Loss: 0.004805 in 2498.935 sec
+Iter: 52, Total Loss: 0.004801 in 2444.898 sec
+Iter: 53, Total Loss: 0.004795 in 2471.976 sec
+Iter: 54, Total Loss: 0.004791 in 2412.805 sec
+Iter: 55, Total Loss: 0.004786 in 2400.909 sec
+Iter: 56, Total Loss: 0.004782 in 2451.331 sec
+Iter: 57, Total Loss: 0.004779 in 2395.037 sec
+Iter: 58, Total Loss: 0.004774 in 2369.522 sec
+Iter: 59, Total Loss: 0.00477 in 2382.519 sec
+Iter: 60, Total Loss: 0.004764 in 2418.459 sec
+Saving results for iter 60
+Iter: 61, Total Loss: 0.00476 in 2409.164 sec
+Iter: 62, Total Loss: 0.004755 in 2660.980 sec
+Iter: 63, Total Loss: 0.004751 in 2865.175 sec
+Iter: 64, Total Loss: 0.004747 in 2500.477 sec
+Iter: 65, Total Loss: 0.004743 in 2885.094 sec
+Iter: 66, Total Loss: 0.004739 in 2498.720 sec
+Iter: 67, Total Loss: 0.004736 in 2407.776 sec
+Iter: 68, Total Loss: 0.004732 in 2477.744 sec
+Iter: 69, Total Loss: 0.004729 in 2391.127 sec
+Iter: 70, Total Loss: 0.004725 in 2415.705 sec
+Saving results for iter 70
+Iter: 71, Total Loss: 0.004721 in 2474.087 sec
+Iter: 72, Total Loss: 0.004718 in 2443.535 sec
+Iter: 73, Total Loss: 0.004714 in 2495.639 sec
+Iter: 74, Total Loss: 0.004711 in 2488.381 sec
+Iter: 75, Total Loss: 0.004707 in 2431.656 sec
+Iter: 76, Total Loss: 0.004705 in 2354.939 sec
+Iter: 77, Total Loss: 0.004701 in 2314.946 sec
+Iter: 78, Total Loss: 0.004698 in 2510.695 sec
+Iter: 79, Total Loss: 0.004695 in 2782.027 sec
+Iter: 80, Total Loss: 0.004692 in 2719.959 sec
+Saving results for iter 80
+Iter: 81, Total Loss: 0.004689 in 2700.945 sec
+Iter: 82, Total Loss: 0.004685 in 2492.377 sec
+Iter: 83, Total Loss: 0.004683 in 2621.009 sec
+Iter: 84, Total Loss: 0.00468 in 2669.639 sec
+Iter: 85, Total Loss: 0.004677 in 2941.728 sec
+Iter: 86, Total Loss: 0.004674 in 2882.483 sec
+Iter: 87, Total Loss: 0.004671 in 2508.285 sec
+Iter: 88, Total Loss: 0.004667 in 2464.303 sec
+Iter: 89, Total Loss: 0.004665 in 2844.470 sec
+Iter: 90, Total Loss: 0.004662 in 2668.346 sec
+Saving results for iter 90
+Iter: 91, Total Loss: 0.00466 in 2700.749 sec
+Iter: 92, Total Loss: 0.004656 in 2929.258 sec
+Iter: 93, Total Loss: 0.004654 in 2495.403 sec
+Iter: 94, Total Loss: 0.004651 in 2506.974 sec
+Iter: 95, Total Loss: 0.004649 in 2496.167 sec
+Iter: 96, Total Loss: 0.004646 in 2685.101 sec
+Iter: 97, Total Loss: 0.004643 in 2536.110 sec
+Iter: 98, Total Loss: 0.00464 in 2658.449 sec
+Iter: 99, Total Loss: 0.004637 in 2608.140 sec
+Iter: 100, Total Loss: 0.004635 in 2502.922 sec
+Saving results for iter 100
+### Finished 100 iterations, averaged iter_t = 2655.554 with std = 223.685 sec ###
+### py4DSTEM ptycho solver is finished in 3 day 1 hr 45 min 57.656 sec###
+
+Success! Loaded .yml file path = 01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml
+Running batch = 1024, pmode = 6, update_step_size = 0.5
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (-30.8785, 1814.7064, 99441.8047)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [1, 0, 0]
+Minimum value of -30.8785 subtracted due to the positive px value constraint of measurements
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0275, 1.4818)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation = 3 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   3%|▎         | 560/16384 [00:00<00:02, 5596.24probe position/s]Normalizing amplitudes:   7%|▋         | 1120/16384 [00:00<00:02, 5586.57probe position/s]Normalizing amplitudes:  10%|█         | 1679/16384 [00:00<00:02, 5345.36probe position/s]Normalizing amplitudes:  14%|█▎        | 2215/16384 [00:00<00:02, 5037.70probe position/s]Normalizing amplitudes:  17%|█▋        | 2753/16384 [00:00<00:02, 5152.23probe position/s]Normalizing amplitudes:  20%|██        | 3327/16384 [00:00<00:02, 5343.42probe position/s]Normalizing amplitudes:  24%|██▍       | 3919/16384 [00:00<00:02, 5525.15probe position/s]Normalizing amplitudes:  27%|██▋       | 4500/16384 [00:00<00:02, 5612.27probe position/s]Normalizing amplitudes:  31%|███       | 5063/16384 [00:00<00:02, 5472.52probe position/s]Normalizing amplitudes:  34%|███▍      | 5612/16384 [00:01<00:01, 5470.52probe position/s]Normalizing amplitudes:  38%|███▊      | 6161/16384 [00:01<00:01, 5471.15probe position/s]Normalizing amplitudes:  41%|████      | 6709/16384 [00:01<00:01, 5467.09probe position/s]Normalizing amplitudes:  44%|████▍     | 7266/16384 [00:01<00:01, 5496.36probe position/s]Normalizing amplitudes:  48%|████▊     | 7832/16384 [00:01<00:01, 5544.21probe position/s]Normalizing amplitudes:  51%|█████▏    | 8436/16384 [00:01<00:01, 5690.85probe position/s]Normalizing amplitudes:  55%|█████▌    | 9031/16384 [00:01<00:01, 5765.49probe position/s]Normalizing amplitudes:  59%|█████▉    | 9632/16384 [00:01<00:01, 5836.26probe position/s]Normalizing amplitudes:  62%|██████▏   | 10216/16384 [00:01<00:01, 5835.89probe position/s]Normalizing amplitudes:  66%|██████▌   | 10812/16384 [00:01<00:00, 5867.84probe position/s]Normalizing amplitudes:  70%|██████▉   | 11399/16384 [00:02<00:00, 5777.26probe position/s]Normalizing amplitudes:  73%|███████▎  | 11978/16384 [00:02<00:00, 5485.51probe position/s]Normalizing amplitudes:  77%|███████▋  | 12536/16384 [00:02<00:00, 5512.27probe position/s]Normalizing amplitudes:  80%|███████▉  | 13090/16384 [00:02<00:00, 5340.12probe position/s]Normalizing amplitudes:  83%|████████▎ | 13652/16384 [00:02<00:00, 5419.08probe position/s]Normalizing amplitudes:  87%|████████▋ | 14273/16384 [00:02<00:00, 5647.97probe position/s]Normalizing amplitudes:  91%|█████████ | 14886/16384 [00:02<00:00, 5786.86probe position/s]Normalizing amplitudes:  94%|█████████▍| 15467/16384 [00:02<00:00, 5548.38probe position/s]Normalizing amplitudes:  98%|█████████▊| 16025/16384 [00:02<00:00, 5383.79probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:02<00:00, 5531.63probe position/s]
+output_path = '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random1024_p6_6slice_dz2_update0.5_kzf1' is generated!
+reconstruction kwargs = {'num_iter': 100, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 1024, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 10, 'save_result': ['model', 'objp'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random1024_p6_6slice_dz2_update0.5_kzf1'}
+Performing 100 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 1024 measurements.
+Iter: 1, Total Loss: 0.1948 in 12.479 sec
+Iter: 2, Total Loss: 0.01021 in 11.659 sec
+Iter: 3, Total Loss: 0.007896 in 11.607 sec
+Iter: 4, Total Loss: 0.007236 in 11.619 sec
+Iter: 5, Total Loss: 0.006923 in 11.650 sec
+Iter: 6, Total Loss: 0.006725 in 11.702 sec
+Iter: 7, Total Loss: 0.006591 in 11.694 sec
+Iter: 8, Total Loss: 0.006491 in 11.671 sec
+Iter: 9, Total Loss: 0.006415 in 11.717 sec
+Iter: 10, Total Loss: 0.006353 in 11.624 sec
+Saving results for iter 10
+Iter: 11, Total Loss: 0.006304 in 11.636 sec
+Iter: 12, Total Loss: 0.00626 in 11.670 sec
+Iter: 13, Total Loss: 0.006226 in 11.781 sec
+Iter: 14, Total Loss: 0.006194 in 11.960 sec
+Iter: 15, Total Loss: 0.006168 in 11.939 sec
+Iter: 16, Total Loss: 0.006144 in 12.012 sec
+Iter: 17, Total Loss: 0.006123 in 12.043 sec
+Iter: 18, Total Loss: 0.006104 in 11.902 sec
+Iter: 19, Total Loss: 0.006085 in 11.881 sec
+Iter: 20, Total Loss: 0.006069 in 11.997 sec
+Saving results for iter 20
+Iter: 21, Total Loss: 0.006052 in 12.035 sec
+Iter: 22, Total Loss: 0.006038 in 11.859 sec
+Iter: 23, Total Loss: 0.006023 in 11.904 sec
+Iter: 24, Total Loss: 0.006009 in 11.849 sec
+Iter: 25, Total Loss: 0.005996 in 11.718 sec
+Iter: 26, Total Loss: 0.005984 in 11.679 sec
+Iter: 27, Total Loss: 0.005971 in 11.750 sec
+Iter: 28, Total Loss: 0.00596 in 11.723 sec
+Iter: 29, Total Loss: 0.005948 in 11.781 sec
+Iter: 30, Total Loss: 0.005937 in 11.898 sec
+Saving results for iter 30
+Iter: 31, Total Loss: 0.005926 in 11.838 sec
+Iter: 32, Total Loss: 0.005915 in 11.931 sec
+Iter: 33, Total Loss: 0.005904 in 11.891 sec
+Iter: 34, Total Loss: 0.005895 in 11.825 sec
+Iter: 35, Total Loss: 0.005884 in 11.947 sec
+Iter: 36, Total Loss: 0.005875 in 11.914 sec
+Iter: 37, Total Loss: 0.005864 in 11.975 sec
+Iter: 38, Total Loss: 0.005855 in 12.095 sec
+Iter: 39, Total Loss: 0.005845 in 12.110 sec
+Iter: 40, Total Loss: 0.005836 in 11.917 sec
+Saving results for iter 40
+Iter: 41, Total Loss: 0.005826 in 11.997 sec
+Iter: 42, Total Loss: 0.005818 in 12.135 sec
+Iter: 43, Total Loss: 0.005809 in 12.155 sec
+Iter: 44, Total Loss: 0.0058 in 12.107 sec
+Iter: 45, Total Loss: 0.00579 in 12.089 sec
+Iter: 46, Total Loss: 0.005783 in 11.868 sec
+Iter: 47, Total Loss: 0.005773 in 12.052 sec
+Iter: 48, Total Loss: 0.005766 in 12.089 sec
+Iter: 49, Total Loss: 0.005757 in 12.109 sec
+Iter: 50, Total Loss: 0.005749 in 12.087 sec
+Saving results for iter 50
+Iter: 51, Total Loss: 0.00574 in 12.104 sec
+Iter: 52, Total Loss: 0.005732 in 12.112 sec
+Iter: 53, Total Loss: 0.005725 in 12.033 sec
+Iter: 54, Total Loss: 0.005718 in 11.872 sec
+Iter: 55, Total Loss: 0.005709 in 11.868 sec
+Iter: 56, Total Loss: 0.005702 in 11.879 sec
+Iter: 57, Total Loss: 0.005694 in 12.130 sec
+Iter: 58, Total Loss: 0.005686 in 12.112 sec
+Iter: 59, Total Loss: 0.005679 in 12.031 sec
+Iter: 60, Total Loss: 0.005672 in 12.087 sec
+Saving results for iter 60
+Iter: 61, Total Loss: 0.005664 in 12.084 sec
+Iter: 62, Total Loss: 0.005657 in 12.048 sec
+Iter: 63, Total Loss: 0.00565 in 11.990 sec
+Iter: 64, Total Loss: 0.005643 in 11.873 sec
+Iter: 65, Total Loss: 0.005636 in 11.982 sec
+Iter: 66, Total Loss: 0.005629 in 11.940 sec
+Iter: 67, Total Loss: 0.005621 in 11.735 sec
+Iter: 68, Total Loss: 0.005614 in 11.866 sec
+Iter: 69, Total Loss: 0.005607 in 11.930 sec
+Iter: 70, Total Loss: 0.0056 in 11.906 sec
+Saving results for iter 70
+Iter: 71, Total Loss: 0.005593 in 11.936 sec
+Iter: 72, Total Loss: 0.005586 in 11.877 sec
+Iter: 73, Total Loss: 0.00558 in 11.888 sec
+Iter: 74, Total Loss: 0.005573 in 11.886 sec
+Iter: 75, Total Loss: 0.005566 in 11.952 sec
+Iter: 76, Total Loss: 0.005559 in 11.855 sec
+Iter: 77, Total Loss: 0.005552 in 11.844 sec
+Iter: 78, Total Loss: 0.005545 in 11.835 sec
+Iter: 79, Total Loss: 0.005538 in 11.747 sec
+Iter: 80, Total Loss: 0.005532 in 11.739 sec
+Saving results for iter 80
+Iter: 81, Total Loss: 0.005525 in 11.644 sec
+Iter: 82, Total Loss: 0.005518 in 11.598 sec
+Iter: 83, Total Loss: 0.005512 in 11.610 sec
+Iter: 84, Total Loss: 0.005505 in 11.657 sec
+Iter: 85, Total Loss: 0.005498 in 11.573 sec
+Iter: 86, Total Loss: 0.005492 in 11.588 sec
+Iter: 87, Total Loss: 0.005486 in 11.637 sec
+Iter: 88, Total Loss: 0.005479 in 11.577 sec
+Iter: 89, Total Loss: 0.005473 in 11.647 sec
+Iter: 90, Total Loss: 0.005466 in 11.764 sec
+Saving results for iter 90
+Iter: 91, Total Loss: 0.00546 in 11.866 sec
+Iter: 92, Total Loss: 0.005453 in 11.883 sec
+Iter: 93, Total Loss: 0.005447 in 11.851 sec
+Iter: 94, Total Loss: 0.005441 in 11.741 sec
+Iter: 95, Total Loss: 0.005434 in 11.646 sec
+Iter: 96, Total Loss: 0.005428 in 11.720 sec
+Iter: 97, Total Loss: 0.00542 in 11.672 sec
+Iter: 98, Total Loss: 0.005414 in 11.647 sec
+Iter: 99, Total Loss: 0.005409 in 11.636 sec
+Iter: 100, Total Loss: 0.005402 in 11.771 sec
+Saving results for iter 100
+### Finished 100 iterations, averaged iter_t = 11.864 with std = 0.175 sec ###
+### py4DSTEM ptycho solver is finished in 19 min 48.116 sec###
+
+Success! Loaded .yml file path = 01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml
+Running batch = 256, pmode = 6, update_step_size = 0.5
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (-30.8785, 1814.7064, 99441.8047)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [1, 0, 0]
+Minimum value of -30.8785 subtracted due to the positive px value constraint of measurements
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0275, 1.4818)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation = 3 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   4%|▍         | 657/16384 [00:00<00:02, 6560.37probe position/s]Normalizing amplitudes:   8%|▊         | 1314/16384 [00:00<00:02, 6316.09probe position/s]Normalizing amplitudes:  12%|█▏        | 1947/16384 [00:00<00:02, 6189.79probe position/s]Normalizing amplitudes:  16%|█▌        | 2567/16384 [00:00<00:02, 6072.51probe position/s]Normalizing amplitudes:  20%|█▉        | 3214/16384 [00:00<00:02, 6211.17probe position/s]Normalizing amplitudes:  23%|██▎       | 3836/16384 [00:00<00:02, 6127.82probe position/s]Normalizing amplitudes:  27%|██▋       | 4450/16384 [00:00<00:01, 5994.98probe position/s]Normalizing amplitudes:  31%|███       | 5052/16384 [00:00<00:01, 6001.58probe position/s]Normalizing amplitudes:  35%|███▍      | 5699/16384 [00:00<00:01, 6142.57probe position/s]Normalizing amplitudes:  39%|███▊      | 6326/16384 [00:01<00:01, 6177.24probe position/s]Normalizing amplitudes:  42%|████▏     | 6945/16384 [00:01<00:01, 6148.49probe position/s]Normalizing amplitudes:  46%|████▌     | 7561/16384 [00:01<00:01, 6087.57probe position/s]Normalizing amplitudes:  50%|████▉     | 8171/16384 [00:01<00:01, 5883.63probe position/s]Normalizing amplitudes:  54%|█████▎    | 8768/16384 [00:01<00:01, 5906.74probe position/s]Normalizing amplitudes:  57%|█████▋    | 9360/16384 [00:01<00:01, 5733.47probe position/s]Normalizing amplitudes:  61%|██████    | 9935/16384 [00:01<00:01, 5735.34probe position/s]Normalizing amplitudes:  64%|██████▍   | 10550/16384 [00:01<00:00, 5854.86probe position/s]Normalizing amplitudes:  68%|██████▊   | 11137/16384 [00:01<00:00, 5831.46probe position/s]Normalizing amplitudes:  72%|███████▏  | 11721/16384 [00:01<00:00, 5550.55probe position/s]Normalizing amplitudes:  75%|███████▌  | 12295/16384 [00:02<00:00, 5603.46probe position/s]Normalizing amplitudes:  78%|███████▊  | 12858/16384 [00:02<00:00, 5540.38probe position/s]Normalizing amplitudes:  82%|████████▏ | 13414/16384 [00:02<00:00, 5259.32probe position/s]Normalizing amplitudes:  85%|████████▌ | 13944/16384 [00:02<00:00, 4724.52probe position/s]Normalizing amplitudes:  89%|████████▉ | 14553/16384 [00:02<00:00, 5086.56probe position/s]Normalizing amplitudes:  92%|█████████▏| 15144/16384 [00:02<00:00, 5311.23probe position/s]Normalizing amplitudes:  96%|█████████▋| 15786/16384 [00:02<00:00, 5623.65probe position/s]Normalizing amplitudes: 100%|█████████▉| 16379/16384 [00:02<00:00, 5710.12probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:02<00:00, 5766.86probe position/s]
+output_path = '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random256_p6_6slice_dz2_update0.5_kzf1' is generated!
+reconstruction kwargs = {'num_iter': 100, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 256, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 10, 'save_result': ['model', 'objp'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random256_p6_6slice_dz2_update0.5_kzf1'}
+Performing 100 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 256 measurements.
+Iter: 1, Total Loss: 0.05909 in 15.773 sec
+Iter: 2, Total Loss: 0.006937 in 15.843 sec
+Iter: 3, Total Loss: 0.00639 in 15.878 sec
+Iter: 4, Total Loss: 0.00625 in 15.852 sec
+Iter: 5, Total Loss: 0.006165 in 15.909 sec
+Iter: 6, Total Loss: 0.006101 in 15.912 sec
+Iter: 7, Total Loss: 0.006045 in 17.424 sec
+Iter: 8, Total Loss: 0.005996 in 17.672 sec
+Iter: 9, Total Loss: 0.005948 in 18.549 sec
+Iter: 10, Total Loss: 0.005907 in 17.671 sec
+Saving results for iter 10
+Iter: 11, Total Loss: 0.005864 in 17.903 sec
+Iter: 12, Total Loss: 0.005827 in 17.692 sec
+Iter: 13, Total Loss: 0.005788 in 17.743 sec
+Iter: 14, Total Loss: 0.005752 in 18.315 sec
+Iter: 15, Total Loss: 0.005717 in 17.020 sec
+Iter: 16, Total Loss: 0.005685 in 17.477 sec
+Iter: 17, Total Loss: 0.005653 in 16.998 sec
+Iter: 18, Total Loss: 0.005624 in 17.474 sec
+Iter: 19, Total Loss: 0.005594 in 17.811 sec
+Iter: 20, Total Loss: 0.005567 in 16.972 sec
+Saving results for iter 20
+Iter: 21, Total Loss: 0.005539 in 16.264 sec
+Iter: 22, Total Loss: 0.005513 in 16.868 sec
+Iter: 23, Total Loss: 0.005487 in 16.364 sec
+Iter: 24, Total Loss: 0.005464 in 16.705 sec
+Iter: 25, Total Loss: 0.005441 in 17.251 sec
+Iter: 26, Total Loss: 0.005418 in 17.470 sec
+Iter: 27, Total Loss: 0.005396 in 17.158 sec
+Iter: 28, Total Loss: 0.005375 in 18.398 sec
+Iter: 29, Total Loss: 0.005354 in 19.624 sec
+Iter: 30, Total Loss: 0.005334 in 19.365 sec
+Saving results for iter 30
+Iter: 31, Total Loss: 0.005315 in 17.791 sec
+Iter: 32, Total Loss: 0.005296 in 17.644 sec
+Iter: 33, Total Loss: 0.005278 in 17.446 sec
+Iter: 34, Total Loss: 0.00526 in 16.890 sec
+Iter: 35, Total Loss: 0.005243 in 18.356 sec
+Iter: 36, Total Loss: 0.005226 in 18.466 sec
+Iter: 37, Total Loss: 0.00521 in 17.942 sec
+Iter: 38, Total Loss: 0.005192 in 17.784 sec
+Iter: 39, Total Loss: 0.005176 in 18.930 sec
+Iter: 40, Total Loss: 0.005161 in 19.509 sec
+Saving results for iter 40
+Iter: 41, Total Loss: 0.005146 in 19.721 sec
+Iter: 42, Total Loss: 0.005131 in 18.295 sec
+Iter: 43, Total Loss: 0.005116 in 16.169 sec
+Iter: 44, Total Loss: 0.005101 in 15.732 sec
+Iter: 45, Total Loss: 0.005088 in 15.608 sec
+Iter: 46, Total Loss: 0.005075 in 15.605 sec
+Iter: 47, Total Loss: 0.005061 in 16.115 sec
+Iter: 48, Total Loss: 0.005048 in 17.339 sec
+Iter: 49, Total Loss: 0.005036 in 16.855 sec
+Iter: 50, Total Loss: 0.005024 in 16.816 sec
+Saving results for iter 50
+Iter: 51, Total Loss: 0.005013 in 16.593 sec
+Iter: 52, Total Loss: 0.005001 in 16.534 sec
+Iter: 53, Total Loss: 0.00499 in 17.172 sec
+Iter: 54, Total Loss: 0.004979 in 15.804 sec
+Iter: 55, Total Loss: 0.00497 in 15.605 sec
+Iter: 56, Total Loss: 0.004959 in 15.755 sec
+Iter: 57, Total Loss: 0.004949 in 15.804 sec
+Iter: 58, Total Loss: 0.00494 in 15.658 sec
+Iter: 59, Total Loss: 0.00493 in 15.796 sec
+Iter: 60, Total Loss: 0.004921 in 15.822 sec
+Saving results for iter 60
+Iter: 61, Total Loss: 0.004912 in 15.758 sec
+Iter: 62, Total Loss: 0.004904 in 17.088 sec
+Iter: 63, Total Loss: 0.004895 in 16.951 sec
+Iter: 64, Total Loss: 0.004887 in 16.938 sec
+Iter: 65, Total Loss: 0.004879 in 16.693 sec
+Iter: 66, Total Loss: 0.004871 in 16.459 sec
+Iter: 67, Total Loss: 0.004863 in 15.753 sec
+Iter: 68, Total Loss: 0.004855 in 16.154 sec
+Iter: 69, Total Loss: 0.004848 in 15.846 sec
+Iter: 70, Total Loss: 0.004841 in 15.926 sec
+Saving results for iter 70
+Iter: 71, Total Loss: 0.004834 in 16.092 sec
+Iter: 72, Total Loss: 0.004827 in 15.949 sec
+Iter: 73, Total Loss: 0.00482 in 16.076 sec
+Iter: 74, Total Loss: 0.004813 in 16.017 sec
+Iter: 75, Total Loss: 0.004806 in 15.880 sec
+Iter: 76, Total Loss: 0.0048 in 16.129 sec
+Iter: 77, Total Loss: 0.004793 in 16.158 sec
+Iter: 78, Total Loss: 0.004787 in 16.645 sec
+Iter: 79, Total Loss: 0.00478 in 16.501 sec
+Iter: 80, Total Loss: 0.004774 in 16.704 sec
+Saving results for iter 80
+Iter: 81, Total Loss: 0.004768 in 16.256 sec
+Iter: 82, Total Loss: 0.004762 in 17.068 sec
+Iter: 83, Total Loss: 0.004756 in 16.883 sec
+Iter: 84, Total Loss: 0.004751 in 16.443 sec
+Iter: 85, Total Loss: 0.004744 in 16.792 sec
+Iter: 86, Total Loss: 0.004739 in 17.099 sec
+Iter: 87, Total Loss: 0.004734 in 18.124 sec
+Iter: 88, Total Loss: 0.004728 in 17.626 sec
+Iter: 89, Total Loss: 0.004723 in 17.952 sec
+Iter: 90, Total Loss: 0.004717 in 18.982 sec
+Saving results for iter 90
+Iter: 91, Total Loss: 0.004712 in 18.812 sec
+Iter: 92, Total Loss: 0.004707 in 18.958 sec
+Iter: 93, Total Loss: 0.004702 in 18.400 sec
+Iter: 94, Total Loss: 0.004697 in 18.586 sec
+Iter: 95, Total Loss: 0.004692 in 18.303 sec
+Iter: 96, Total Loss: 0.004688 in 19.783 sec
+Iter: 97, Total Loss: 0.004683 in 19.810 sec
+Iter: 98, Total Loss: 0.004678 in 18.378 sec
+Iter: 99, Total Loss: 0.004674 in 18.487 sec
+Iter: 100, Total Loss: 0.004669 in 18.543 sec
+Saving results for iter 100
+### Finished 100 iterations, averaged iter_t = 17.139 with std = 1.143 sec ###
+### py4DSTEM ptycho solver is finished in 28 min 35.529 sec###
+
+Success! Loaded .yml file path = 01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml
+Running batch = 64, pmode = 6, update_step_size = 0.5
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (-30.8785, 1814.7064, 99441.8047)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [1, 0, 0]
+Minimum value of -30.8785 subtracted due to the positive px value constraint of measurements
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0275, 1.4818)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation = 3 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   4%|▎         | 607/16384 [00:00<00:02, 6060.28probe position/s]Normalizing amplitudes:   7%|▋         | 1214/16384 [00:00<00:02, 5909.99probe position/s]Normalizing amplitudes:  11%|█         | 1835/16384 [00:00<00:02, 6037.36probe position/s]Normalizing amplitudes:  15%|█▍        | 2440/16384 [00:00<00:02, 5986.82probe position/s]Normalizing amplitudes:  19%|█▊        | 3039/16384 [00:00<00:02, 5984.14probe position/s]Normalizing amplitudes:  22%|██▏       | 3665/16384 [00:00<00:02, 6073.90probe position/s]Normalizing amplitudes:  26%|██▌       | 4273/16384 [00:00<00:02, 5894.19probe position/s]Normalizing amplitudes:  30%|██▉       | 4890/16384 [00:00<00:01, 5977.60probe position/s]Normalizing amplitudes:  34%|███▎      | 5489/16384 [00:00<00:01, 5885.08probe position/s]Normalizing amplitudes:  37%|███▋      | 6102/16384 [00:01<00:01, 5957.90probe position/s]Normalizing amplitudes:  41%|████      | 6699/16384 [00:01<00:01, 5921.38probe position/s]Normalizing amplitudes:  45%|████▍     | 7301/16384 [00:01<00:01, 5948.61probe position/s]Normalizing amplitudes:  48%|████▊     | 7897/16384 [00:01<00:01, 5906.03probe position/s]Normalizing amplitudes:  52%|█████▏    | 8488/16384 [00:01<00:01, 5893.89probe position/s]Normalizing amplitudes:  56%|█████▌    | 9108/16384 [00:01<00:01, 5983.35probe position/s]Normalizing amplitudes:  59%|█████▉    | 9707/16384 [00:01<00:01, 5888.26probe position/s]Normalizing amplitudes:  63%|██████▎   | 10320/16384 [00:01<00:01, 5957.63probe position/s]Normalizing amplitudes:  67%|██████▋   | 10917/16384 [00:01<00:00, 5879.24probe position/s]Normalizing amplitudes:  70%|███████   | 11530/16384 [00:01<00:00, 5951.14probe position/s]Normalizing amplitudes:  74%|███████▍  | 12126/16384 [00:02<00:00, 5846.25probe position/s]Normalizing amplitudes:  78%|███████▊  | 12737/16384 [00:02<00:00, 5921.57probe position/s]Normalizing amplitudes:  81%|████████▏ | 13330/16384 [00:02<00:00, 5916.65probe position/s]Normalizing amplitudes:  85%|████████▌ | 13962/16384 [00:02<00:00, 6034.98probe position/s]Normalizing amplitudes:  89%|████████▉ | 14571/16384 [00:02<00:00, 6050.87probe position/s]Normalizing amplitudes:  93%|█████████▎| 15177/16384 [00:02<00:00, 5918.43probe position/s]Normalizing amplitudes:  96%|█████████▋| 15805/16384 [00:02<00:00, 6023.93probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:02<00:00, 5941.61probe position/s]
+output_path = '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random64_p6_6slice_dz2_update0.5_kzf1' is generated!
+reconstruction kwargs = {'num_iter': 100, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 64, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 10, 'save_result': ['model', 'objp'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random64_p6_6slice_dz2_update0.5_kzf1'}
+Performing 100 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 64 measurements.
+Iter: 1, Total Loss: 0.02039 in 46.710 sec
+Iter: 2, Total Loss: 0.006278 in 45.480 sec
+Iter: 3, Total Loss: 0.006038 in 44.381 sec
+Iter: 4, Total Loss: 0.005884 in 43.614 sec
+Iter: 5, Total Loss: 0.00575 in 41.894 sec
+Iter: 6, Total Loss: 0.005636 in 39.314 sec
+Iter: 7, Total Loss: 0.005539 in 39.064 sec
+Iter: 8, Total Loss: 0.005457 in 39.353 sec
+Iter: 9, Total Loss: 0.005385 in 42.208 sec
+Iter: 10, Total Loss: 0.005321 in 42.216 sec
+Saving results for iter 10
+Iter: 11, Total Loss: 0.005265 in 42.443 sec
+Iter: 12, Total Loss: 0.005211 in 42.355 sec
+Iter: 13, Total Loss: 0.005163 in 42.416 sec
+Iter: 14, Total Loss: 0.005118 in 42.107 sec
+Iter: 15, Total Loss: 0.005075 in 41.798 sec
+Iter: 16, Total Loss: 0.005035 in 41.839 sec
+Iter: 17, Total Loss: 0.004997 in 41.916 sec
+Iter: 18, Total Loss: 0.00496 in 41.690 sec
+Iter: 19, Total Loss: 0.004925 in 42.268 sec
+Iter: 20, Total Loss: 0.004893 in 42.800 sec
+Saving results for iter 20
+Iter: 21, Total Loss: 0.004861 in 42.790 sec
+Iter: 22, Total Loss: 0.004832 in 42.307 sec
+Iter: 23, Total Loss: 0.004807 in 42.343 sec
+Iter: 24, Total Loss: 0.004784 in 42.158 sec
+Iter: 25, Total Loss: 0.004763 in 41.852 sec
+Iter: 26, Total Loss: 0.004744 in 40.553 sec
+Iter: 27, Total Loss: 0.004729 in 40.145 sec
+Iter: 28, Total Loss: 0.004714 in 40.759 sec
+Iter: 29, Total Loss: 0.004702 in 42.657 sec
+Iter: 30, Total Loss: 0.00469 in 42.360 sec
+Saving results for iter 30
+Iter: 31, Total Loss: 0.004679 in 46.071 sec
+Iter: 32, Total Loss: 0.004669 in 44.365 sec
+Iter: 33, Total Loss: 0.00466 in 44.233 sec
+Iter: 34, Total Loss: 0.004653 in 45.709 sec
+Iter: 35, Total Loss: 0.004644 in 45.065 sec
+Iter: 36, Total Loss: 0.004637 in 43.608 sec
+Iter: 37, Total Loss: 0.00463 in 42.624 sec
+Iter: 38, Total Loss: 0.004623 in 41.700 sec
+Iter: 39, Total Loss: 0.004616 in 42.542 sec
+Iter: 40, Total Loss: 0.004611 in 42.960 sec
+Saving results for iter 40
+Iter: 41, Total Loss: 0.004605 in 42.725 sec
+Iter: 42, Total Loss: 0.0046 in 43.402 sec
+Iter: 43, Total Loss: 0.004594 in 42.850 sec
+Iter: 44, Total Loss: 0.004589 in 43.767 sec
+Iter: 45, Total Loss: 0.004584 in 44.083 sec
+Iter: 46, Total Loss: 0.004579 in 43.658 sec
+Iter: 47, Total Loss: 0.004574 in 43.176 sec
+Iter: 48, Total Loss: 0.00457 in 42.867 sec
+Iter: 49, Total Loss: 0.004565 in 42.806 sec
+Iter: 50, Total Loss: 0.004561 in 42.573 sec
+Saving results for iter 50
+Iter: 51, Total Loss: 0.004557 in 41.974 sec
+Iter: 52, Total Loss: 0.004553 in 42.866 sec
+Iter: 53, Total Loss: 0.004549 in 42.598 sec
+Iter: 54, Total Loss: 0.004545 in 41.875 sec
+Iter: 55, Total Loss: 0.004541 in 42.812 sec
+Iter: 56, Total Loss: 0.004537 in 42.550 sec
+Iter: 57, Total Loss: 0.004534 in 42.531 sec
+Iter: 58, Total Loss: 0.00453 in 42.503 sec
+Iter: 59, Total Loss: 0.004527 in 41.909 sec
+Iter: 60, Total Loss: 0.004523 in 41.643 sec
+Saving results for iter 60
+Iter: 61, Total Loss: 0.00452 in 42.380 sec
+Iter: 62, Total Loss: 0.004516 in 42.793 sec
+Iter: 63, Total Loss: 0.004513 in 42.484 sec
+Iter: 64, Total Loss: 0.004509 in 43.144 sec
+Iter: 65, Total Loss: 0.004506 in 43.640 sec
+Iter: 66, Total Loss: 0.004503 in 42.931 sec
+Iter: 67, Total Loss: 0.0045 in 42.134 sec
+Iter: 68, Total Loss: 0.004497 in 43.243 sec
+Iter: 69, Total Loss: 0.004494 in 42.803 sec
+Iter: 70, Total Loss: 0.004492 in 42.325 sec
+Saving results for iter 70
+Iter: 71, Total Loss: 0.004489 in 41.526 sec
+Iter: 72, Total Loss: 0.004486 in 41.791 sec
+Iter: 73, Total Loss: 0.004483 in 42.205 sec
+Iter: 74, Total Loss: 0.00448 in 42.165 sec
+Iter: 75, Total Loss: 0.004477 in 42.598 sec
+Iter: 76, Total Loss: 0.004475 in 42.455 sec
+Iter: 77, Total Loss: 0.004472 in 42.960 sec
+Iter: 78, Total Loss: 0.00447 in 41.694 sec
+Iter: 79, Total Loss: 0.004468 in 41.522 sec
+Iter: 80, Total Loss: 0.004465 in 42.059 sec
+Saving results for iter 80
+Iter: 81, Total Loss: 0.004463 in 41.704 sec
+Iter: 82, Total Loss: 0.00446 in 40.697 sec
+Iter: 83, Total Loss: 0.004458 in 40.611 sec
+Iter: 84, Total Loss: 0.004455 in 39.637 sec
+Iter: 85, Total Loss: 0.004453 in 39.769 sec
+Iter: 86, Total Loss: 0.004451 in 40.756 sec
+Iter: 87, Total Loss: 0.004449 in 40.289 sec
+Iter: 88, Total Loss: 0.004447 in 41.203 sec
+Iter: 89, Total Loss: 0.004445 in 40.672 sec
+Iter: 90, Total Loss: 0.004442 in 41.538 sec
+Saving results for iter 90
+Iter: 91, Total Loss: 0.004441 in 41.710 sec
+Iter: 92, Total Loss: 0.004439 in 45.614 sec
+Iter: 93, Total Loss: 0.004437 in 46.411 sec
+Iter: 94, Total Loss: 0.004435 in 46.219 sec
+Iter: 95, Total Loss: 0.004433 in 45.904 sec
+Iter: 96, Total Loss: 0.004431 in 42.971 sec
+Iter: 97, Total Loss: 0.004429 in 42.479 sec
+Iter: 98, Total Loss: 0.004427 in 41.748 sec
+Iter: 99, Total Loss: 0.004426 in 42.319 sec
+Iter: 100, Total Loss: 0.004424 in 44.821 sec
+Saving results for iter 100
+### Finished 100 iterations, averaged iter_t = 42.538 with std = 1.507 sec ###
+### py4DSTEM ptycho solver is finished in 1 hr 10 min 55.419 sec###
+
+Success! Loaded .yml file path = 01_params/py4dstem_batch_sizes_tBL_WSe2_p6_6slice.yml
+Running batch = 16, pmode = 6, update_step_size = 0.5
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (-30.8785, 1814.7064, 99441.8047)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [1, 0, 0]
+Minimum value of -30.8785 subtracted due to the positive px value constraint of measurements
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0275, 1.4818)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation = 3 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   5%|▍         | 791/16384 [00:00<00:01, 7907.24probe position/s]Normalizing amplitudes:  10%|▉         | 1582/16384 [00:00<00:02, 5646.06probe position/s]Normalizing amplitudes:  13%|█▎        | 2185/16384 [00:00<00:02, 5226.86probe position/s]Normalizing amplitudes:  17%|█▋        | 2727/16384 [00:00<00:02, 5015.09probe position/s]Normalizing amplitudes:  21%|██        | 3477/16384 [00:00<00:02, 5774.26probe position/s]Normalizing amplitudes:  25%|██▌       | 4176/16384 [00:00<00:01, 6131.18probe position/s]Normalizing amplitudes:  29%|██▉       | 4806/16384 [00:00<00:02, 5551.87probe position/s]Normalizing amplitudes:  33%|███▎      | 5380/16384 [00:00<00:02, 5222.60probe position/s]Normalizing amplitudes:  36%|███▌      | 5916/16384 [00:01<00:02, 5030.36probe position/s]Normalizing amplitudes:  41%|████      | 6672/16384 [00:01<00:01, 5713.62probe position/s]Normalizing amplitudes:  45%|████▍     | 7356/16384 [00:01<00:01, 6026.24probe position/s]Normalizing amplitudes:  49%|████▊     | 7973/16384 [00:01<00:01, 5576.61probe position/s]Normalizing amplitudes:  52%|█████▏    | 8546/16384 [00:01<00:01, 5214.69probe position/s]Normalizing amplitudes:  55%|█████▌    | 9081/16384 [00:01<00:01, 5032.47probe position/s]Normalizing amplitudes:  60%|██████    | 9836/16384 [00:01<00:01, 5701.26probe position/s]Normalizing amplitudes:  64%|██████▍   | 10520/16384 [00:01<00:00, 6013.28probe position/s]Normalizing amplitudes:  68%|██████▊   | 11135/16384 [00:02<00:00, 5591.45probe position/s]Normalizing amplitudes:  71%|███████▏  | 11708/16384 [00:02<00:00, 5273.08probe position/s]Normalizing amplitudes:  75%|███████▍  | 12247/16384 [00:02<00:00, 5081.62probe position/s]Normalizing amplitudes:  79%|███████▉  | 13005/16384 [00:02<00:00, 5747.82probe position/s]Normalizing amplitudes:  84%|████████▎ | 13695/16384 [00:02<00:00, 6064.39probe position/s]Normalizing amplitudes:  87%|████████▋ | 14314/16384 [00:02<00:00, 5621.92probe position/s]Normalizing amplitudes:  91%|█████████ | 14890/16384 [00:02<00:00, 5287.80probe position/s]Normalizing amplitudes:  94%|█████████▍| 15431/16384 [00:02<00:00, 5089.17probe position/s]Normalizing amplitudes:  99%|█████████▉| 16191/16384 [00:02<00:00, 5757.09probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:02<00:00, 5574.39probe position/s]
+output_path = '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random16_p6_6slice_dz2_update0.5_kzf1' is generated!
+reconstruction kwargs = {'num_iter': 100, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 16, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 10, 'save_result': ['model', 'objp'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': '03_output/tBL_WSe2/20250604_py4DSTEM_batch_sizes/N16384_dp128_flipT100_random16_p6_6slice_dz2_update0.5_kzf1'}
+Performing 100 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 16 measurements.
+Iter: 1, Total Loss: 0.01038 in 157.032 sec
+Iter: 2, Total Loss: 0.005912 in 156.991 sec
+Iter: 3, Total Loss: 0.005553 in 153.075 sec
+Iter: 4, Total Loss: 0.005317 in 157.525 sec
+Iter: 5, Total Loss: 0.005112 in 158.601 sec
+Iter: 6, Total Loss: 0.004963 in 152.527 sec
+Iter: 7, Total Loss: 0.004877 in 144.305 sec
+Iter: 8, Total Loss: 0.004822 in 146.761 sec
+Iter: 9, Total Loss: 0.004783 in 152.979 sec
+Iter: 10, Total Loss: 0.004754 in 152.590 sec
+Saving results for iter 10
+Iter: 11, Total Loss: 0.00473 in 150.418 sec
+Iter: 12, Total Loss: 0.00471 in 151.625 sec
+Iter: 13, Total Loss: 0.004692 in 150.432 sec
+Iter: 14, Total Loss: 0.004677 in 152.069 sec
+Iter: 15, Total Loss: 0.004664 in 153.033 sec
+Iter: 16, Total Loss: 0.004653 in 152.336 sec
+Iter: 17, Total Loss: 0.004642 in 153.333 sec
+Iter: 18, Total Loss: 0.004633 in 153.241 sec
+Iter: 19, Total Loss: 0.004625 in 153.533 sec
+Iter: 20, Total Loss: 0.004618 in 151.198 sec
+Saving results for iter 20
+Iter: 21, Total Loss: 0.004611 in 148.759 sec
+Iter: 22, Total Loss: 0.004605 in 152.987 sec
+Iter: 23, Total Loss: 0.004599 in 149.681 sec
+Iter: 24, Total Loss: 0.004594 in 148.350 sec
+Iter: 25, Total Loss: 0.004589 in 153.043 sec
+Iter: 26, Total Loss: 0.004585 in 150.353 sec
+Iter: 27, Total Loss: 0.00458 in 164.153 sec
+Iter: 28, Total Loss: 0.004577 in 159.061 sec
+Iter: 29, Total Loss: 0.004573 in 159.513 sec
+Iter: 30, Total Loss: 0.004569 in 162.004 sec
+Saving results for iter 30
+Iter: 31, Total Loss: 0.004566 in 163.140 sec
+Iter: 32, Total Loss: 0.004563 in 154.135 sec
+Iter: 33, Total Loss: 0.00456 in 142.618 sec
+Iter: 34, Total Loss: 0.004557 in 145.127 sec
+Iter: 35, Total Loss: 0.004555 in 152.601 sec
+Iter: 36, Total Loss: 0.004552 in 151.992 sec
+Iter: 37, Total Loss: 0.00455 in 152.472 sec
+Iter: 38, Total Loss: 0.004547 in 153.359 sec
+Iter: 39, Total Loss: 0.004545 in 150.502 sec
+Iter: 40, Total Loss: 0.004542 in 153.311 sec
+Saving results for iter 40
+Iter: 41, Total Loss: 0.00454 in 151.711 sec
+Iter: 42, Total Loss: 0.004539 in 152.948 sec
+Iter: 43, Total Loss: 0.004536 in 155.750 sec
+Iter: 44, Total Loss: 0.004534 in 154.776 sec
+Iter: 45, Total Loss: 0.004532 in 155.826 sec
+Iter: 46, Total Loss: 0.004531 in 153.978 sec
+Iter: 47, Total Loss: 0.004529 in 153.670 sec
+Iter: 48, Total Loss: 0.004527 in 156.430 sec
+Iter: 49, Total Loss: 0.004526 in 153.227 sec
+Iter: 50, Total Loss: 0.004524 in 156.993 sec
+Saving results for iter 50
+Iter: 51, Total Loss: 0.004523 in 155.501 sec
+Iter: 52, Total Loss: 0.004522 in 153.868 sec
+Iter: 53, Total Loss: 0.00452 in 157.388 sec
+Iter: 54, Total Loss: 0.004519 in 156.256 sec
+Iter: 55, Total Loss: 0.004517 in 159.168 sec
+Iter: 56, Total Loss: 0.004516 in 160.976 sec
+Iter: 57, Total Loss: 0.004515 in 156.352 sec
+Iter: 58, Total Loss: 0.004514 in 154.245 sec
+Iter: 59, Total Loss: 0.004512 in 155.316 sec
+Iter: 60, Total Loss: 0.004511 in 156.498 sec
+Saving results for iter 60
+Iter: 61, Total Loss: 0.00451 in 153.182 sec
+Iter: 62, Total Loss: 0.004509 in 155.646 sec
+Iter: 63, Total Loss: 0.004508 in 158.170 sec
+Iter: 64, Total Loss: 0.004507 in 155.506 sec
+Iter: 65, Total Loss: 0.004506 in 159.149 sec
+Iter: 66, Total Loss: 0.004505 in 159.024 sec
+Iter: 67, Total Loss: 0.004504 in 151.974 sec
+Iter: 68, Total Loss: 0.004503 in 158.616 sec
+Iter: 69, Total Loss: 0.004502 in 158.393 sec
+Iter: 70, Total Loss: 0.004501 in 158.038 sec
+Saving results for iter 70
+Iter: 71, Total Loss: 0.0045 in 152.934 sec
+Iter: 72, Total Loss: 0.004499 in 152.118 sec
+Iter: 73, Total Loss: 0.004498 in 152.782 sec
+Iter: 74, Total Loss: 0.004497 in 153.130 sec
+Iter: 75, Total Loss: 0.004496 in 149.175 sec
+Iter: 76, Total Loss: 0.004495 in 157.949 sec
+Iter: 77, Total Loss: 0.004494 in 153.704 sec
+Iter: 78, Total Loss: 0.004494 in 165.264 sec
+Iter: 79, Total Loss: 0.004493 in 168.401 sec
+Iter: 80, Total Loss: 0.004492 in 159.194 sec
+Saving results for iter 80
+Iter: 81, Total Loss: 0.004491 in 156.021 sec
+Iter: 82, Total Loss: 0.00449 in 152.473 sec
+Iter: 83, Total Loss: 0.00449 in 154.990 sec
+Iter: 84, Total Loss: 0.004489 in 151.316 sec
+Iter: 85, Total Loss: 0.004488 in 153.722 sec
+Iter: 86, Total Loss: 0.004488 in 157.894 sec
+Iter: 87, Total Loss: 0.004487 in 156.588 sec
+Iter: 88, Total Loss: 0.004486 in 159.197 sec
+Iter: 89, Total Loss: 0.004485 in 155.079 sec
+Iter: 90, Total Loss: 0.004485 in 153.995 sec
+Saving results for iter 90
+Iter: 91, Total Loss: 0.004484 in 152.405 sec
+Iter: 92, Total Loss: 0.004483 in 148.423 sec
+Iter: 93, Total Loss: 0.004483 in 156.977 sec
+Iter: 94, Total Loss: 0.004482 in 156.933 sec
+Iter: 95, Total Loss: 0.004481 in 158.964 sec
+Iter: 96, Total Loss: 0.004481 in 157.541 sec
+Iter: 97, Total Loss: 0.00448 in 155.676 sec
+Iter: 98, Total Loss: 0.004479 in 157.009 sec
+Iter: 99, Total Loss: 0.004479 in 154.766 sec
+Iter: 100, Total Loss: 0.004478 in 152.159 sec
+Saving results for iter 100
+### Finished 100 iterations, averaged iter_t = 154.661 with std = 4.107 sec ###
+### py4DSTEM ptycho solver is finished in 4 hr 17 min 48.589 sec###
+
+Sun Jun  8 21:32:57 EDT 2025

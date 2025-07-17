@@ -1,0 +1,1983 @@
+/home/fs01/cl2696/workspace/ptyrad
+c0002
+Wed Feb 19 02:26:25 EST 2025
+Starting job 47911 on c0002
+/home/fs01/cl2696/workspace/ptyrad/params/paper
+GPU 0: NVIDIA A100-SXM4-80GB (UUID: GPU-31203ec1-b145-480b-d58d-66b8c414ddd2)
+GPU 1: NVIDIA A100-SXM4-80GB (UUID: GPU-7251cf85-2d13-62a5-ab91-c22272f0810f)
+GPU 2: NVIDIA A100-SXM4-80GB (UUID: GPU-a4dd3583-3df5-975b-ad95-40d126f5251b)
+  MIG 2g.20gb     Device  0: (UUID: MIG-0d2e10c1-f380-5552-864e-3eacbdda0059)
+GPU 3: NVIDIA A100-SXM4-80GB (UUID: GPU-1ef1bae9-5f03-78bc-dbbd-b033bf30a7b1)
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2021 The MathWorks, Inc.
+                  R2021a (9.10.0.1602886) 64-bit (glnxa64)
+                             February 17, 2021
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans = 
+
+  CUDADevice with properties:
+
+                      Name: 'NVIDIA A100-SXM4-80GB MIG 2g.20gb'
+                     Index: 1
+         ComputeCapability: '8.0'
+            SupportsDouble: 1
+             DriverVersion: 11.8000
+            ToolkitVersion: 11
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 2.0938e+10
+           AvailableMemory: 2.0629e+10
+       MultiprocessorCount: 28
+              ClockRateKHz: 1410000
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 0
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+           DeviceAvailable: 1
+            DeviceSelected: 1
+
+Started at 2025-02-19_02-26-38
+Original dp min = 0.0000, mean = 0.0254, max = 2.1056
+Processed dp min = 0.0000, mean = 0.0254, max = 2.1056
+[Warning: Directory already exists.] 
+[> In ptyshv_convergence_simu_tBL_WSe2_batch16_p12_6slice (line 168)] 
+data_roi5_Ndp128_step128_dp.hdf5 has been saved!
+Current grouping: 16, Current Nprobe: 12
+[init] : Preparing paths.
+[init] :  p.queue.name is not set, using default p.queue.name = ''
+[init] : p.detector.data_prefix is not defined
+[init] : Using matlab APS data preparator.
+[init] : run_name = S00005_128x128_b0_MLs_L1_p12_g16_pc1_noModel_mm_Ns6_dz2_reg0.1
+[init] : base_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//
+[init] : Using default save_path
+[init] : save_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/analysis/S00000-00999/S00005/
+[init] : Using default prepared data path
+[init] : prepare_data_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/analysis/S00000-00999/S00005/
+[init] : Using default prepared data filename
+[init] : prepare_data_filename = S00005_data_128x128.h5
+[init] : Loading preferences for empad detector.
+[init] : read_path_format not defined for empad. Using default value.
+[Warning: Applying custom scan flip: 1 1 0 ] 
+[> In scans.positions.matlab_pos (line 14)
+In scans.read_positions (line 20)
+In core.initialize_ptycho (line 107)
+In core.ptycho_recons/ptycho_call (line 172)
+In core.ptycho_recons (line 289)
+In ptyshv_convergence_simu_tBL_WSe2_batch16_p12_6slice (line 537)] 
+[init] : Preparing initial guess.
+[init] : Computed object size: 493 x 493
+[init] : Using random object as initial guess.
+[init] : Using previous run as initial probe.
+[init] : Loaded probe from: /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/5/init_probe_128.mat
+[init] : File /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/5/init_probe_128.mat loaded successfully.
+[init] : Loading raw data
+[init] : Preparing data using matlab APS data preparation.
+[init] : Using supplied center: 65  65
+[init] : Using center: (65, 65)
+[init] : Selected region: ('RowFrom', 1, 'RowTo', 128, 'ColumnFrom', 1, 'ColumnTo', 128)
+[init] : Loading raw data of scan 00005.
+[init] : HDF5 file name:/home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//5/data_roi5_Ndp128_step128_dp.hdf5
+[init] : Loaded data from:/home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//5/data_roi5_Ndp128_step128_dp.hdf5
+[init] : Number of probe positions: 16384
+[init] : Number of diffraction patterns : 16384
+[init] : Finished data preparation and initialization.
+[ptycho] : Reconstructing S00005 
+[ptycho] : Calling engine GPU_MS
+[GPU/CPU_MS-engine] : Intermediate results will be saved in the directory below every 10 iterations.
+[GPU/CPU_MS-engine] : /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//5/roi5_Ndp128_step128//MLs_L1_p12_g16_pc1_noModel_mm_Ns6_dz2_reg0.1/
+[GPU/CPU_MS-engine] : Loading constant probe (1)
+[GPU/CPU_MS-engine] : Loading constant probe (2)
+[GPU/CPU_MS-engine] : Loading constant probe (3)
+[GPU/CPU_MS-engine] : Loading constant probe (4)
+[GPU/CPU_MS-engine] : Loading constant probe (5)
+[GPU/CPU_MS-engine] : Loading constant probe (6)
+[GPU/CPU_MS-engine] : Loading constant probe (7)
+[GPU/CPU_MS-engine] : Loading constant probe (8)
+[GPU/CPU_MS-engine] : Loading constant probe (9)
+[GPU/CPU_MS-engine] : Loading constant probe (10)
+[GPU/CPU_MS-engine] : Loading constant probe (11)
+[GPU/CPU_MS-engine] : Loading constant probe (12)
+[GPU/CPU_MS-engine] : Load and pad object and probe
+[GPU/CPU_MS-engine] : Preparing data and masks
+[GPU/CPU_MS-engine] : GPU 1 initialized ... 
+[GPU/CPU_MS-engine-init] : Add 5 more layers from 1 layer(s)
+[GPU/CPU_MS-engine-init] : Append vacuum layer
+[GPU/CPU_MS-engine-init] : 931 of 1056 GB RAM free
+[GPU/CPU_MS-engine-init] : Check GPU load
+[GPU/CPU_MS-engine-init] : 
+----MEMORY REPORT GPU ID:1-----
+Required total memory 1.38GB
+ - Required data memory 1.07GB 
+ - Required object memory 0.04GB 
+ - Required FFT memory 0.03GB 
+ ============================ 
+available memory 20.63/20.94GB
+[GPU/CPU_MS-engine-init] :  === Starting MLs solver === 
+[GPU/CPU_MS-engine-init] : Maximal possible grouping 1210
+[GPU/CPU_MS-engine-init] : Selected grouping 16
+[GPU-1_MLs_WSe2_] : Started solver using MLs method on GPU 1
+[GPU-1_MLs_WSe2_] : Moving data to GPU
+[GPU-1_MLs_WSe2_] : Free GPU memory 20.63GB
+[GPU-1_MLs_WSe2_] : Data moved to GPU
+[GPU-1_MLs_WSe2_] : Free GPU memory 19.53GB
+[GPU-1_MLs_WSe2_] : Iteration: 1 / 200  (Time left:Inf hour. avg:Inf sec)
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0514 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0519 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0526 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0536 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0544 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0551 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.07014 
+[GPU-1_MLs_WSe2_] : Iteration: 2 / 200  (Time left:14.5 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : EMPIRICAL ESTIMATION OF POSITION RELIABILITY
+
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.095 px MAX error 0.11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0762 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0768 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0773 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0778 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0781 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06939 
+[GPU-1_MLs_WSe2_] : Iteration: 3 / 200  (Time left:15.1 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.13 px MAX error 0.21 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0909 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0899 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0898 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0902 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0908 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0921 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06876 
+[GPU-1_MLs_WSe2_] : Iteration: 4 / 200  (Time left:15.1 hour. avg:276 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.18 px MAX error 0.32 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0863 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0851 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0844 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0843 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0847 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0853 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06854 
+[GPU-1_MLs_WSe2_] : Iteration: 5 / 200  (Time left:15.3 hour. avg:280 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.22 px MAX error 0.42 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0826 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0825 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0826 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0829 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0832 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0836 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06845 
+[GPU-1_MLs_WSe2_] : Iteration: 6 / 200  (Time left:15.1 hour. avg:279 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.25 px MAX error 0.53 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0829 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0819 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0804 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0789 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.078 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0785 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06839 
+[GPU-1_MLs_WSe2_] : Iteration: 7 / 200  (Time left: 15 hour. avg:279 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.28 px MAX error 0.64 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0768 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.431  o1: 0.0703 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06836 
+[GPU-1_MLs_WSe2_] : Iteration: 8 / 200  (Time left:14.9 hour. avg:279 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.31 px MAX error 0.75 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0769 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0762 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0753 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0747 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.426  o1: 0.0742 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06832 
+[GPU-1_MLs_WSe2_] : Iteration: 9 / 200  (Time left:14.8 hour. avg:278 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.33 px MAX error 0.86 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0706 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06833 
+[GPU-1_MLs_WSe2_] : Iteration: 10 / 200  (Time left:14.7 hour. avg:276 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.36 px MAX error 0.96 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0784 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0785 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0783 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0774 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0766 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0763 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 11 / 200  (Time left:14.7 hour. avg:278 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.38 px MAX error 1.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0743 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0759 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 12 / 200  (Time left:14.6 hour. avg:278 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.4 px MAX error 1.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0701 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0687 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0682 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06832 
+[GPU-1_MLs_WSe2_] : Iteration: 13 / 200  (Time left:14.4 hour. avg:276 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.42 px MAX error 1.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0653 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0656 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.43  o1: 0.0665 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 14 / 200  (Time left:14.2 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.44 px MAX error 1.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0786 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0767 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0753 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0732 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 15 / 200  (Time left:14.1 hour. avg:273 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.45 px MAX error 1.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0755 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0756 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0754 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.075 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 16 / 200  (Time left: 14 hour. avg:273 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.47 px MAX error 1.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.428  o1: 0.0721 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.0683 
+[GPU-1_MLs_WSe2_] : Iteration: 17 / 200  (Time left:14.1 hour. avg:275 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.48 px MAX error 1.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.429  o1: 0.071 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 18 / 200  (Time left:14.1 hour. avg:277 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.5 px MAX error 1.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0768 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0746 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0756 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 19 / 200  (Time left:13.9 hour. avg:275 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.51 px MAX error 1.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0704 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0705 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 20 / 200  (Time left:13.8 hour. avg:275 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.52 px MAX error   2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0713 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.0683 
+[GPU-1_MLs_WSe2_] : Iteration: 21 / 200  (Time left:13.7 hour. avg:275 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.53 px MAX error 2.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0737 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0746 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0768 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0774 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 22 / 200  (Time left:13.6 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.55 px MAX error 2.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0685 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0721 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 23 / 200  (Time left:13.5 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.56 px MAX error 2.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0753 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0753 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 24 / 200  (Time left:13.5 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.57 px MAX error 2.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0764 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0758 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.428  o1: 0.0749 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06831 
+[GPU-1_MLs_WSe2_] : Iteration: 25 / 200  (Time left:13.4 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.58 px MAX error 2.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0819 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0813 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0803 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0792 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0781 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0775 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 26 / 200  (Time left:13.3 hour. avg:275 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.59 px MAX error 2.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.072 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0706 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 27 / 200  (Time left:13.3 hour. avg:275 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.6 px MAX error 2.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.072 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0733 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 28 / 200  (Time left:13.2 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.61 px MAX error 2.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0739 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0727 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06829 
+[GPU-1_MLs_WSe2_] : Iteration: 29 / 200  (Time left:13.1 hour. avg:274 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.62 px MAX error 2.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.083 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0815 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0805 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0798 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0789 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.425  o1: 0.0784 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 30 / 200  (Time left: 13 hour. avg:273 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.63 px MAX error   3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0752 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.429  o1: 0.0718 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 31 / 200  (Time left:12.9 hour. avg:273 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.64 px MAX error 3.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0764 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0768 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0782 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0803 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.082 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0826 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 32 / 200  (Time left:12.8 hour. avg:273 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.65 px MAX error 3.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0727 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06833 
+[GPU-1_MLs_WSe2_] : Iteration: 33 / 200  (Time left:12.7 hour. avg:272 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.65 px MAX error 3.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0738 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.425  o1: 0.0748 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 34 / 200  (Time left:12.6 hour. avg:271 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.66 px MAX error 3.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0701 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0701 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0723 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 35 / 200  (Time left:12.4 hour. avg:270 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.67 px MAX error 3.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0745 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 36 / 200  (Time left:12.3 hour. avg:269 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.68 px MAX error 3.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0759 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0747 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.416  o1: 0.075 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06831 
+[GPU-1_MLs_WSe2_] : Iteration: 37 / 200  (Time left:12.2 hour. avg:268 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.69 px MAX error 3.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0755 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.425  o1: 0.0725 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 38 / 200  (Time left:12.1 hour. avg:268 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.69 px MAX error 3.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0662 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0648 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0654 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0664 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 39 / 200  (Time left: 12 hour. avg:267 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.7 px MAX error 3.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0641 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0639 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0646 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0657 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.43  o1: 0.0667 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 40 / 200  (Time left:11.9 hour. avg:266 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.71 px MAX error   4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0713 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06831 
+[GPU-1_MLs_WSe2_] : Iteration: 41 / 200  (Time left:11.8 hour. avg:266 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.71 px MAX error 4.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0754 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0769 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.079 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 42 / 200  (Time left:11.7 hour. avg:265 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.72 px MAX error 4.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0763 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0755 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0761 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0772 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0784 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 43 / 200  (Time left:11.6 hour. avg:264 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.73 px MAX error 4.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0805 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0804 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.081 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0816 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0822 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0823 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 44 / 200  (Time left:11.5 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.74 px MAX error 4.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0657 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0658 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0689 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.431  o1: 0.07 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06836 
+[GPU-1_MLs_WSe2_] : Iteration: 45 / 200  (Time left:11.4 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.74 px MAX error 4.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0704 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0687 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.429  o1: 0.0691 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 46 / 200  (Time left:11.3 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.75 px MAX error 4.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0763 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.076 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0759 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0745 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 47 / 200  (Time left:11.2 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.75 px MAX error 4.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0727 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0742 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 48 / 200  (Time left:11.2 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.76 px MAX error 4.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.072 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0721 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.43  o1: 0.0711 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06836 
+[GPU-1_MLs_WSe2_] : Iteration: 49 / 200  (Time left:11.1 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.77 px MAX error 4.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0763 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0738 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0737 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 50 / 200  (Time left: 11 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.77 px MAX error 4.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0697 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 51 / 200  (Time left:10.9 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.78 px MAX error   5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.426  o1: 0.075 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 52 / 200  (Time left:10.9 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.79 px MAX error   5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0778 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0779 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.078 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0783 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0786 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0792 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 53 / 200  (Time left:10.8 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.79 px MAX error 5.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0778 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.077 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0765 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0765 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0767 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0771 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 54 / 200  (Time left:10.7 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.8 px MAX error 5.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0685 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.425  o1: 0.0703 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 55 / 200  (Time left:10.6 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.8 px MAX error 5.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0669 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0679 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.412  o1: 0.0688 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 56 / 200  (Time left:10.5 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.81 px MAX error 5.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0732 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06837 
+[GPU-1_MLs_WSe2_] : Iteration: 57 / 200  (Time left:10.5 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.81 px MAX error 5.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0753 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0761 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.428  o1: 0.0774 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 58 / 200  (Time left:10.4 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.82 px MAX error 5.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0685 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0686 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 59 / 200  (Time left:10.3 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.82 px MAX error 5.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0752 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0707 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 60 / 200  (Time left:10.2 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.83 px MAX error 5.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0758 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.426  o1: 0.073 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 61 / 200  (Time left:10.2 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.83 px MAX error   6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0761 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0776 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0792 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0804 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0815 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 62 / 200  (Time left:10.1 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.84 px MAX error 6.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0673 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0733 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 63 / 200  (Time left: 10 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.85 px MAX error 6.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0746 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0753 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0761 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0769 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0775 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 64 / 200  (Time left:9.93 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.85 px MAX error 6.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0667 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.428  o1: 0.0692 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06838 
+[GPU-1_MLs_WSe2_] : Iteration: 65 / 200  (Time left:9.85 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.86 px MAX error 6.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0743 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0717 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 66 / 200  (Time left:9.78 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.86 px MAX error 6.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0704 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0699 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0696 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 67 / 200  (Time left:9.71 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.86 px MAX error 6.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0801 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0788 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0776 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0771 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0771 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0776 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 68 / 200  (Time left:9.63 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.87 px MAX error 6.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0689 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0685 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 69 / 200  (Time left:9.56 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.87 px MAX error 6.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0662 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0655 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.065 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 70 / 200  (Time left:9.49 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.88 px MAX error 6.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0672 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 71 / 200  (Time left:9.4 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.88 px MAX error 6.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0738 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0746 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0755 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 72 / 200  (Time left:9.33 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.89 px MAX error   7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0779 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0771 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0766 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0769 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0776 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0787 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06842 
+[GPU-1_MLs_WSe2_] : Iteration: 73 / 200  (Time left:9.25 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.89 px MAX error 7.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0669 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.416  o1: 0.0718 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 74 / 200  (Time left:9.16 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.9 px MAX error 7.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0705 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 75 / 200  (Time left:9.08 hour. avg:259 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.9 px MAX error 7.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0736 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0727 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0741 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 76 / 200  (Time left:  9 hour. avg:259 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.91 px MAX error 7.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.426  o1: 0.0733 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 77 / 200  (Time left:8.92 hour. avg:259 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.91 px MAX error 7.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0739 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.425  o1: 0.0738 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 78 / 200  (Time left:8.85 hour. avg:259 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.91 px MAX error 7.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0811 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0721 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.069 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0687 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.428  o1: 0.0692 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 79 / 200  (Time left:8.78 hour. avg:259 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.92 px MAX error 7.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.432  o1: 0.0684 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 80 / 200  (Time left:8.71 hour. avg:259 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.92 px MAX error 7.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.411  o1: 0.0719 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06839 
+[GPU-1_MLs_WSe2_] : Iteration: 81 / 200  (Time left:8.66 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.92 px MAX error   8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0737 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0738 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0768 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.079 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 82 / 200  (Time left:8.59 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.93 px MAX error 8.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0695 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0743 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 83 / 200  (Time left:8.52 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.93 px MAX error 8.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0739 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 84 / 200  (Time left:8.46 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.94 px MAX error 8.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0743 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0737 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0752 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0768 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 85 / 200  (Time left:8.38 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.94 px MAX error 8.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0743 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.425  o1: 0.0707 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 86 / 200  (Time left:8.3 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.94 px MAX error 8.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.426  o1: 0.0706 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 87 / 200  (Time left:8.24 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.95 px MAX error 8.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.072 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0718 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 88 / 200  (Time left:8.17 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.95 px MAX error 8.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0758 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0755 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.0684 
+[GPU-1_MLs_WSe2_] : Iteration: 89 / 200  (Time left:8.1 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.96 px MAX error 8.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0727 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0733 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 90 / 200  (Time left:8.04 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.96 px MAX error 8.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0632 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.062 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0613 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0613 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0617 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.432  o1: 0.0618 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 91 / 200  (Time left:7.96 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.96 px MAX error   9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0781 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0788 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0795 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0804 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0812 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0824 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 92 / 200  (Time left:7.89 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.97 px MAX error 9.1 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0746 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 93 / 200  (Time left:7.82 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.97 px MAX error 9.2 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0674 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.069 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0697 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 94 / 200  (Time left:7.75 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.97 px MAX error 9.3 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0778 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0774 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0763 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0738 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0734 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 95 / 200  (Time left:7.68 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.98 px MAX error 9.4 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0743 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0747 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 96 / 200  (Time left:7.61 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.98 px MAX error 9.5 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0704 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0695 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0696 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06842 
+[GPU-1_MLs_WSe2_] : Iteration: 97 / 200  (Time left:7.54 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.98 px MAX error 9.6 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0704 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0699 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0701 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.428  o1: 0.0697 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 98 / 200  (Time left:7.47 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.99 px MAX error 9.7 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0692 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.069 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0699 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 99 / 200  (Time left:7.4 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.99 px MAX error 9.8 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0695 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0694 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 100 / 200  (Time left:7.33 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 0.99 px MAX error 9.9 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.066 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0656 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0658 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.426  o1: 0.0668 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 101 / 200  (Time left:7.25 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  10 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0762 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0762 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0768 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.077 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.077 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0778 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 102 / 200  (Time left:7.18 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  10 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0737 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0753 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 103 / 200  (Time left:7.11 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  10 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0687 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0689 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 104 / 200  (Time left:7.03 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  10 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.425  o1: 0.0729 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 105 / 200  (Time left:6.96 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  10 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.415  o1: 0.0719 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 106 / 200  (Time left:6.88 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  10 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0699 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0712 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 107 / 200  (Time left:6.81 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0936 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0727 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0692 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0689 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 108 / 200  (Time left:6.73 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0661 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0659 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.066 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0669 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 109 / 200  (Time left:6.66 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0668 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0672 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 110 / 200  (Time left:6.58 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0668 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0677 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 111 / 200  (Time left:6.51 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0782 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0781 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0785 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0793 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0806 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.412  o1: 0.0819 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 112 / 200  (Time left:6.43 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0725 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06846 
+[GPU-1_MLs_WSe2_] : Iteration: 113 / 200  (Time left:6.36 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0765 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0784 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 114 / 200  (Time left:6.29 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0692 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0685 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0678 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0682 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 115 / 200  (Time left:6.22 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0725 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0721 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.072 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.426  o1: 0.0728 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 116 / 200  (Time left:6.14 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0723 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 117 / 200  (Time left:6.07 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  11 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0758 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0733 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 118 / 200  (Time left:  6 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0674 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 119 / 200  (Time left:5.93 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error   1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0666 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0668 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0674 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0688 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 120 / 200  (Time left:5.85 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0717 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 121 / 200  (Time left:5.78 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0745 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 122 / 200  (Time left:5.71 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0679 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0679 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0674 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.069 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 123 / 200  (Time left:5.64 hour. avg:260 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0669 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0666 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0667 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0673 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 124 / 200  (Time left:5.57 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0746 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0756 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 125 / 200  (Time left:5.5 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0726 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 126 / 200  (Time left:5.43 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0701 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0698 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0695 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.41  o1: 0.0696 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 127 / 200  (Time left:5.36 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.429  o1: 0.0716 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 128 / 200  (Time left:5.29 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0704 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0699 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0691 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06843 
+[GPU-1_MLs_WSe2_] : Iteration: 129 / 200  (Time left:5.22 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0708 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0692 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0697 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 130 / 200  (Time left:5.15 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0631 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0632 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0636 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0644 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0653 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0664 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 131 / 200  (Time left:5.08 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  12 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0766 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.412  o1: 0.078 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 132 / 200  (Time left:5.01 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0745 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.416  o1: 0.0767 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 133 / 200  (Time left:4.94 hour. avg:261 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0662 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0653 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0648 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0654 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0669 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.405  o1: 0.0688 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 134 / 200  (Time left:4.87 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0775 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0761 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0736 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.412  o1: 0.0746 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 135 / 200  (Time left:4.8 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0627 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0624 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0631 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0641 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0654 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.0671 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 136 / 200  (Time left:4.73 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0678 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0671 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 137 / 200  (Time left:4.66 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0737 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0735 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 138 / 200  (Time left:4.58 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.066 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0653 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0659 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0667 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0677 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 139 / 200  (Time left:4.51 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0695 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0678 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0668 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0671 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 140 / 200  (Time left:4.43 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0668 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0703 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 141 / 200  (Time left:4.36 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0744 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0752 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.076 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.077 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.405  o1: 0.0782 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 142 / 200  (Time left:4.29 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.074 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0739 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0753 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.402  o1: 0.076 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 143 / 200  (Time left:4.22 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0602 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0596 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0602 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0615 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0632 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.409  o1: 0.0647 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 144 / 200  (Time left:4.15 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0666 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0658 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0655 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0658 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0673 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06846 
+[GPU-1_MLs_WSe2_] : Iteration: 145 / 200  (Time left:4.08 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0741 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0762 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 146 / 200  (Time left:  4 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.063 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0627 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0626 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0626 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0628 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0633 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 147 / 200  (Time left:3.93 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0643 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0638 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0637 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0638 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0642 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0649 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 148 / 200  (Time left:3.86 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0691 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0679 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0664 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 149 / 200  (Time left:3.78 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0734 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0721 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0721 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 150 / 200  (Time left:3.71 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0704 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 151 / 200  (Time left:3.64 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  13 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0764 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 152 / 200  (Time left:3.57 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0633 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0641 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0653 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0685 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.07 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 153 / 200  (Time left:3.49 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0726 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 154 / 200  (Time left:3.42 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0673 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0666 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0668 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 155 / 200  (Time left:3.35 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0699 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0727 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.411  o1: 0.0735 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 156 / 200  (Time left:3.28 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0704 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0721 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.073 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 157 / 200  (Time left:3.2 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0695 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.433  o1: 0.0728 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 158 / 200  (Time left:3.13 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0678 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0699 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0706 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 159 / 200  (Time left:3.06 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0692 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0664 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.408  o1: 0.066 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 160 / 200  (Time left:2.99 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0678 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.429  o1: 0.0658 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06845 
+[GPU-1_MLs_WSe2_] : Iteration: 161 / 200  (Time left:2.91 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0717 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0726 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0739 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0757 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0778 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0798 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 162 / 200  (Time left:2.84 hour. avg:262 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.1 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0732 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0736 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0742 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.415  o1: 0.0751 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 163 / 200  (Time left:2.77 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0723 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 164 / 200  (Time left:2.7 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0695 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0687 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 165 / 200  (Time left:2.63 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.065 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0661 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0687 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 166 / 200  (Time left:2.55 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0656 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0657 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0672 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0693 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 167 / 200  (Time left:2.48 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.072 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0724 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 168 / 200  (Time left:2.41 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0678 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0678 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 169 / 200  (Time left:2.33 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0689 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0686 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0689 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 170 / 200  (Time left:2.26 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.066 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0647 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0639 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0636 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0637 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 171 / 200  (Time left:2.19 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0735 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0748 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0771 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0797 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.082 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 172 / 200  (Time left:2.12 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  14 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0668 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0687 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0719 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0737 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 173 / 200  (Time left:2.04 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0737 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0733 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0728 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0724 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0728 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 174 / 200  (Time left:1.97 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0636 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0643 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0664 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0679 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.413  o1: 0.0696 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 175 / 200  (Time left:1.9 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0655 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0664 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 176 / 200  (Time left:1.83 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0653 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0657 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.408  o1: 0.0682 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 177 / 200  (Time left:1.75 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0674 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0679 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0685 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 178 / 200  (Time left:1.68 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0714 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0705 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0703 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0704 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 179 / 200  (Time left:1.61 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0681 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0678 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.423  o1: 0.0676 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 180 / 200  (Time left:1.53 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0656 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0656 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0661 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0664 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06846 
+[GPU-1_MLs_WSe2_] : Iteration: 181 / 200  (Time left:1.46 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0666 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.067 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0706 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0731 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.404  o1: 0.0755 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 182 / 200  (Time left:1.39 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  15 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0697 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0689 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0689 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0694 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.418  o1: 0.0707 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 183 / 200  (Time left:1.32 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.072 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0722 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.415  o1: 0.0728 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 184 / 200  (Time left:1.24 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0679 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0677 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0701 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 185 / 200  (Time left:1.17 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0713 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0715 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0723 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0736 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.075 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 186 / 200  (Time left:1.1 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0699 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0685 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0674 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0667 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0665 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0668 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 187 / 200  (Time left:1.02 hour. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0676 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0671 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0675 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.41  o1: 0.0692 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 188 / 200  (Time left: 57 min. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0646 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0638 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0636 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0636 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0637 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.427  o1: 0.064 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 189 / 200  (Time left:52.7 min. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0667 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0666 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0664 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0662 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0659 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 190 / 200  (Time left:48.3 min. avg:263 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0667 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0647 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.065 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0655 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.408  o1: 0.0659 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 191 / 200  (Time left:43.9 min. avg:264 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0639 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0641 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0652 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0673 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0696 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.409  o1: 0.0717 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 192 / 200  (Time left:39.6 min. avg:264 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0632 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0635 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0643 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0656 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0668 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.415  o1: 0.0677 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 193 / 200  (Time left:35.2 min. avg:264 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  16 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0707 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0721 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.073 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0738 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.412  o1: 0.0747 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 194 / 200  (Time left:30.8 min. avg:264 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  17 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.071 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0709 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0711 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0718 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0729 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.424  o1: 0.0743 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 195 / 200  (Time left:26.4 min. avg:264 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  17 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.07 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0693 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0688 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0684 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0682 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0686 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 196 / 200  (Time left:22.1 min. avg:265 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  17 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0648 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0644 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0643 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0647 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0655 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.417  o1: 0.0666 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 197 / 200  (Time left:17.7 min. avg:265 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  17 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.0961 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0651 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0642 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0645 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0657 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0667 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.42  o1: 0.0673 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 198 / 200  (Time left:13.3 min. avg:265 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  17 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0758 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0752 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0751 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.075 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0749 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.422  o1: 0.0751 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 199 / 200  (Time left:8.84 min. avg:265 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  17 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0716 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0712 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0702 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0692 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0683 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.414  o1: 0.0679 layer 1
+[GPU-1_MLs_WSe2_] : Iteration: 200 / 200  (Time left:4.43 min. avg:266 sec)
+[GPU-1_MLs_WSe2_] : ==== AVG position error 1.2 px MAX error  17 LIMIT Inf px 
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0666 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0663 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0664 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0669 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.068 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.419  o1: 0.0692 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.06845 
+[GPU-1_MLs_WSe2_] :  ====  Time per one iteration 265.721s
+[GPU-1_MLs_WSe2_] :  ====  Total time 53144.20s
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : ========= 2D PTYCHO GEOMETRY REFINEMENT, apply manually to your template ===========
+[GPU-1_MLs_WSe2_] : p.affine_matrix =  [1.001 , 0.0003683 ; -0.004824 , 1.003 ] 
+[GPU-1_MLs_WSe2_] : ====================================================================================
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : Advanced: ======================== AFFINE CORRECTION OF SCANNER AXIS ====================
+[GPU-1_MLs_WSe2_] : Advanced: (for control system of piezo scanner, important for calibration of cSAXS fast FZP scanner)
+[GPU-1_MLs_WSe2_] : Advanced: correction_matrix = inv(p.affine_matrix) =  [0.9988 , -0.0003666 ; 0.004802 , 0.9966 ]  
+[GPU-1_MLs_WSe2_] : Advanced: ===============================================================================
+[GPU-1_MLs_WSe2_] : Note:  Use scans at 0 and 180 deg with eng.share_object == true && eng.mirror_objects == true to get estimation of the 0vs180deg affine matrix requied for ptychotomography
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : 
+[GPU-1_MLs_WSe2_] : ==== Geometry parameters for each scan===== 
+[GPU-1_MLs_WSe2_] : Scan #5: [scale=1.0023 , asymmetry=-0.002 , rotation=0.021deg , shear=-0.254deg, shift = 0.0 0.0px ] 
+[GPU-1_MLs_WSe2_] :  === Finished MLs solver === in 5.32e+04s
+[ptycho] : Elapsed time for engine GPU_MS: 53196.4 s
+Elapsed time is 53208.360925 seconds.

@@ -1,0 +1,144 @@
+/home/fs01/cl2696/workspace/ptyrad
+c0002
+Wed Feb 19 02:15:09 EST 2025
+Starting job 47906 on c0002
+/home/fs01/cl2696/workspace/ptyrad/params/paper
+GPU 0: NVIDIA A100-SXM4-80GB (UUID: GPU-31203ec1-b145-480b-d58d-66b8c414ddd2)
+  MIG 2g.20gb     Device  0: (UUID: MIG-96237af8-c36e-57b9-959e-5223f99be934)
+GPU 1: NVIDIA A100-SXM4-80GB (UUID: GPU-7251cf85-2d13-62a5-ab91-c22272f0810f)
+GPU 2: NVIDIA A100-SXM4-80GB (UUID: GPU-a4dd3583-3df5-975b-ad95-40d126f5251b)
+GPU 3: NVIDIA A100-SXM4-80GB (UUID: GPU-1ef1bae9-5f03-78bc-dbbd-b033bf30a7b1)
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2021 The MathWorks, Inc.
+                  R2021a (9.10.0.1602886) 64-bit (glnxa64)
+                             February 17, 2021
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+ans = 
+
+  CUDADevice with properties:
+
+                      Name: 'NVIDIA A100-SXM4-80GB MIG 2g.20gb'
+                     Index: 1
+         ComputeCapability: '8.0'
+            SupportsDouble: 1
+             DriverVersion: 11.8000
+            ToolkitVersion: 11
+        MaxThreadsPerBlock: 1024
+          MaxShmemPerBlock: 49152
+        MaxThreadBlockSize: [1024 1024 64]
+               MaxGridSize: [2.1475e+09 65535 65535]
+                 SIMDWidth: 32
+               TotalMemory: 2.0938e+10
+           AvailableMemory: 2.0629e+10
+       MultiprocessorCount: 28
+              ClockRateKHz: 1410000
+               ComputeMode: 'Default'
+      GPUOverlapsTransfers: 1
+    KernelExecutionTimeout: 0
+          CanMapHostMemory: 1
+           DeviceSupported: 1
+           DeviceAvailable: 1
+            DeviceSelected: 1
+
+Started at 2025-02-19_02-15-21
+Original dp min = 0.0000, mean = 0.0254, max = 2.1056
+Processed dp min = 0.0000, mean = 0.0254, max = 2.1056
+data_roi5_Ndp128_step128_dp.hdf5 has been saved!
+Current grouping: 16, Current Nprobe: 12
+[init] : Preparing paths.
+[init] :  p.queue.name is not set, using default p.queue.name = ''
+[init] : p.detector.data_prefix is not defined
+[init] : Using matlab APS data preparator.
+[init] : run_name = S00005_128x128_b0_MLs_L1_p12_g16_mm_Ns6_dz2_reg0.1
+[init] : base_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//
+[init] : Using default save_path
+[init] : save_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/analysis/S00000-00999/S00005/
+[init] : Using default prepared data path
+[init] : prepare_data_path = /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/analysis/S00000-00999/S00005/
+[init] : Using default prepared data filename
+[init] : prepare_data_filename = S00005_data_128x128.h5
+[init] : Loading preferences for empad detector.
+[init] : read_path_format not defined for empad. Using default value.
+[Warning: Applying custom scan flip: 1 1 0 ] 
+[> In scans.positions.matlab_pos (line 14)
+In scans.read_positions (line 20)
+In core.initialize_ptycho (line 107)
+In core.ptycho_recons/ptycho_call (line 172)
+In core.ptycho_recons (line 289)
+In ptyshv_convergence_simu_tBL_WSe2_batch16_p12_6slice (line 537)] 
+[init] : Preparing initial guess.
+[init] : Computed object size: 493 x 493
+[init] : Using random object as initial guess.
+[init] : Using previous run as initial probe.
+[init] : Loaded probe from: /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/5/init_probe_128.mat
+[init] : File /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2/5/init_probe_128.mat loaded successfully.
+[init] : Loading raw data
+[init] : Preparing data using matlab APS data preparation.
+[init] : Using supplied center: 65  65
+[init] : Using center: (65, 65)
+[init] : Selected region: ('RowFrom', 1, 'RowTo', 128, 'ColumnFrom', 1, 'ColumnTo', 128)
+[init] : Loading raw data of scan 00005.
+[init] : HDF5 file name:/home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//5/data_roi5_Ndp128_step128_dp.hdf5
+[init] : Loaded data from:/home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//5/data_roi5_Ndp128_step128_dp.hdf5
+[init] : Number of probe positions: 16384
+[init] : Number of diffraction patterns : 16384
+[init] : Finished data preparation and initialization.
+[ptycho] : Reconstructing S00005 
+[ptycho] : Calling engine GPU_MS
+[GPU/CPU_MS-engine] : Intermediate results will be saved in the directory below every 1 iterations.
+[GPU/CPU_MS-engine] : /home/fs01/cl2696/workspace/ptyrad/data/paper/simu_tBL_WSe2//5/roi5_Ndp128_step128//MLs_L1_p12_g16_mm_Ns6_dz2_reg0.1/
+[GPU/CPU_MS-engine] : Loading constant probe (1)
+[GPU/CPU_MS-engine] : Loading constant probe (2)
+[GPU/CPU_MS-engine] : Loading constant probe (3)
+[GPU/CPU_MS-engine] : Loading constant probe (4)
+[GPU/CPU_MS-engine] : Loading constant probe (5)
+[GPU/CPU_MS-engine] : Loading constant probe (6)
+[GPU/CPU_MS-engine] : Loading constant probe (7)
+[GPU/CPU_MS-engine] : Loading constant probe (8)
+[GPU/CPU_MS-engine] : Loading constant probe (9)
+[GPU/CPU_MS-engine] : Loading constant probe (10)
+[GPU/CPU_MS-engine] : Loading constant probe (11)
+[GPU/CPU_MS-engine] : Loading constant probe (12)
+[GPU/CPU_MS-engine] : Load and pad object and probe
+[GPU/CPU_MS-engine] : Preparing data and masks
+[GPU/CPU_MS-engine] : GPU 1 initialized ... 
+[GPU/CPU_MS-engine-init] : Add 5 more layers from 1 layer(s)
+[GPU/CPU_MS-engine-init] : Append vacuum layer
+[GPU/CPU_MS-engine-init] : 932 of 1056 GB RAM free
+[GPU/CPU_MS-engine-init] : Check GPU load
+[GPU/CPU_MS-engine-init] : 
+----MEMORY REPORT GPU ID:1-----
+Required total memory 1.37GB
+ - Required data memory 1.07GB 
+ - Required object memory 0.03GB 
+ - Required FFT memory 0.03GB 
+ ============================ 
+available memory 20.63/20.94GB
+[GPU/CPU_MS-engine-init] :  === Starting MLs solver === 
+[GPU/CPU_MS-engine-init] : Maximal possible grouping 1210
+[GPU/CPU_MS-engine-init] : Selected grouping 16
+[GPU-1_MLs_WSe2_] : Started solver using MLs method on GPU 1
+[GPU-1_MLs_WSe2_] : Moving data to GPU
+[GPU-1_MLs_WSe2_] : Free GPU memory 20.63GB
+[GPU-1_MLs_WSe2_] : Data moved to GPU
+[GPU-1_MLs_WSe2_] : Free GPU memory 19.53GB
+[GPU-1_MLs_WSe2_] : Iteration: 1 / 1  (Time left:Inf hour. avg:Inf sec)
+[GPU-1_MLs_WSe2_] : Grad pos corr -- AVG step  0.1 px , acceleration =  0.0
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0502 layer 6
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0497 layer 5
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.05 layer 4
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0506 layer 3
+[GPU-1_MLs_WSe2_] : Average step p1:   0  o1: 0.0513 layer 2
+[GPU-1_MLs_WSe2_] : Average step p1: 0.421  o1: 0.0521 layer 1
+[GPU-1_MLs_WSe2_] : =====  Fourier error = 0.07014 
+[GPU-1_MLs_WSe2_] :  ====  Time per one iteration 284.789s
+[GPU-1_MLs_WSe2_] :  ====  Total time 284.79s
+[GPU-1_MLs_WSe2_] :  === Finished MLs solver === in  329s
+[ptycho] : Elapsed time for engine GPU_MS: 332.5 s
+Elapsed time is 343.599910 seconds.

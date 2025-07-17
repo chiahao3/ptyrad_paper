@@ -1,0 +1,230 @@
+/home/fs01/cl2696/workspace/ptyrad
+c0002
+Wed Feb 19 02:15:12 EST 2025
+params_path = params/paper/ptyrad_convergence_simu_tBL_WSe2_batch16_p12_6slice.yml
+2025-02-19 02:15:24,127 - ### PtyRAD Logger configuration ###
+2025-02-19 02:15:24,127 - log_file       = 'ptyrad_log.txt'. If log_file = None, no log file will be created.
+2025-02-19 02:15:24,127 - log_dir        = 'auto'. If log_dir = 'auto', then log will be saved to `output_path` or 'logs/'.
+2025-02-19 02:15:24,127 - flush_file     = True. Automatically set to True if `log_file is not None`
+2025-02-19 02:15:24,128 - prefix_date    = True. If true, a datetime str is prefixed to the `log_file`.
+2025-02-19 02:15:24,128 - prefix_jobid   = '0'. If not 0, it'll be prefixed to the log file. This is used for hypertune mode with multiple GPUs.
+2025-02-19 02:15:24,128 - append_to_file = True. If true, logs will be appended to the existing file. If false, the log file will be overwritten.
+2025-02-19 02:15:24,128 - show_timestamp = True. If true, the printed information will contain a timestamp.
+2025-02-19 02:15:24,128 -  
+2025-02-19 02:15:24,128 - ### HuggingFace accelerator is not available, no multi-GPU or mixed-precision ###
+2025-02-19 02:15:24,128 -  
+2025-02-19 02:15:24,128 - ### System information ###
+2025-02-19 02:15:24,128 - Operating System: Linux 4.18.0-372.26.1.el8_6.x86_64
+2025-02-19 02:15:24,128 - OS Version: #1 SMP Tue Sep 13 18:09:48 UTC 2022
+2025-02-19 02:15:24,128 - Machine: x86_64
+2025-02-19 02:15:24,133 - Processor: x86_64
+2025-02-19 02:15:24,133 - Available CPU cores: 4
+2025-02-19 02:15:24,134 - Memory information will be available after `conda install conda-forge::psutil`
+2025-02-19 02:15:24,255 - CUDA Available: True
+2025-02-19 02:15:24,255 - CUDA Version: 11.8
+2025-02-19 02:15:24,290 - GPU Device: ['NVIDIA A100-SXM4-80GB MIG 2g.20gb']
+2025-02-19 02:15:24,290 - Python Executable: /home/fs01/cl2696/anaconda3/envs/ptyrad/bin/python
+2025-02-19 02:15:24,290 - Python Version: 3.11.9 (main, Apr 19 2024, 16:48:06) [GCC 11.2.0]
+2025-02-19 02:15:24,290 - NumPy Version: 1.26.4
+2025-02-19 02:15:24,290 - PyTorch Version: 2.1.2
+2025-02-19 02:15:24,290 - PtyRAD Version: v0.1.0-beta3.1
+2025-02-19 02:15:24,290 -  
+2025-02-19 02:15:24,290 - ### Loading params file ###
+2025-02-19 02:15:24,391 - Success! Loaded .yml file path = params/paper/ptyrad_convergence_simu_tBL_WSe2_batch16_p12_6slice.yml
+2025-02-19 02:15:24,391 -  
+2025-02-19 02:15:24,391 - ### Setting GPU ID ###
+2025-02-19 02:15:24,391 - Selected GPU device: cuda:0 (NVIDIA A100-SXM4-80GB MIG 2g.20gb)
+2025-02-19 02:15:24,391 -  
+2025-02-19 02:15:24,391 - ### Initializing Initializer ###
+2025-02-19 02:15:24,391 - ### Initializing cache ###
+2025-02-19 02:15:24,391 - use_cached_obj   = False
+2025-02-19 02:15:24,391 - use_cached_probe = False
+2025-02-19 02:15:24,391 - use_cached_pos   = False
+2025-02-19 02:15:24,391 -  
+2025-02-19 02:15:24,391 - ### Initializing exp_params ###
+2025-02-19 02:15:24,391 - Input values are displayed below:
+2025-02-19 02:15:24,392 - illumination_type: electron
+2025-02-19 02:15:24,392 - kv: 80
+2025-02-19 02:15:24,392 - conv_angle: 24.9
+2025-02-19 02:15:24,392 - Npix: 128
+2025-02-19 02:15:24,392 - dx_spec: 0.1494
+2025-02-19 02:15:24,392 - defocus: 0
+2025-02-19 02:15:24,392 - c3: 0
+2025-02-19 02:15:24,392 - c5: 0
+2025-02-19 02:15:24,392 - slice_thickness: 2
+2025-02-19 02:15:24,392 - Nlayer: 6
+2025-02-19 02:15:24,392 - N_scans: 16384
+2025-02-19 02:15:24,392 - N_scan_slow: 128
+2025-02-19 02:15:24,392 - N_scan_fast: 128
+2025-02-19 02:15:24,392 - scan_step_size: 0.429
+2025-02-19 02:15:24,392 - scan_flipT: None
+2025-02-19 02:15:24,392 - scan_affine: None
+2025-02-19 02:15:24,392 - scan_rand_std: 0.15
+2025-02-19 02:15:24,392 - omode_max: 1
+2025-02-19 02:15:24,392 - omode_init_occu: {'occu_type': 'uniform', 'init_occu': None}
+2025-02-19 02:15:24,392 - pmode_max: 12
+2025-02-19 02:15:24,392 - pmode_init_pows: [0.02]
+2025-02-19 02:15:24,392 - probe_permute: None
+2025-02-19 02:15:24,392 - meas_permute: None
+2025-02-19 02:15:24,392 - meas_reshape: [-1, 128, 128]
+2025-02-19 02:15:24,392 - meas_flipT: [0, 0, 1]
+2025-02-19 02:15:24,392 - meas_crop: None
+2025-02-19 02:15:24,392 - meas_resample: {'mode': None, 'scale_factors': [2, 2]}
+2025-02-19 02:15:24,392 - meas_add_source_size: None
+2025-02-19 02:15:24,392 - meas_add_detector_blur: None
+2025-02-19 02:15:24,392 - meas_remove_neg_values: {'mode': 'clip_neg', 'value': None}
+2025-02-19 02:15:24,392 - meas_add_poisson_noise: None
+2025-02-19 02:15:24,392 -  
+2025-02-19 02:15:24,393 - Derived values given input exp_params:
+2025-02-19 02:15:24,393 - kv          = 80 kV
+2025-02-19 02:15:24,393 - wavelength  = 0.0418 Ang
+2025-02-19 02:15:24,393 - conv_angle  = 24.9 mrad
+2025-02-19 02:15:24,393 - Npix        = 128 px
+2025-02-19 02:15:24,393 - dk          = 0.0523 Ang^-1
+2025-02-19 02:15:24,393 - kMax        = 3.3467 Ang^-1
+2025-02-19 02:15:24,393 - alpha_max   = 139.7495 mrad
+2025-02-19 02:15:24,393 - dx          = 0.1494 Ang, Nyquist-limited dmin = 2*dx = 0.2988 Ang
+2025-02-19 02:15:24,393 - Rayleigh-limited resolution  = 1.0230 Ang (0.61*lambda/alpha for focused probe )
+2025-02-19 02:15:24,393 - Real space probe extent = 19.1232 Ang
+2025-02-19 02:15:24,393 -  
+2025-02-19 02:15:24,393 - ### Initializing measurements from 'hdf5' ###
+Success! Loaded .hdf5 file path = data/paper/simu_tBL_WSe2/phonon_temporal_spatial_N16384_dp128.hdf5
+Imported .hdf5 data shape = (16384, 128, 128)
+Imported .hdf5 data type = float32
+2025-02-19 02:15:26,354 - Imported meausrements shape / dtype = (16384, 128, 128), dtype = float32
+2025-02-19 02:15:26,678 - Imported meausrements int. statistics (min, mean, max) = (0.0000, 0.0254, 2.1056)
+2025-02-19 02:15:26,678 - Reshaping measurements into [-1, 128, 128]
+2025-02-19 02:15:26,678 - Flipping measurements with [flipup, fliplr, transpose] = [0, 0, 1]
+2025-02-19 02:15:27,439 - Normalizing measurements by 1.0000029 so the averaged measurement has max intensity at 1 for ease of display/comparison
+2025-02-19 02:15:27,522 - Radius of bright field disk             (rbf) = 10.5 px, suggested probe_mask_k radius (rbf*2/Npix) > 0.16
+2025-02-19 02:15:27,733 - meausrements int. statistics (min, mean, max) = (0.0000, 0.0254, 2.1055)
+2025-02-19 02:15:27,733 - measurements                      (N, Ky, Kx) = float32, (16384, 128, 128)
+2025-02-19 02:15:27,733 -  
+2025-02-19 02:15:27,734 - ### Initializing probe from 'simu' ###
+2025-02-19 02:15:27,734 - Use exp_params and default values instead for simulation
+2025-02-19 02:15:27,734 - Start simulating STEM probe
+2025-02-19 02:15:27,740 - kv          = 80.0 kV
+2025-02-19 02:15:27,740 - wavelength  = 0.0418 Ang
+2025-02-19 02:15:27,740 - conv_angle  = 24.9 mrad
+2025-02-19 02:15:27,740 - Npix        = 128 px
+2025-02-19 02:15:27,740 - dk          = 0.0523 Ang^-1
+2025-02-19 02:15:27,741 - kMax        = 3.3467 Ang^-1
+2025-02-19 02:15:27,741 - alpha_max   = 139.7447 mrad
+2025-02-19 02:15:27,741 - dx          = 0.1494 Ang, Nyquist-limited dmin = 2*dx = 0.2988 Ang
+2025-02-19 02:15:27,741 - Rayleigh-limited resolution  = 1.0229 Ang (0.61*lambda/alpha for focused probe )
+2025-02-19 02:15:27,741 - Real space probe extent = 19.1232 Ang
+2025-02-19 02:15:27,741 - Start making mixed-state STEM probe with 12 incoherent probe modes
+2025-02-19 02:15:27,791 - Relative power of probe modes = [0.78 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02 0.02]
+2025-02-19 02:15:27,881 - probe                         (pmode, Ny, Nx) = complex64, (12, 128, 128)
+2025-02-19 02:15:27,967 - sum(|probe_data|**2) = 416.66, while sum(meas)/len(meas) = 416.66
+2025-02-19 02:15:27,968 -  
+2025-02-19 02:15:27,968 - ### Initializing probe pos from 'simu' ###
+2025-02-19 02:15:27,968 - Simulating probe positions with dx_spec = 0.1494, scan_step_size = 0.429, N_scan_fast = 128, N_scan_slow = 128
+2025-02-19 02:15:27,980 - Applying Gaussian distributed random displacement with std = 0.15 px to scan positions
+2025-02-19 02:15:27,982 - crop_pos                                (N,2) = int16, (16384, 2)
+2025-02-19 02:15:27,982 - crop_pos 1st and last px coords (y,x)         = ([50, 49], [414, 414])
+2025-02-19 02:15:27,984 - crop_pos extent (Ang)                         = [54.6804 54.6804]
+2025-02-19 02:15:27,984 - probe_pos_shifts                        (N,2) = float32, (16384, 2)
+2025-02-19 02:15:27,984 -  
+2025-02-19 02:15:27,984 - ### Initializing obj from 'simu' ###
+2025-02-19 02:15:27,984 - obj_shape is not provided, use exp_params, position range, and probe shape for estimated obj_shape (omode, Nz, Ny, Nx)
+2025-02-19 02:15:28,074 - object                    (omode, Nz, Ny, Nx) = complex64, (1, 6, 592, 592)
+2025-02-19 02:15:28,075 - object extent                 (Z, Y, X) (Ang) = [12.     88.4448 88.4448]
+2025-02-19 02:15:28,075 -  
+2025-02-19 02:15:28,075 - ### Initializing omode_occu from 'uniform' ###
+2025-02-19 02:15:28,075 - omode_occu                            (omode) = float32, (1,)
+2025-02-19 02:15:28,075 -  
+2025-02-19 02:15:28,075 - ### Initializing H (Fresnel propagator) ###
+2025-02-19 02:15:28,075 - Calculating H with probe_shape = [128 128], dx_spec = 0.1494 Ang, slice_thickness = 2.0000 Ang, lambd = 0.0418 Ang
+2025-02-19 02:15:28,077 - H                                    (Ky, Kx) = complex64, (128, 128)
+2025-02-19 02:15:28,077 -  
+2025-02-19 02:15:28,077 - ### Initializing obj tilts from = 'simu' ###
+2025-02-19 02:15:28,077 - Initialized obj_tilts with init_tilts = [[0, 0]] (theta_y, theta_x) mrad
+2025-02-19 02:15:28,077 - obj_tilts                              (N, 2) = float32, (1, 2)
+2025-02-19 02:15:28,077 -  
+2025-02-19 02:15:28,077 - ### Checking consistency between input params with the initialized variables ###
+2025-02-19 02:15:28,077 - Npix, DP measurements, probe, and H shapes are consistent as '128'
+2025-02-19 02:15:28,077 - N_scans, len(meas), N_scan_slow*N_scan_fast, len(crop_pos), and len(probe_pos_shifts) are consistent as '16384'
+2025-02-19 02:15:28,077 - obj.shape[0] is consistent with len(omode_occu) as '1'
+2025-02-19 02:15:28,077 - obj.shape[1] is consistent with Nlayer as '6'
+2025-02-19 02:15:28,077 - obj_tilts is consistent with either 1 or N_scans
+2025-02-19 02:15:28,077 - Pass the consistency check of initialized variables, initialization is done!
+2025-02-19 02:15:28,077 -  
+2025-02-19 02:15:28,077 - ### Initializing loss function ###
+2025-02-19 02:15:28,077 - Active loss types:
+2025-02-19 02:15:28,077 -   loss_single : {'state': True, 'weight': 1.0, 'dp_pow': 0.5}
+2025-02-19 02:15:28,078 -  
+2025-02-19 02:15:28,078 - ### Initializing constraint function ###
+2025-02-19 02:15:28,078 - Active constraint types:
+2025-02-19 02:15:28,078 -   ortho_pmode : {'freq': 1}
+2025-02-19 02:15:28,078 -   fix_probe_int: {'freq': 1}
+2025-02-19 02:15:28,078 -   obj_rblur   : {'freq': 1, 'obj_type': 'both', 'kernel_size': 5, 'std': 0.4}
+2025-02-19 02:15:28,078 -   obj_zblur   : {'freq': 1, 'obj_type': 'both', 'kernel_size': 5, 'std': 1}
+2025-02-19 02:15:28,078 -   obja_thresh : {'freq': 1, 'relax': 0, 'thresh': [0.98, 1.02]}
+2025-02-19 02:15:28,078 -  
+2025-02-19 02:15:28,078 - ### Done initializing PtyRADSolver ###
+2025-02-19 02:15:28,078 -  
+2025-02-19 02:15:36,223 - ### Starting the PtyRADSolver in reconstruct mode ###
+2025-02-19 02:15:36,224 -  
+2025-02-19 02:15:36,663 - ### PtychoAD optimizable variables ###
+2025-02-19 02:15:36,663 - obja            : torch.Size([1, 6, 592, 592])    , torch.float32   , device:cuda:0, grad:True , lr:5e-04
+2025-02-19 02:15:36,663 - objp            : torch.Size([1, 6, 592, 592])    , torch.float32   , device:cuda:0, grad:True , lr:5e-04
+2025-02-19 02:15:36,663 - obj_tilts       : torch.Size([1, 2])              , torch.float32   , device:cuda:0, grad:False, lr:0e+00
+2025-02-19 02:15:36,663 - slice_thickness : torch.Size([])                  , torch.float32   , device:cuda:0, grad:False, lr:0e+00
+2025-02-19 02:15:36,663 - probe           : torch.Size([12, 128, 128, 2])   , torch.float32   , device:cuda:0, grad:True , lr:1e-04
+2025-02-19 02:15:36,663 - probe_pos_shifts: torch.Size([16384, 2])          , torch.float32   , device:cuda:0, grad:True , lr:1e-04
+2025-02-19 02:15:36,663 -  
+2025-02-19 02:15:36,663 - ### Optimizable variables statitsics ###
+2025-02-19 02:15:36,663 - Total measurement values  : 268,435,456
+2025-02-19 02:15:36,664 - Total optimizing variables: 4,631,552
+2025-02-19 02:15:36,664 - Overdetermined ratio      : 57.96
+2025-02-19 02:15:36,664 -  
+2025-02-19 02:15:36,664 - ### Model behavior ###
+2025-02-19 02:15:36,664 - Obj preblur               : False
+2025-02-19 02:15:36,664 - Tilt propagator           : False
+2025-02-19 02:15:36,664 - Change slice thickness    : False
+2025-02-19 02:15:36,664 - Sub-px probe shift        : True
+2025-02-19 02:15:36,664 - Detector blur             : False
+2025-02-19 02:15:36,664 - On-the-fly meas resample  : False
+2025-02-19 02:15:36,664 -  
+2025-02-19 02:15:36,664 - ### Creating PyTorch 'Adam' optimizer with configs = {} ###
+2025-02-19 02:15:36,665 -  
+2025-02-19 02:15:36,665 - ### Generating indices, batches, and output_path ###
+2025-02-19 02:15:36,684 - d90 = 31.000 px or 4.631 Ang
+2025-02-19 02:15:36,684 - Selecting indices with the 'full' mode 
+2025-02-19 02:15:39,215 - Generated 1024 'random' groups of ~16 scan positions in 0.002 sec
+2025-02-19 02:15:41,755 - The effective batch size (i.e., how many probe positions are simultaneously used for 1 update of ptychographic parameters) is batch_size * grad_accumulation = 16 * 1 = 16
+2025-02-19 02:15:41,761 - output_path = 'output/paper/simu_tBL_WSe2/20250219_ptyrad_convergence/full_N16384_dp128_flipT001_random16_p12_1obj_6slice_dz2_Adam_plr1e-4_oalr5e-4_oplr5e-4_slr1e-4_orblur0.4_ozblur1_oathr0.98_sng1.0_1e5' is generated!
+2025-02-19 02:15:47,091 -  
+2025-02-19 02:15:47,091 - ### Successfully copy 'ptyrad_convergence_simu_tBL_WSe2_batch16_p12_6slice.yml' to 'output/paper/simu_tBL_WSe2/20250219_ptyrad_convergence/full_N16384_dp128_flipT001_random16_p12_1obj_6slice_dz2_Adam_plr1e-4_oalr5e-4_oplr5e-4_slr1e-4_orblur0.4_ozblur1_oathr0.98_sng1.0_1e5' ###
+2025-02-19 02:15:47,092 -  
+2025-02-19 02:15:47,093 - ### Log file is flushed (created) as output/paper/simu_tBL_WSe2/20250219_ptyrad_convergence/full_N16384_dp128_flipT001_random16_p12_1obj_6slice_dz2_Adam_plr1e-4_oalr5e-4_oplr5e-4_slr1e-4_orblur0.4_ozblur1_oathr0.98_sng1.0_1e5/20250219_ptyrad_log.txt ###
+2025-02-19 02:15:47,093 -  
+2025-02-19 02:15:47,093 - ### Start the PtyRAD iterative ptycho reconstruction ###
+2025-02-19 02:15:47,094 - Iter: 1, obja.requires_grad = True
+2025-02-19 02:15:47,094 - Iter: 1, objp.requires_grad = True
+2025-02-19 02:15:47,094 - Iter: 1, obj_tilts.requires_grad = False
+2025-02-19 02:15:47,094 - Iter: 1, slice_thickness.requires_grad = False
+2025-02-19 02:15:47,094 - Iter: 1, probe.requires_grad = True
+2025-02-19 02:15:47,094 - Iter: 1, probe_pos_shifts.requires_grad = True
+2025-02-19 02:15:47,377 - Done batch 1 with 16 indices ([1981, 14807, 1233, 8594, 799]...) in 0.280 sec
+2025-02-19 02:15:52,759 - Done batch 205 with 16 indices ([8534, 15297, 115, 16229, 11368]...) in 0.025 sec
+2025-02-19 02:15:58,210 - Done batch 410 with 16 indices ([7240, 7660, 3622, 9301, 4285]...) in 0.026 sec
+2025-02-19 02:16:03,843 - Done batch 614 with 16 indices ([8262, 3353, 11283, 15365, 236]...) in 0.029 sec
+2025-02-19 02:16:09,336 - Done batch 819 with 16 indices ([4913, 1689, 15068, 13279, 1473]...) in 0.027 sec
+2025-02-19 02:16:14,757 - Done batch 1024 with 16 indices ([9972, 4680, 15480, 242, 7243]...) in 0.027 sec
+2025-02-19 02:16:19,817 - Apply ortho pmode constraint at iter 1, relative pmode power = [0.75  0.038 0.027 0.026 0.026 0.026 0.019 0.019 0.019 0.019 0.015 0.015], probe int sum = 445.9856
+2025-02-19 02:16:19,817 - Apply fix probe int constraint at iter 1, probe int sum = 416.6595
+2025-02-19 02:16:19,825 - Apply lateral (y,x) Gaussian blur with std = 0.4 px on obja at iter 1
+2025-02-19 02:16:19,825 - Apply lateral (y,x) Gaussian blur with std = 0.4 px on objp at iter 1
+2025-02-19 02:16:23,075 - Apply z-direction Gaussian blur with std = 1 px on obja at iter 1
+2025-02-19 02:16:23,076 - Apply z-direction Gaussian blur with std = 1 px on objp at iter 1
+2025-02-19 02:16:23,078 - Apply hard threshold constraint with thresh = [0.98, 1.02] on obja at iter 1
+2025-02-19 02:16:23,080 - Iter: 1, Total Loss: 1.2370, loss_single: 1.2370, loss_poissn: 0.0000, loss_pacbed: 0.0000, loss_sparse: 0.0000, loss_simlar: 0.0000, in 35.985 sec
+2025-02-19 02:16:23,080 -  
+2025-02-19 02:16:23,290 - Saving summary figures for iter 1
+2025-02-19 02:16:34,391 - ### Finished 1 iterations, averaged iter_t = 35.985 with std = 0.000 ###
+2025-02-19 02:16:34,392 -  
+2025-02-19 02:16:34,397 - ### The PtyRADSolver is finished in 58.174 sec ###
+2025-02-19 02:16:34,397 -  
+Wed Feb 19 02:16:36 EST 2025

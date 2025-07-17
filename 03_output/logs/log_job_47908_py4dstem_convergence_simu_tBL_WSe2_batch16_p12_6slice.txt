@@ -1,0 +1,43 @@
+/home/fs01/cl2696/workspace/ptyrad
+c0002
+Wed Feb 19 02:15:18 EST 2025
+params_path = params/paper/py4dstem_convergence_simu_tBL_WSe2_batch16_p12_6slice.yml
+Load py4DSTEM-dev v0.0.4 (2024.12.12 CHL) from editable local repo
+cupyx.jit.rawkernel is experimental. The interface can change in the future.
+### System information ###
+Operating System: Linux 4.18.0-372.26.1.el8_6.x86_64
+OS Version: #1 SMP Tue Sep 13 18:09:48 UTC 2022
+Machine: x86_64
+Processor: x86_64
+Available CPU cores: 4
+Total Memory: 1007.45 GB
+Available Memory: 894.79 GB
+CUDA Runtime Version: 11.8
+GPU Device: ['NVIDIA A100-SXM4-80GB MIG 2g.20gb']
+Python Executable: /home/fs01/cl2696/anaconda3/envs/py4dstem/bin/python
+Python Version: 3.11.10 (main, Oct  3 2024, 07:29:13) [GCC 11.2.0]
+NumPy Version: 1.26.4
+Cupy Version: 13.3.0
+Success! Loaded .yml file path = params/paper/py4dstem_convergence_simu_tBL_WSe2_batch16_p12_6slice.yml
+Success! Loaded .hdf5 file path = data/paper/simu_tBL_WSe2/phonon_temporal_spatial_N16384_dp128.hdf5
+Imported .hdf5 data shape = (16384, 128, 128)
+Imported meausrements shape / dtype = (16384, 128, 128), float32
+Imported meausrements int. statistics (min, mean, max) = (0.0000, 0.0254, 2.1056)
+Reshaping measurements into [128, 128, 128, 128]
+Flipping measurements with [flipup, fliplr, transpose] = [0, 0, 1]
+Normalizing measurements so the averaged measurement has max intensity at 1
+Processed meausrements int. statistics (min, mean, max) = (0.0000, 0.0254, 2.1055)
+py4DSTEM datacube.shape = (128, 128, 128, 128) (N_scan_slow, N_scan_fast, ky, kx)
+pos_extent = [367.5502008 367.5502008] px, object_extent = [594.66024096 594.66024096], object_padding_px = (113.0, 113.0)
+Initializing MixedstateMultislicePtychography
+Best fit rotation forced to 0 degrees.
+Normalizing amplitudes:   0%|          | 0/16384 [00:00<?, ?probe position/s]Normalizing amplitudes:   3%|▎         | 513/16384 [00:00<00:03, 5127.01probe position/s]Normalizing amplitudes:   7%|▋         | 1067/16384 [00:00<00:02, 5359.71probe position/s]Normalizing amplitudes:  10%|▉         | 1633/16384 [00:00<00:02, 5495.68probe position/s]Normalizing amplitudes:  13%|█▎        | 2185/16384 [00:00<00:02, 5502.77probe position/s]Normalizing amplitudes:  17%|█▋        | 2736/16384 [00:00<00:02, 5211.36probe position/s]Normalizing amplitudes:  20%|██        | 3296/16384 [00:00<00:02, 5336.70probe position/s]Normalizing amplitudes:  24%|██▍       | 3918/16384 [00:00<00:02, 5616.51probe position/s]Normalizing amplitudes:  28%|██▊       | 4536/16384 [00:00<00:02, 5791.33probe position/s]Normalizing amplitudes:  31%|███       | 5117/16384 [00:00<00:02, 5487.52probe position/s]Normalizing amplitudes:  35%|███▍      | 5670/16384 [00:01<00:01, 5468.84probe position/s]Normalizing amplitudes:  38%|███▊      | 6227/16384 [00:01<00:01, 5493.39probe position/s]Normalizing amplitudes:  42%|████▏     | 6804/16384 [00:01<00:01, 5573.06probe position/s]Normalizing amplitudes:  45%|████▍     | 7363/16384 [00:01<00:01, 5560.23probe position/s]Normalizing amplitudes:  48%|████▊     | 7921/16384 [00:01<00:01, 5556.67probe position/s]Normalizing amplitudes:  52%|█████▏    | 8478/16384 [00:01<00:01, 5522.21probe position/s]Normalizing amplitudes:  55%|█████▌    | 9031/16384 [00:01<00:01, 5453.52probe position/s]Normalizing amplitudes:  58%|█████▊    | 9577/16384 [00:01<00:01, 5364.32probe position/s]Normalizing amplitudes:  62%|██████▏   | 10114/16384 [00:01<00:01, 5318.25probe position/s]Normalizing amplitudes:  65%|██████▍   | 10647/16384 [00:01<00:01, 5286.80probe position/s]Normalizing amplitudes:  68%|██████▊   | 11189/16384 [00:02<00:00, 5324.47probe position/s]Normalizing amplitudes:  72%|███████▏  | 11781/16384 [00:02<00:00, 5498.73probe position/s]Normalizing amplitudes:  75%|███████▌  | 12332/16384 [00:02<00:00, 5363.44probe position/s]Normalizing amplitudes:  79%|███████▊  | 12871/16384 [00:02<00:00, 5369.89probe position/s]Normalizing amplitudes:  82%|████████▏ | 13409/16384 [00:02<00:00, 5349.85probe position/s]Normalizing amplitudes:  85%|████████▌ | 13969/16384 [00:02<00:00, 5422.05probe position/s]Normalizing amplitudes:  89%|████████▉ | 14590/16384 [00:02<00:00, 5655.54probe position/s]Normalizing amplitudes:  93%|█████████▎| 15157/16384 [00:02<00:00, 5413.35probe position/s]Normalizing amplitudes:  96%|█████████▌| 15701/16384 [00:02<00:00, 5359.72probe position/s]Normalizing amplitudes:  99%|█████████▉| 16275/16384 [00:02<00:00, 5469.44probe position/s]Normalizing amplitudes: 100%|██████████| 16384/16384 [00:03<00:00, 5448.30probe position/s]
+output_path = 'output/paper/simu_tBL_WSe2/20250219_py4dstem_convergence/20250219_N16384_dp128_flipT001_random16_p12_6slice_dz2_update0.5_kzf0.1_1e5' is generated!
+reconstruction kwargs = {'num_iter': 1, 'reconstruction_method': 'gradient-descent', 'max_batch_size': 16, 'step_size': 0.5, 'reset': True, 'progress_bar': False, 'store_iterations': False, 'save_iters': 1, 'save_result': ['model', 'objp', 'probe'], 'result_modes': {'obj_dim': [2, 3], 'FOV': ['crop'], 'bit': ['8']}, 'output_path': 'output/paper/simu_tBL_WSe2/20250219_py4dstem_convergence/20250219_N16384_dp128_flipT001_random16_p12_6slice_dz2_update0.5_kzf0.1_1e5'}
+Performing 1 iterations using a complex object type, with the gradient-descent algorithm, with normalization_min: 1 and step _size: 0.5, in batches of max 16 measurements.
+Iter: 1, Total Loss: 0.695 in 373.796 sec
+Saving results for iter 1
+### Finished 1 iterations, averaged iter_t = 373.796 with std = 0.000 sec ###
+### py4DSTEM ptycho solver is finished in 6 min 14.163 sec###
+
+Wed Feb 19 02:22:12 EST 2025
